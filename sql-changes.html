@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSERT, UPDATE, DELETE | SQL | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="sql-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html" class="active">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="SQL tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">INSERT, UPDATE, DELETE</h1>
+                <p class="intro-text">INSERT adds rows, UPDATE changes matching rows, and DELETE removes them. Before changing data, inspect the target with SELECT and ensure UPDATE or DELETE has a specific WHERE clause. Practice on a disposable copy.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>INSERT creates rows; explicitly naming the target columns documents the values and avoids relying on column order. Defaults may fill omitted optional columns, while NOT NULL and other constraints can reject incomplete records.</p>
+                <p>UPDATE changes every row matching WHERE, not just the first row. Before executing one, run a SELECT with the same condition and check the affected-row count. Omitting WHERE can update the entire table; an unqualified DELETE can remove every row.</p>
+                <p>Use placeholders and bound parameters for values from a form or other external source. Parameters keep data separate from SQL syntax; identifiers such as table names usually cannot be parameterized and need an allow-list if selected dynamically.</p>
+                <p>The example inserts a named customer, then changes the city for customer_id 7. It intentionally targets a specific identifier. Practice on test data, and use a transaction when partial completion would leave inconsistent data.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>INSERT INTO customers (name, city)
+VALUES (&#x27;Ada&#x27;, &#x27;Lagos&#x27;);
+
+UPDATE customers
+SET city = &#x27;Abuja&#x27;
+WHERE customer_id = 7;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Add a sample row and verify it with SELECT. Practice an update only on test data and confirm its WHERE clause matches the intended row.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="sql-filtering.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Filtering and Sorting</a>
+                <a href="sql-aggregates.html" class="nav-btn next-btn">Functions and Aggregates &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

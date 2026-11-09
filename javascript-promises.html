@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Promises | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="promises">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Promises</h1><p class="intro-text">A promise represents the eventual result of an asynchronous operation. Use then() for a successful result and catch() to handle a failure.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>A promise represents a future result</h3><p>A promise represents an asynchronous operation that may fulfill with a value or reject with a reason. It starts pending and settles once. This lets code describe what to do when work completes without blocking the browser.</p><h3>Compose work with then and catch</h3><p><code>.then()</code> registers a fulfillment handler and returns a new promise. A returned value becomes the next value; a thrown error rejects the chain. <code>.catch()</code> can handle a rejection and recover by returning a value.</p><h3>Return asynchronous work to keep it connected</h3><p>If a promise started inside a handler is not returned, the outer chain cannot wait for it and may miss its errors. Return dependent operations rather than nesting chains. Promise fundamentals explain async/await and parallel work with <code>Promise.all()</code>.</p></section><section class="content-section"><h2>Handle a promise</h2><p>Returning a promise from a then() callback lets the next step wait for that operation.</p><pre class="lesson-code"><code>Promise.resolve("Ready")
+    .then(value =&gt; console.log(value))
+    .catch(error =&gt; console.error(error));</code></pre><h2>Practice</h2><p>Chain two then() calls and add a catch() handler for errors.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

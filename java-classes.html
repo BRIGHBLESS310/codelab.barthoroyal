@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Classes and Inheritance | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html">Java Intro</a><a href="java-get-started.html">Java Get Started</a><a href="java-syntax.html">Java Syntax & Output</a>
+            <a href="java-variables.html">Variables & Data Types</a><a href="java-operators.html">Operators & Math</a>
+            <a href="java-conditions.html">Conditions & Switch</a><a href="java-loops.html">Java Loops</a>
+            <a href="java-arrays.html">Java Arrays</a><a href="java-methods.html">Java Methods</a><a href="java-classes.html" class="active">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card"><h1 class="glow-text">Java Classes and Inheritance</h1><p class="intro-text">Classes define new reference types by grouping data and behavior. Objects are individual instances created from those class definitions.</p></section>
+            <section class="content-section">
+                <h2>Create a class and object</h2>
+                <p>Fields store an object's state. A constructor initializes the object, and methods provide behavior. Use access modifiers to control which code can reach a field.</p>
+                <pre class="lesson-code"><code>class Greeter {
+    private final String name;
+
+    Greeter(String name) {
+        this.name = name;
+    }
+
+    String greet() {
+        return "Hello, " + name + "!";
+    }
+}
+
+Greeter greeter = new Greeter("Ada");
+System.out.println(greeter.greet());</code></pre>
+                <p>The keyword <code>this</code> refers to the current object. The constructor runs when <code>new Greeter("Ada")</code> creates an instance.</p>
+                <p>A class describes the shape and behavior of a type; an object is one concrete instance with its own field values. Calling a constructor with <code>new</code> allocates and initializes that instance, and the resulting reference lets other code use its accessible methods.</p>
+                <p>The constructor parameter and field can share a name because <code>this.name</code> explicitly selects the field on the current object. Making a field <code>private</code> keeps callers from bypassing the class's rules, while a <code>final</code> field can be assigned only during initialization.</p>
+            </section>
+            <section class="content-section">
+                <h2>Encapsulation</h2>
+                <p>Encapsulation keeps an object's internal state protected and exposes clear operations. Private fields prevent other code from changing data without the class's rules being applied.</p>
+                <pre class="lesson-code"><code>class Counter {
+    private int value;
+
+    void increment() {
+        value++;
+    }
+
+    int getValue() {
+        return value;
+    }
+}</code></pre>
+                <p>Do not add getters and setters automatically for every field. Prefer methods that express useful behavior and preserve valid object state.</p>
+                <p>Encapsulation means that an object owns the rules for changing its state. A method such as <code>deposit(amount)</code> can reject an invalid amount before updating the balance, whereas a public balance field would let any caller create an impossible value.</p>
+                <p>Think of a class's public methods as a small interface to its implementation. Internal representation can then change later without requiring every caller to be rewritten, as long as the visible behavior stays consistent.</p>
+            </section>
+            <section class="content-section">
+                <h2>Inheritance and overriding</h2>
+                <p>A subclass can extend a superclass and specialize its behavior. Use <code>@Override</code> so the compiler can check that a method really overrides one from its parent type.</p>
+                <pre class="lesson-code"><code>class Animal {
+    void speak() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void speak() {
+        System.out.println("Woof");
+    }
+}</code></pre>
+                <p>Inheritance is useful for a genuine “is a” relationship. If one class simply needs another class's functionality, composition is often easier to maintain.</p>
+                <p>An overriding method has the same compatible signature as an inherited instance method, and <code>@Override</code> asks the compiler to verify that relationship. A subclass can specialize behavior while callers that use the parent type continue to work.</p>
+                <p>Java classes have a single direct superclass, so deep inheritance trees can tightly couple types. Prefer a small hierarchy for stable shared concepts; when the relationship is “has a” rather than “is a,” store another object in a field and delegate to it instead.</p>
+            </section>
+            <section class="content-section">
+                <h2>Build a small model</h2>
+                <p>For a library example, a <code>Book</code> class could hold a title and an availability state. A method such as <code>borrow()</code> can check availability before updating it. This keeps the rule close to the data it protects.</p>
+                <p>Model only the state and behavior needed by the problem. A useful design asks what must always be true for each object, then ensures constructors and methods preserve those invariants rather than exposing fields for arbitrary edits.</p>
+                <p>This connects classes to the earlier lessons: fields are variables with object lifetime, methods apply logic and conditions to them, and collections can hold groups of objects. Start with one object, test its behavior, then decide whether a relationship or hierarchy is truly needed.</p>
+            </section>
+            <section class="content-section"><h2>Practice</h2><p>Create a <code>Book</code> class with a private title and a method that prints a short description. Make two objects with different titles and call the method on both.</p><div class="cta-box"><h4>Congratulations—you have reached the end of the Java fundamentals course!</h4></div></section>
+            <div class="chapter-navigation"><a href="java-methods.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</a><a href="java.html" class="nav-btn next-btn">Course Overview &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p><div class="social-links"><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></div></footer>
+</body>
+</html>

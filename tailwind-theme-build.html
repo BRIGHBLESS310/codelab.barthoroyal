@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Theme &amp; Production Build | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Keep a consistent theme and build</h1>
+                <p class="intro-text">A design system uses shared choices for colors, spacing, and typography. Tailwind theme customization and CSS entry-point conventions vary by major version, so use the documentation matching the project rather than mixing configuration examples.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Use a production build to verify that the scanner includes all relevant template files. Keep class names discoverable as complete strings and avoid shipping development-only configuration or secrets.</p>
+            </section>
+            <section class="content-section">
+                <h2>Connect design tokens to the production build</h2>
+                <p>A theme centralizes recurring design decisions—such as brand colors, font families, spacing, and breakpoints—so components can use meaningful shared values. Tailwind's mechanism for declaring theme values differs between major versions, so use the documentation that matches the installed package rather than mixing configuration styles.</p>
+                <p>In production, the build scans application sources and emits a stylesheet containing the utilities it discovers. Keep class names statically detectable; constructing fragments such as <code>text-</code> plus a runtime color can prevent the scanner from seeing the complete candidate. Prefer explicit mappings or a documented safelist strategy when dynamic choices are necessary.</p>
+                <p>Validate a production build, not only the development server. Production settings may scan different paths, minify CSS, or omit unexpected files. A consistent theme and verified build reduce visual drift and prevent styles that worked locally from disappearing after deployment.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The example intentionally avoids prescribing a version-specific config file. Establish a shared token once, then use its utility consistently throughout the app.</p>
+                <pre class="lesson-code"><code>/* Define shared choices using the mechanism for your installed version. */
+/* Then use stable utilities throughout the interface. */
+&lt;h2 class=&quot;text-brand-700 text-2xl font-semibold&quot;&gt;Course overview&lt;/h2&gt;
+
+/* Build and inspect the production output before release. */</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Identify a repeated brand color and spacing value. Configure or document them for your project&#x27;s Tailwind version, run a production build, and check that all pages are styled.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-reusable-components.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Reusable Components</a>
+                <a href="tailwind.html" class="nav-btn next-btn">Tailwind CSS Overview &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

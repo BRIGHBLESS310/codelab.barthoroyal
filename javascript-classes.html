@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Classes | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="classes">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Classes</h1><p class="intro-text">Classes provide syntax for creating objects with shared methods. Use a constructor to initialize instance properties and extends to define a subclass.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>A template for related objects</h3><p>A class defines a pattern for creating objects that share methods and expected fields. Its <code>constructor</code> initializes each instance, and methods describe behavior the instances can use. Calling the class with <code>new</code> creates an instance.</p><h3>Instances and inheritance</h3><p>Class methods are shared through the prototype rather than copied as separate functions to every instance. A subclass can extend a base class and use <code>super()</code> to initialize inherited state before accessing <code>this</code>. Inheritance fits ?is a? relationships; composition is often simpler for combining capabilities.</p><h3>Classes do not enforce correctness automatically</h3><p>A constructor does not validate its inputs, and ordinary fields are not private by default. Keep constructors focused on establishing valid state and use private fields if encapsulation is needed. Plain objects may be clearer for simple records; classes help when instances have shared behavior.</p></section><section class="content-section"><h2>Create a class</h2><p>JavaScript classes use prototypes under the hood. Choose classes when they make object creation and behavior easier to organize.</p><pre class="lesson-code"><code>class User {
+    constructor(name) {
+        this.name = name;
+    }
+
+    greet() {
+        return "Hello, " + this.name;
+    }
+}</code></pre><h2>Practice</h2><p>Create a class for a book with a title property and a method that describes the book.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Dark Mode | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Support a dark color scheme</h1>
+                <p class="intro-text">Dark-mode variants let you provide alternative utilities when a dark theme is active. The activation strategy depends on your Tailwind version and project configuration; it may follow the operating-system preference or a class controlled by your app.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Design both themes intentionally. Check text contrast, borders, form controls, and focus rings in each mode rather than simply inverting colors.</p>
+            </section>
+            <section class="content-section">
+                <h2>Design both color schemes as one system</h2>
+                <p>A dark-mode variant applies a style when the project's dark-mode condition is active. Depending on Tailwind version and configuration, that condition can follow the operating-system preference or a class/data attribute controlled by the application. Confirm which mechanism the project uses before adding variants.</p>
+                <p>Dark mode is not just a dark page background. Surfaces, borders, muted text, links, focus rings, and status colors may all need adjustment to preserve contrast and hierarchy. A light-mode shade that works on white can become too bright or lose distinction on a dark surface.</p>
+                <p>Test switching themes with every component state, including hover, keyboard focus, disabled controls, and error messages. If the application stores a manual preference, ensure it remains consistent across navigation and does not create a flash of the wrong theme during page load.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>Base utilities describe the light appearance, while dark: utilities provide a coordinated dark surface and readable text.</p>
+                <pre class="lesson-code"><code>&lt;article class=&quot;bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100&quot;&gt;
+  &lt;h2 class=&quot;font-semibold&quot;&gt;Reading preferences&lt;/h2&gt;
+  &lt;p class=&quot;mt-2 text-slate-600 dark:text-slate-300&quot;&gt;Choose a comfortable theme.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Add a dark variant to a card and its border. Test both theme states and verify links and focus indicators remain visible.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-borders-shadows.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Borders &amp; Shadows</a>
+                <a href="tailwind-arbitrary-values.html" class="nav-btn next-btn">Arbitrary Values &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

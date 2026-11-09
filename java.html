@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Tutorial | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html" class="active">Java Intro</a>
+            <a href="java-get-started.html">Java Get Started</a>
+            <a href="java-syntax.html">Java Syntax & Output</a>
+            <a href="java-variables.html">Variables & Data Types</a>
+            <a href="java-operators.html">Operators & Math</a>
+            <a href="java-conditions.html">Conditions & Switch</a>
+            <a href="java-loops.html">Java Loops</a>
+            <a href="java-arrays.html">Java Arrays</a>
+            <a href="java-methods.html">Java Methods</a>
+            <a href="java-classes.html">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text"><i class="fa-brands fa-java"></i> Java Tutorial</h1>
+                <p class="intro-text">Welcome to the CodeLab Java course. Java is a statically typed, object-oriented language used for server software, Android applications, desktop tools, and large business systems. Java source code is compiled to bytecode that runs on a Java Virtual Machine (JVM).</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>How to use this course:</strong> Follow the Java lessons in the sidebar. Each chapter explains a concept, shows code, and gives you a small exercise to try on your computer.</p></div>
+                <p>Java is <strong>statically typed</strong>: the compiler checks the kinds of values your code uses before the program runs. This catches many mistakes early and makes the structure of larger programs easier to reason about.</p>
+                <p>The JVM (Java Virtual Machine) runs compiled Java bytecode. Because bytecode runs on JVM implementations for different operating systems, a program can often move between platforms without changing its source code, provided the required Java version and libraries are available.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>What you will learn</h2>
+                <ul class="feature-list">
+                    <li><strong class="highlight">Getting started:</strong> Install a JDK, compile a Java file, and run your first program.</li>
+                    <li><strong class="highlight">Language fundamentals:</strong> Understand statements, variables, types, operators, and control flow.</li>
+                    <li><strong class="highlight">Reusable code:</strong> Write methods and organize data using classes and objects.</li>
+                    <li><strong class="highlight">Practice:</strong> Compile each example and change it to test your understanding.</li>
+                </ul>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Your first Java program</h2>
+                <p class="desc-text">A Java application starts running from its <code>main</code> method. The public class name must match the source filename.</p>
+                <pre class="lesson-code"><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, CodeLab!");
+    }
+}</code></pre>
+                <p>Save the code as <code>Main.java</code>. The <a href="java-get-started.html">Get Started lesson</a> explains how to compile and run it.</p>
+                <p>The filename and public class name match because Java uses the public class as the named type defined by this source file. The <code>main</code> method has a particular signature that the Java launcher recognizes; it is the starting point, not a special kind of class.</p>
+                <p>When you compile, <code>javac</code> checks the source and produces bytecode, usually in <code>Main.class</code>. Running <code>java Main</code> asks the JVM to load that class and invoke its entry point. This separation helps distinguish compile-time errors from problems that only appear while the program runs.</p>
+            </section>
+            <section class="content-section">
+                <h2>A good way to learn</h2>
+                <ol class="lang-grid">
+                    <li>Read one topic and type the example yourself instead of only copying it.</li>
+                    <li>Compile and run the code, then change a value or add a new case.</li>
+                    <li>When an error appears, read its message and check the line it points to.</li>
+                    <li>Build a small program that combines the concepts from several chapters.</li>
+                </ol>
+                <div class="cta-box"><h4>Start with <a href="java-get-started.html">Java Get Started</a>, then work through the sidebar chapters.</h4></div>
+                <p>The lessons build on one another: variables hold the data that operators calculate, conditions choose a path, and loops repeat work. Methods package related steps, while classes combine data and behavior into reusable types.</p>
+                <p>When a new idea feels abstract, make the smallest program that demonstrates it, then vary one input at a time. This makes cause and effect visible and helps you connect compiler messages, program state, and output.</p>
+            </section>
+            <div class="chapter-navigation">
+                <a href="index.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Home</a>
+                <a href="java-get-started.html" class="nav-btn next-btn">Get Started &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

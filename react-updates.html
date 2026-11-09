@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updating Arrays and Objects | React | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="react-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html" class="active">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="React tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Updating Arrays and Objects</h1>
+                <p class="intro-text">Update state immutably: spread objects to change properties and create new arrays when adding, removing, or updating items. Compute derived values from state rather than keeping duplicate copies.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>React treats state as a render snapshot. Do not mutate an object or array stored in state; create a new value with spread, map, or filter so React can detect the update and old references stay unchanged.</p>
+                <p>Use a functional setter when an update depends on prior state. Spread preserves array entries, map replaces a matching entry, and filter removes entries; each operation returns a new array without editing the original.</p>
+                <p>Nested data requires copying every changed level. For deeply nested objects, choose a simpler state shape or a well-established immutable-update helper instead of mutating a nested value in place.</p>
+                <p>The example appends through the updater form, which remains correct if updates are queued. For todos, identify entries by stable IDs when removing or editing rather than relying on current positions.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>const [items, setItems] = useState([&quot;Read&quot;]);
+
+function addItem() {
+  setItems(current =&gt; [...current, &quot;Practice&quot;]);
+}
+
+function renameFirst() {
+  setItems(current =&gt; current.map((item, index) =&gt;
+    index === 0 ? &quot;Review&quot; : item
+  ));
+}</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create a todo list that adds and removes items without mutating its state array.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="react-forms.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Forms and Controlled Inputs</a>
+                <a href="react-effects.html" class="nav-btn next-btn">Effects and Data Fetching &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

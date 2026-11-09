@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio and Video | HTML | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="html-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html" class="active">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="HTML tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Audio and Video</h1><p class="intro-text">Explore audio and video through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Native audio and video elements provide playback controls. Include captions for video dialogue and alternatives for media.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>The native <code>audio</code> and <code>video</code> elements let browsers expose familiar playback controls and multiple source choices. The <code>controls</code> attribute gives users a way to play, pause, adjust volume, and seek.</p><h3>How to apply it</h3><p>Captions communicate spoken dialogue and important sounds to people who cannot hear the track, while a transcript can make the information searchable and available in another format. Provide alternatives appropriate to the media and keep them synchronized with the content.</p><h3>Common pitfalls</h3><p>Autoplay can be disruptive and may be blocked by browsers, especially when sound is enabled. Do not make media the only way to receive essential information, and check that controls, captions, and fallback text work on the devices you support.</p></div>
+<pre class="lesson-code"><code>&lt;video controls width="640" poster="preview.jpg"&gt;
+  &lt;source src="tour.mp4" type="video/mp4"&gt;
+  &lt;track kind="captions" src="tour-en.vtt" srclang="en" label="English"&gt;
+  Your browser cannot play this video.
+&lt;/video&gt;</code></pre>
+<p>Play the example with sound off and confirm that captions or an equivalent transcript still communicate the important information.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Add a video with controls, a poster, and captions. Consider what alternative formats users may need.</p><p>When ready, continue to <a href="html-embedding.html">Embedding Content</a>. You can return to the <a href="html.html">HTML course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="html-form-validation.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Form Validation</a>
+<a href="html-embedding.html" class="nav-btn next-btn">Next: Embedding Content &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

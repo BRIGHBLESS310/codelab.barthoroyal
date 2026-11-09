@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Box Model | CSS | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="css-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html" class="active">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="CSS tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">The Box Model</h1><p class="intro-text">Explore the box model through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Each element is a box made of content, padding, border, and margin. These layers affect its size and surrounding space.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>The box model measures an element's content area plus padding, border, and margin. Padding adds room inside the border; margin separates the element from its neighbors, and neither should be confused with the content size.</p><h3>How to apply it</h3><p>With the default <code>content-box</code> sizing, declared width describes only the content, so padding and borders increase the rendered total. <code>box-sizing: border-box</code> makes the declared width include content, padding, and border, which is often easier to reason about.</p><h3>Common pitfalls</h3><p>Margins can collapse vertically in some block-layout situations, so two adjacent margins do not always add together. Inspect the box-model diagram in browser tools when spacing seems surprising rather than compensating with arbitrary negative values.</p></div>
+<pre class="lesson-code"><code>*, *::before, *::after { box-sizing: border-box; }
+.card { width: 20rem; padding: 1.25rem; border: 2px solid #cbd5e1; margin: 1rem; }</code></pre>
+<p>Calculate the total outer size from the declared width and the example's padding and border, then repeat the calculation with border-box sizing.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Give a card width, padding, border, and margin. Inspect its dimensions in developer tools.</p><p>When ready, continue to <a href="css-typography.html">Typography</a>. You can return to the <a href="css.html">CSS course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="css-colors-units.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Colors and Units</a>
+<a href="css-typography.html" class="nav-btn next-btn">Next: Typography &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

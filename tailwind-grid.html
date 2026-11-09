@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Grid | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Create two-dimensional layouts</h1>
+                <p class="intro-text">CSS Grid arranges content in rows and columns. Tailwind utilities can define columns, gaps, alignment, and responsive changes without writing separate selector rules.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Grid works well for repeated cards or dashboards where both row and column alignment matter. Use a single column on small screens, then add columns at suitable breakpoints.</p>
+            </section>
+            <section class="content-section">
+                <h2>Think in tracks and placement</h2>
+                <p>CSS Grid defines tracks—rows and columns—and places children into the resulting two-dimensional space. A declaration such as <code>grid-cols-3</code> establishes three equal columns; a gap utility adds space between tracks without adding margins to each child.</p>
+                <p>Grid is a good fit when alignment across both dimensions matters, such as a card gallery or a dashboard. A responsive grid can change its column count at breakpoints, but fixed track counts may overflow when a container is narrow. Consider minimum track sizes and the content's natural width.</p>
+                <p>Grid controls the container's layout, while the child utilities control each item's own appearance. Keeping those roles separate helps debug unexpected placement: first check the parent’s grid definition, then the item’s span or order. Use Flexbox when the layout is fundamentally a single row or column.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The grid starts with one column and expands at the small and large breakpoints. The gap applies in both directions.</p>
+                <pre class="lesson-code"><code>&lt;div class=&quot;grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3&quot;&gt;
+  &lt;article class=&quot;rounded-lg border p-4&quot;&gt;Plan&lt;/article&gt;
+  &lt;article class=&quot;rounded-lg border p-4&quot;&gt;Build&lt;/article&gt;
+  &lt;article class=&quot;rounded-lg border p-4&quot;&gt;Review&lt;/article&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Make a card grid that has one column by default and three columns on a wide screen. Add enough sample cards to see how rows fill.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-flexbox.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Flexbox</a>
+                <a href="tailwind-responsive-design.html" class="nav-btn next-btn">Responsive Design &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

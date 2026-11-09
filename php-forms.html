@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Request Data | PHP | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="php-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html" class="active">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="PHP tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Forms and Request Data</h1>
+                <p class="intro-text">HTML forms send request data to the server. Values in $_GET and $_POST are untrusted: check the request method, ensure fields exist, validate formats, and provide helpful errors.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>HTML forms send request data to the server. Values in $_GET and $_POST are untrusted: check the request method, ensure fields exist, validate formats, and provide helpful errors.</p>
+                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>&lt;?php
+$name = &quot;&quot;;
+if ($_SERVER[&quot;REQUEST_METHOD&quot;] === &quot;POST&quot;) {
+    $name = trim($_POST[&quot;name&quot;] ?? &quot;&quot;);
+}
+?&gt;
+&lt;form method=&quot;post&quot;&gt;
+  &lt;label&gt;Name &lt;input name=&quot;name&quot; required&gt;&lt;/label&gt;
+  &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                <p>Run or adapt this example in an appropriate local learning environment. Pay attention to the inputs, the result, and any assumptions the code makes.</p>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Build a form that rejects blank names on the server and displays an escaped response.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="php-functions.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Functions</a>
+                <a href="php-validation.html" class="nav-btn next-btn">Validation and Safe Output &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

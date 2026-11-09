@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Python Topics | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="python.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav id="emo">
+        <a href="index.html">Home</a><a href="python.html" class="active">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Python tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-python"></i> Python Tutorial</h3>
+            <a href="python.html">Python Intro</a><a href="pythongetstarted.html">Python Get Started</a>
+            <a href="pythonsinax.html">Python Syntax</a><a href="pythoncommet.html">Python Comments</a>
+            <a href="pythonvariable.html">Python Variables</a><a href="data.html">Python Data Types</a>
+            <a href="numbers.html">Python Numbers</a><a href="casting.html">Python Casting</a>
+            <a href="python-strings.html">Python Strings</a><a href="python-booleans.html">Python Booleans</a>
+            <a href="python-operators.html">Python Operators</a><a href="python-lists.html">Python Lists</a>
+            <a href="python-advanced.html#tuples">Python Tuples</a><a href="python-advanced.html#sets">Python Sets</a>
+            <a href="python-advanced.html#dictionaries">Python Dictionaries</a><a href="python-advanced.html#ifelse">Python If...Else</a>
+            <a href="python-advanced.html#whileloops">Python While Loops</a><a href="python-advanced.html#forloops">Python For Loops</a>
+            <a href="python-advanced.html#functions">Python Functions</a><a href="python-advanced.html#lambda">Python Lambda</a>
+            <a href="python-advanced.html#arrays">Python Arrays</a><a href="python-advanced.html#classes">Python Classes/Objects</a>
+        </aside>
+    <main id="python-container">
+        <section class="hero-card"><h1 class="glow-text">More Python Topics</h1><p class="intro-text">This lesson brings together collections, control flow, functions, and classes. These features build on variables, values, comparisons, and indentation to help you organize larger programs.</p></section>
+        <section class="content-section" id="tuples">
+            <h2>Tuples</h2><p>Tuples are ordered sequences that cannot be changed after creation. They are useful for fixed groups of related values.</p>
+            <pre class="lesson-code"><code>point = (4, 7)
+x, y = point
+print(x, y)</code></pre>
+            <p>Like lists, tuples keep items in order and support indexing, slicing, and iteration. Unlike lists, a tuple cannot have its items added, removed, or replaced after it is created, which makes it useful for a fixed record such as coordinates or a function's multiple return values.</p>
+            <p>The example uses tuple unpacking: Python assigns each item to a matching name. The number of names must match the number of items, or unpacking raises an error. A one-item tuple needs a trailing comma, as in <code>(4,)</code>, to distinguish it from a parenthesized number.</p>
+        </section>
+        <section class="content-section" id="sets">
+            <h2>Sets</h2><p>Sets hold unique values and support efficient membership checks and set operations.</p>
+            <pre class="lesson-code"><code>languages = {"Python", "Java"}
+languages.add("Rust")
+print("Python" in languages)</code></pre>
+            <p>Adding a value already present does not create a duplicate, which makes sets useful for deduplication and checking whether an item has been seen. Sets are unordered, so do not depend on the displayed order or try to retrieve a value by numeric index.</p>
+            <p>Set operations such as union, intersection, and difference compare groups of values. Elements must be hashable, so immutable values such as strings and numbers work as elements while mutable lists do not. Use a list instead when order or repeated entries matter.</p>
+        </section>
+        <section class="content-section" id="dictionaries">
+            <h2>Dictionaries</h2><p>Dictionaries map keys to values. Use clear, hashable keys and handle keys that may be absent.</p>
+            <pre class="lesson-code"><code>person = {"name": "Ada", "age": 36}
+print(person.get("name"))
+person["city"] = "Lagos"</code></pre>
+            <p>A dictionary is useful when values have labels: a program can retrieve a person's name by its key instead of remembering a numeric position. Keys are unique; assigning to an existing key replaces its value, while assigning to a new key adds an entry.</p>
+            <p>Bracket lookup raises <code>KeyError</code> when a key is missing. Use <code>get()</code> when absence is expected or provide a default, and choose stable immutable keys such as strings. Dictionaries connect naturally to data types: their values can themselves be lists, other dictionaries, or any other Python objects.</p>
+        </section>
+        <section class="content-section" id="ifelse">
+            <h2>If...else</h2><p>Conditions choose which block runs. Python uses indentation to define each block.</p>
+            <pre class="lesson-code"><code>score = 82
+if score >= 70:
+    print("Pass")
+else:
+    print("Try again")</code></pre>
+            <p>The condition is evaluated as true or false. Python runs the indented block after <code>if</code> when it is true; otherwise, the optional <code>else</code> block runs. Use <code>elif</code> to test another condition in order, and remember that only the first matching branch is selected.</p>
+            <p>The colon begins each block and indentation marks its boundaries, linking conditionals to the syntax lesson. Keep related checks together and consider boundary values when testing comparisons—for instance, check scores just below, equal to, and above the passing threshold.</p>
+        </section>
+        <section class="content-section" id="whileloops">
+            <h2>While loops</h2><p>A <code>while</code> loop repeats while its condition is true. Ensure the loop can eventually stop.</p>
+            <pre class="lesson-code"><code>count = 3
+while count > 0:
+    print(count)
+    count -= 1</code></pre>
+            <p>Python checks the condition before every iteration, so a false condition at the start means the body runs zero times. In this example, the counter is reduced on each pass until the condition becomes false; that change is what guarantees progress toward stopping.</p>
+            <p>If no part of the loop can make its condition false, the loop can run indefinitely. Use a <code>while</code> loop when repetition depends on a condition or user input, and keep the update that changes the condition easy to spot.</p>
+        </section>
+        <section class="content-section" id="forloops">
+            <h2>For loops</h2><p>A <code>for</code> loop visits each item in an iterable, such as a list or a range.</p>
+            <pre class="lesson-code"><code>for number in range(1, 4):
+    print(number)</code></pre>
+            <p>On each iteration, the loop variable receives the next item. <code>range(1, 4)</code> produces 1, 2, and 3: its start is included and its stop is excluded. This makes ranges work naturally with zero-based indexes and adjacent slices.</p>
+            <p>A <code>for</code> loop is usually the clearest choice when processing every item in a collection, while a <code>while</code> loop is useful when the stopping point depends on a changing condition. Avoid changing the collection being iterated unless you have planned for how its positions change.</p>
+        </section>
+        <section class="content-section" id="functions">
+            <h2>Functions</h2><p>Functions group reusable behavior. Parameters provide inputs, and <code>return</code> sends a result back.</p>
+            <pre class="lesson-code"><code>def double(number):
+    return number * 2
+
+print(double(5))</code></pre>
+            <p><code>def</code> defines a function, and its indented body runs when the function is called. The value inside the parentheses is a parameter; the call supplies an argument. This separation lets one implementation work with many input values.</p>
+            <p><code>return</code> passes a result back to the caller, where it can be stored or used in another expression. A function without a <code>return</code> statement returns <code>None</code>. Give functions focused names and responsibilities so they are easier to test and reuse.</p>
+        </section>
+        <section class="content-section" id="lambda">
+            <h2>Lambda expressions</h2><p>A lambda is a small anonymous function expression. Use a regular <code>def</code> when behavior needs a name or multiple steps.</p>
+            <pre class="lesson-code"><code>names = ["Mina", "Ada", "Zoe"]
+print(sorted(names, key=lambda name: len(name)))</code></pre>
+            <p>The lambda expression takes one argument, <code>name</code>, and returns its length. The <code>key</code> parameter tells <code>sorted()</code> which value to compare for each item, so the names are ordered by length rather than alphabetically.</p>
+            <p>A lambda can contain only a single expression and is best for short behavior passed directly to another function. If the operation needs explanation, multiple steps, or repeated use, a named function communicates intent more clearly.</p>
+        </section>
+        <section class="content-section" id="arrays">
+            <h2>Arrays</h2><p>For general-purpose sequences, Python's built-in list is commonly used. The <code>array</code> module can store compact sequences of numeric values of a specified type.</p>
+            <pre class="lesson-code"><code>from array import array
+scores = array("i", [10, 20, 30])
+print(scores[0])</code></pre>
+            <p>The type code <code>"i"</code> requests an array of signed integers, so its values must match that element type. Arrays can use less memory than lists for large, uniform numeric sequences, but they are less flexible because they cannot mix arbitrary object types.</p>
+            <p>For most everyday collections, a list is the simpler choice. Specialized numerical workloads may use libraries such as NumPy, which provide additional operations; choose a representation based on the data and operations you need rather than using an array solely because it exists.</p>
+        </section>
+        <section class="content-section" id="classes">
+            <h2>Classes and objects</h2><p>A class defines a type; an object is an instance of that type. Keep classes focused on a clear responsibility.</p>
+            <pre class="lesson-code"><code>class Greeter:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        return f"Hello, {self.name}"
+
+print(Greeter("Ada").greet())</code></pre>
+            <p>Calling <code>Greeter("Ada")</code> creates an instance and invokes <code>__init__</code> to initialize its state. The parameter <code>self</code> refers to that particular object; <code>self.name</code> stores data that the object's other methods can use.</p>
+            <p>Methods are functions defined on a class, and calling one through an instance supplies that instance as <code>self</code>. Classes are useful when data and related behavior belong together, but a small script may be clearer with ordinary functions and collections. This connects object-oriented design to the variables and functions learned earlier.</p>
+        </section>
+        <section class="content-section"><h2>Keep going</h2><p>Practice each concept by building small programs, then explore modules, exceptions, and testing.</p><p><a href="python.html">Return to the Python introduction</a> or explore <a href="python-lists.html">Python Lists</a>.</p></section>
+        <section class="content-section animate-fade" data-python-sandbox>
+            <h2><i class="fa-solid fa-laptop-code"></i> Try It Yourself</h2>
+            <p class="desc-text">Edit the sample and press Run Code. This lightweight preview supports basic assignments and <code>print()</code>, not these collection, control-flow, function, or class examples; run them in a local Python interpreter.</p>
+            <div class="editor-wrapper">
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-code"></i> Python Input Code</span><button class="copy-btn" data-action="copy" type="button"><i class="fa-solid fa-copy"></i> Copy Code</button></div>
+                    <textarea class="python-editor" aria-label="Python code editor" spellcheck="false">message = "Keep practicing Python!"
+print(message)</textarea>
+                    <div class="editor-actions"><button class="run-btn" data-action="run" type="button"><i class="fa-solid fa-play"></i> Run Code</button></div>
+                </div>
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-terminal"></i> Output Window</span><button class="clear-btn" data-action="clear" type="button"><i class="fa-solid fa-trash"></i> Clear</button></div>
+                    <div class="terminal-box" aria-live="polite">Click "Run Code" to view output...</div>
+                </div>
+            </div>
+        </section>
+        <div class="chapter-navigation">
+            <a href="python-lists.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> &laquo; Previous</a>
+            <a href="python.html" class="nav-btn next-btn">Course Overview &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </main>
+    </div>
+    <script>
+        function updateActiveTopic() {
+            const topic = window.location.hash || "#tuples";
+            document.querySelectorAll(".sidebar a[href^='python-advanced.html#']").forEach(link => {
+                link.classList.toggle("active", link.hash === topic);
+            });
+        }
+
+        updateActiveTopic();
+        window.addEventListener("hashchange", updateActiveTopic);
+    </script>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+    <script src="python-sandbox.js"></script>
+</body>
+</html>

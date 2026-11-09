@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Numbers | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="numbers">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Numbers</h1><p class="intro-text">JavaScript uses the Number type for most numeric values. It includes special values such as NaN and Infinity. Decimal calculations use floating-point arithmetic.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>One type for ordinary numbers</h3><p>JavaScript uses <code>Number</code> for integers and fractional values using floating-point representation. The same type includes <code>NaN</code>, <code>Infinity</code>, and negative infinity. Numeric literals can be decimal, binary, octal, or hexadecimal.</p><h3>Precision and conversion affect results</h3><p>Many decimal fractions cannot be represented exactly in binary floating point, leading to tiny rounding differences. Convert text deliberately and check results with <code>Number.isFinite()</code> or <code>Number.isNaN()</code>. For exact currency arithmetic, store integer minor units.</p><h3>A numeric-looking string is still text</h3><p><code>"12"</code> is a string until converted, and operators can coerce it differently. Check whole-number requirements separately with <code>Number.isInteger()</code>. Numeric fundamentals support comparisons, Math operations, and reliable form handling.</p></section><section class="content-section"><h2>Check numeric results</h2><p>Use Number.isNaN() and Number.isFinite() to check numeric results. Applications involving money should account for floating-point precision.</p><pre class="lesson-code"><code>const result = 0.1 + 0.2;
+console.log(result);
+console.log(Number.isFinite(result));</code></pre><h2>Practice</h2><p>Calculate a percentage and check the result with Number.isFinite().</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

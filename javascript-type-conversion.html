@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Type Conversion | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="type-conversion">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Type Conversion</h1><p class="intro-text">Convert values explicitly when possible. This helps avoid surprises from implicit coercion, where JavaScript changes a value's type during an operation.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Conversion changes a values type</h3><p>Explicit conversion uses <code>Number()</code>, <code>String()</code>, or <code>Boolean()</code>; implicit coercion occurs when operators expect compatible operands. Deliberate conversion reduces surprises in arithmetic and conditional logic.</p><h3>Inputs convert in different ways</h3><p><code>Number("42")</code> produces a number, while nonnumeric text gives <code>NaN</code>; an empty string becomes zero. Empty arrays and objects are truthy. Parsing functions may accept a numeric prefix, which is not the same as validating the entire input.</p><h3>Validate the converted result</h3><p>A conversion can succeed but still produce a value outside application rules. After converting form data, check whether it is finite and in range. Avoid relying on <code>==</code> coercion; explicit conversion makes comparisons easier to explain.</p></section><section class="content-section"><h2>Convert deliberately</h2><p>Check conversions that may fail: for example, Number("hello") produces NaN. Number.isNaN() can help detect an invalid numeric result.</p><pre class="lesson-code"><code>const text = "42";
+const amount = Number(text);
+const label = String(amount);
+console.log(amount + 1, label);</code></pre><h2>Practice</h2><p>Convert a text input to a number and check whether the result is finite.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

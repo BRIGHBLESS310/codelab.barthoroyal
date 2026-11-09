@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Tutorial | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="sql-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html" class="active">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="SQL tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text"><i class="fa-solid fa-database"></i> SQL Tutorial</h1>
+                <p class="intro-text">SQL (Structured Query Language) lets you define, query, and update relational data. Follow this course from your first query through relationships, transactions, and query design.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>Learning goal:</strong> Read and shape relational data, define integrity rules, and make data changes safely. Follow the course in order or choose a topic in the sidebar. Each lesson has its own page and previous/next links.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Start learning SQL</h2>
+                <p>Begin with <a href="sql-get-started.html">SQL Get Started</a>. Read the explanation, try the example in a suitable environment, and complete its practice prompt.</p>
+                <ul class="feature-list"><li><strong class="highlight">Get Started:</strong> Relational databases organize information into tables of rows and columns. SQL is the language used to define tables and ask questions about their data. SQLite, PostgreSQL, and MySQL are common engines; some syntax differs among them.</li><li><strong class="highlight">SELECT and FROM:</strong> SELECT chooses the columns to return and FROM identifies the table. Name only columns you need: explicit selections are easier to read and avoid transferring unnecessary data. Aliases give result columns clearer names.</li><li><strong class="highlight">Filtering and Sorting:</strong> WHERE filters rows, ORDER BY sorts results, and LIMIT can cap the number returned. Use parentheses when mixing AND and OR. IS NULL checks missing values; comparisons with NULL do not behave like ordinary equality.</li><li><strong class="highlight">INSERT, UPDATE, DELETE:</strong> INSERT adds rows, UPDATE changes matching rows, and DELETE removes them. Before changing data, inspect the target with SELECT and ensure UPDATE or DELETE has a specific WHERE clause. Practice on a disposable copy.</li></ul>
+            </section>
+            <section class="content-section">
+                <h2>How to get the most from this course</h2>
+                <ol class="lang-grid">
+                    <li>Work through the chapters in order; each topic links directly to its dedicated lesson file.</li>
+                    <li>Type and adapt examples instead of only reading them.</li>
+                    <li>Try the practice prompt, then use previous and next links to review or continue.</li>
+                    <li>Use a local development or practice environment for experiments.</li>
+                </ol>
+            </section>
+            <div class="chapter-navigation">
+                <a href="index.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Home</a>
+                <a href="sql-get-started.html" class="nav-btn next-btn">Start the course &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

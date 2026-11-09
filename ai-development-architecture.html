@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Application Architecture | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Separate interface, service, and model</h1>
+                <p class="intro-text">A simple architecture keeps the user interface separate from trusted server logic and external model services. The server can apply access checks, minimize data, enforce limits, and validate responses.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Do not let a client directly control privileged tools or choose arbitrary upstream resources. Define narrow endpoints and authorization rules for each capability.</p>
+            </section>
+            <section class="content-section">
+                <h2>Separate responsibilities at trust boundaries</h2>
+                <p>A typical feature has an interface that collects user intent, a service that enforces application rules, and a model integration that handles inference. The service can check permissions, minimize inputs, shape prompts, and validate results before anything reaches the user.</p>
+                <p>This separation makes failures easier to handle: the interface can present a safe fallback, while the service records operational metrics without exposing unnecessary content. It also makes model providers easier to change and helps keep API credentials away from client-side code.</p>
+                <p>Do not let the model become the authority for access control, business rules, or safety checks. Enforce those deterministically in trusted application code. Clear boundaries also support focused testing: test the service contract, the model behavior, and the full user journey separately.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The server is the control point for policy and integration. The browser receives only the data needed for the interaction, not secrets or unrestricted service access.</p>
+                <pre class="lesson-code"><code>Browser UI -&gt; authenticated app endpoint
+App endpoint -&gt; validate request and permissions
+App endpoint -&gt; model or retrieval service
+App endpoint -&gt; validate result -&gt; UI</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Draw the request path for an AI feature. Label trust boundaries, user identity checks, data stores, and the component that owns the provider credential.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-model-api.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Models &amp; APIs</a>
+                <a href="ai-development-prompt-design.html" class="nav-btn next-btn">Prompt Design &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

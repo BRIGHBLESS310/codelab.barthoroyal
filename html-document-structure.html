@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Structure | HTML | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="html-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html" class="active">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="HTML tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Document Structure</h1><p class="intro-text">Explore document structure through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Every page starts with a doctype and a root html element. The head stores document information; the body contains visible content.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>The doctype tells the browser to use modern, standards-based HTML parsing; it is a declaration, not an element. The root <code>html</code> element contains the entire document, and its <code>lang</code> value helps assistive technology and language-aware tools pronounce and process text.</p><h3>How to apply it</h3><p>The <code>head</code> contains metadata and resource references rather than the page's ordinary visible content. Character encoding should be declared early, the viewport setting allows a sensible mobile layout, and the <code>title</code> names the page in browser tabs, bookmarks, and search results.</p><h3>Common pitfalls</h3><p>The <code>body</code> holds the document content users interact with. Keep one coherent document tree, nest elements according to their parent-child relationships, and do not omit the doctype: quirks mode can make browser layout behave differently.</p></div>
+<pre class="lesson-code"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Welcome&lt;/h1&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Trace the document from the doctype to the closing root tag; then move the heading into the head and notice why metadata and visible page content belong in different places.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Create a complete page for a hobby with a meaningful title, language, and main heading.</p><p>When ready, continue to <a href="html-elements.html">Elements and Attributes</a>. You can return to the <a href="html.html">HTML course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="html.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Course Overview</a>
+<a href="html-elements.html" class="nav-btn next-btn">Next: Elements and Attributes &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

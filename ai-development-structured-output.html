@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Structured Output | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Validate structured model output</h1>
+                <p class="intro-text">Structured output can make a response easier for an application to process, but a model&#x27;s JSON-looking text is not automatically valid or trustworthy. Use supported schema features where available and validate on the server.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Check required fields, types, allowed values, and size. Treat any returned text as untrusted data; do not execute it or use it to bypass authorization.</p>
+            </section>
+            <section class="content-section">
+                <h2>Parsing is not the same as validation</h2>
+                <p>Structured output asks a model to return fields in a predictable shape, often JSON. A syntactically valid response can still omit required information, use an unexpected value, or invent content. Parsing only checks whether the representation can be read; it does not establish that the data is complete or correct.</p>
+                <p>Define a schema with required fields, types, allowed ranges, and enumerated values where appropriate. Validate the response on the server and handle parse failures or schema violations as expected outcomes. Do not silently coerce invalid values into trusted application state.</p>
+                <p>For consequential fields, check them against trusted source material or ask a person to review them. A schema constrains form, not truth. Keep the original evidence available where permitted so downstream users can understand what a value means and where it came from.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>Parsing and checking fields are separate steps. Validation prevents malformed or unexpected content from silently becoming application state.</p>
+                <pre class="lesson-code"><code>raw = model_response()
+result = parse_json(raw)
+
+if result.get(&quot;status&quot;) not in {&quot;ready&quot;, &quot;needs_review&quot;}:
+    raise ValueError(&quot;Unexpected status&quot;)
+if not isinstance(result.get(&quot;summary&quot;), str):
+    raise ValueError(&quot;Summary must be text&quot;)</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Define a three-field schema for a meeting summary. List allowed values and one validation failure for each field.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-prompt-design.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Prompt Design</a>
+                <a href="ai-development-retrieval.html" class="nav-btn next-btn">Retrieval-Augmented Generation &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

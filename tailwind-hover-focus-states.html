@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Hover &amp; Focus States | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Style interaction states accessibly</h1>
+                <p class="intro-text">State variants such as hover:, focus:, active:, and disabled: apply utilities for a particular interaction state. Keyboard users need a clear focus indicator, even when hover styling is present.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Do not remove the browser outline without replacing it. Ensure controls communicate disabled state and retain adequate contrast in all states.</p>
+            </section>
+            <section class="content-section">
+                <h2>Make interaction states perceivable</h2>
+                <p>A state variant scopes a utility to a condition: <code>hover:bg-*</code> changes appearance while a pointing device is over an element, and <code>focus-visible:ring-*</code> can make keyboard focus easy to track. These variants describe when a style applies; they do not add behavior such as navigation or form submission.</p>
+                <p>Hover is not a substitute for focus. Keyboard users need a clearly visible focus indicator, and touch users may never experience hover. Avoid removing the browser outline unless a replacement remains visible with sufficient contrast against every relevant background.</p>
+                <p>Choose states that explain the control's affordance—what it does and whether it is available. Disabled, active, and selected states may need separate semantics as well as visual treatments. Native buttons and links provide keyboard behavior and accessibility semantics that styling alone cannot supply.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>Hover changes the background, focus-visible draws a keyboard indicator, and disabled styles clarify unavailable interaction. Native button semantics provide keyboard activation.</p>
+                <pre class="lesson-code"><code>&lt;button class=&quot;rounded bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:cursor-not-allowed disabled:opacity-50&quot;&gt;
+  Continue
+&lt;/button&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Add hover, keyboard focus, and disabled styles to a link and a button. Navigate using only the keyboard and verify each state is easy to see.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-responsive-design.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Responsive Design</a>
+                <a href="tailwind-borders-shadows.html" class="nav-btn next-btn">Borders &amp; Shadows &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

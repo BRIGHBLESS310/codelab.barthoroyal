@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Reliability &amp; Fallbacks | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Plan for timeouts and uncertainty</h1>
+                <p class="intro-text">Model services can be slow, unavailable, rate-limited, or uncertain. A reliable feature sets deadlines, handles errors explicitly, and gives users a useful alternative rather than hanging or inventing a result.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Use bounded retries only where safe, prevent duplicate side effects, and monitor failure rates. Make uncertainty visible and provide a human or non-AI path for important tasks.</p>
+            </section>
+            <section class="content-section">
+                <h2>Design for failures as normal outcomes</h2>
+                <p>Model calls depend on networks and external services, so they can time out, be rate-limited, or return malformed output. Set a bounded timeout and define a useful fallback, such as offering a manual path or explaining that the feature is temporarily unavailable.</p>
+                <p>Retries can help with transient errors but may multiply cost or repeat side effects. Retry only appropriate failures, use backoff and limits, and make actions idempotent where possible. Do not repeatedly submit a request that has already caused an external change.</p>
+                <p>Model output itself is uncertain even when the API succeeds. Validate it, communicate uncertainty honestly, and avoid presenting unsupported content as authoritative. Track latency, failure rate, and quality signals so teams can distinguish an outage from a gradual change in model behavior.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The example distinguishes timeout, outage, and low confidence. Each has a clear user-facing fallback instead of returning an empty or fabricated answer.</p>
+                <pre class="lesson-code"><code>try:
+    result = await call_model(timeout=15)
+except TimeoutError:
+    return show_search_instead()
+except ServiceUnavailable:
+    return explain_temporary_issue()
+
+if result.confidence_is_insufficient:
+    return offer_human_help()</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>List three failure modes for your project and write the exact user-facing fallback for each. Include how the user can continue without AI.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-privacy.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Privacy &amp; Data Handling</a>
+                <a href="ai-development-deployment.html" class="nav-btn next-btn">Deployment &amp; Monitoring &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

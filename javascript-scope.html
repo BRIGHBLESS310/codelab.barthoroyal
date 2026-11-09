@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Scope | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="scope">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Scope</h1><p class="intro-text">Scope determines where a name is available. Variables declared with let and const are block-scoped; parameters and local variables are available within their function.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Where a name can be accessed</h3><p>Scope is the region where a declared name is visible. JavaScript has global, function, and block scopes; <code>let</code> and <code>const</code> are block-scoped, while parameters and local declarations belong to a function.</p><h3>Closures preserve outer bindings</h3><p>A nested function can use variables from where it was created even after the outer function returns. This closure behavior supports private state and callbacks. It captures bindings, not a frozen snapshot, so later updates can be observed.</p><h3>Limit global state</h3><p>A name may be unavailable outside its block, and using it before lexical initialization causes an error. Accidental globals create collisions and hidden dependencies. Keep variables near their use; closures and modules provide controlled sharing.</p></section><section class="content-section"><h2>Use variables in scope</h2><p>Keep variables close to where they are used. Closures let an inner function continue to access variables from its surrounding scope.</p><pre class="lesson-code"><code>const course = "JavaScript";
+function showCourse() {
+    const message = "Learning " + course;
+    return message;
+}
+console.log(showCourse());</code></pre><h2>Practice</h2><p>Create a function with a local variable and try to access it from outside the function.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

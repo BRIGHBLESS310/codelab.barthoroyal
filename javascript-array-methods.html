@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="array-methods">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Array Methods</h1><p class="intro-text">Array methods express common collection operations. map() transforms items, filter() selects items, and find() returns the first matching item.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Choose the operation by its result</h3><p>Array methods describe a desired operation on an ordered collection. <code>map()</code> returns a same-length array of transformed values, <code>filter()</code> keeps matching values, and <code>find()</code> returns the first matching value or <code>undefined</code>. Their return values communicate intent.</p><h3>Callbacks shape each pass</h3><p>Each method invokes a callback with an element, its index, and the original array. The callback?s return value is important for <code>map()</code> and <code>filter()</code>; chained operations run left to right, each receiving the previous result. Use <code>forEach()</code> when you need an action but no new array.</p><h3>Avoid mutation surprises</h3><p>A common mistake is choosing <code>map()</code> for side effects, or assuming every array method leaves the original alone. Methods such as <code>sort()</code> and <code>splice()</code> mutate; <code>map()</code> and <code>filter()</code> do not. This distinction helps keep data transformations predictable.</p></section><section class="content-section"><h2>Transform and select</h2><p>Use forEach() for an action on each item when you do not need a new array.</p><pre class="lesson-code"><code>const scores = [45, 80, 92];
+const passed = scores.filter(score =&gt; score &gt;= 60);
+const labels = passed.map(score =&gt; "Score: " + score);
+console.log(labels);</code></pre><h2>Practice</h2><p>Filter a list of numbers to keep the positive values, then map them to doubled values.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

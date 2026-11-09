@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Operators and Math | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html">Java Intro</a><a href="java-get-started.html">Java Get Started</a><a href="java-syntax.html">Java Syntax & Output</a>
+            <a href="java-variables.html">Variables & Data Types</a><a href="java-operators.html" class="active">Operators & Math</a>
+            <a href="java-conditions.html">Conditions & Switch</a><a href="java-loops.html">Java Loops</a><a href="java-arrays.html">Java Arrays</a>
+            <a href="java-methods.html">Java Methods</a><a href="java-classes.html">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card"><h1 class="glow-text">Java Operators and Math</h1><p class="intro-text">Operators calculate values, compare data, and combine conditions. Understanding their result types helps prevent common logic errors.</p></section>
+            <section class="content-section">
+                <h2>Arithmetic operators</h2>
+                <p>Java supports addition, subtraction, multiplication, division, and remainder. When both operands are integers, division also produces an integer.</p>
+                <pre class="lesson-code"><code>int sum = 7 + 3;
+int difference = 7 - 3;
+int product = 7 * 3;
+int quotient = 7 / 3;   // 2
+int remainder = 7 % 3;  // 1
+double decimal = 7.0 / 3;</code></pre>
+                <p>Use a decimal operand when you need a fractional result. Parentheses make the intended order of operations explicit.</p>
+                <p>Integer division discards the fractional portion toward zero: <code>7 / 3</code> is <code>2</code>, and <code>-7 / 3</code> is <code>-2</code>. The remainder operator gives what is left after integer division, which is useful for checks such as testing whether a number is even with <code>number % 2 == 0</code>.</p>
+                <p>Java applies operators using precedence rules, so multiplication happens before addition unless parentheses say otherwise. Parentheses are especially helpful when an expression mixes arithmetic or when the intended grouping is important to a reader.</p>
+            </section>
+            <section class="content-section">
+                <h2>Comparison and logical operators</h2>
+                <p>Comparisons return a <code>boolean</code>. Use <code>&amp;&amp;</code> for AND, <code>||</code> for OR, and <code>!</code> for NOT.</p>
+                <pre class="lesson-code"><code>int age = 20;
+boolean isAdult = age >= 18;
+boolean hasPermission = true;
+boolean mayEnter = isAdult && hasPermission;</code></pre>
+                <p>Java's <code>&amp;&amp;</code> and <code>||</code> short-circuit: the second expression is evaluated only when needed to determine the result.</p>
+                <p>Comparisons such as <code>&lt;</code>, <code>&gt;=</code>, and <code>!=</code> produce a boolean that can be stored, combined, or used directly in an <code>if</code>. For objects such as <code>String</code>, use <code>equals()</code> to compare text contents; <code>==</code> checks whether two references identify the same object.</p>
+                <p>Short-circuiting can safely guard an operation that is only valid under a condition. For example, <code>denominator != 0 &amp;&amp; numerator / denominator &gt; 1</code> checks the nonzero case first; the division is skipped when the denominator is zero.</p>
+            </section>
+            <section class="content-section">
+                <h2>Assignment and increment</h2>
+                <p>Compound assignments combine an operation with storing its result. Increment and decrement change an integer by one.</p>
+                <pre class="lesson-code"><code>int score = 10;
+score += 5;  // score is now 15
+score--;     // score is now 14</code></pre>
+                <p>Use these operators as separate, clear statements while learning; embedded increments can make a larger expression harder to follow.</p>
+                <p>Compound assignments such as <code>score += 5</code> make an update concise, but the variable must already have a compatible value. Incrementing changes the variable itself; assigning the result to another name is a separate operation.</p>
+                <p>Post-increment (<code>value++</code>) and pre-increment (<code>++value</code>) both increase the variable by one, but produce their old and new values respectively when used inside a larger expression. A standalone increment avoids that subtle distinction.</p>
+            </section>
+            <section class="content-section">
+                <h2>Useful Math methods</h2>
+                <p>The <code>Math</code> class provides common operations such as absolute value, minimum, maximum, and square root.</p>
+                <pre class="lesson-code"><code>int larger = Math.max(8, 12);
+double distance = Math.sqrt(81);
+double roundedUp = Math.ceil(3.2);</code></pre>
+                <p><code>Math</code> methods return values rather than changing their arguments. The return type may be <code>double</code> even when the input appears whole, so check the method signature when assigning its result to a variable.</p>
+                <p>Floating-point arithmetic is approximate because many decimal fractions cannot be represented exactly in binary. That is usually fine for measurements and graphics, but exact financial calculations need a decimal representation and deliberate rounding rules.</p>
+            </section>
+            <section class="content-section"><h2>Practice</h2><p>Calculate the average of three quiz scores. Make sure the division produces a decimal value, then use a comparison to decide whether the average meets a target.</p></section>
+            <div class="chapter-navigation"><a href="java-variables.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</a><a href="java-conditions.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p><div class="social-links"><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></div></footer>
+</body>
+</html>

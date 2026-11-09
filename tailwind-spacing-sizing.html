@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Spacing &amp; Sizing | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Control spacing and dimensions</h1>
+                <p class="intro-text">Padding adds room inside an element, margin separates it from neighbors, and gap spaces items in a layout. Width and max-width utilities help content remain readable across screen sizes.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Use spacing consistently rather than adjusting each element by arbitrary amounts. A max-width on long-form content prevents lines from becoming difficult to scan.</p>
+            </section>
+            <section class="content-section">
+                <h2>Spacing utilities use a shared scale</h2>
+                <p>Padding creates space inside an element; margin creates space outside it. Tailwind's spacing scale gives these utilities related increments, so repeated gaps and dimensions can align across a page. Directional forms such as <code>px-*</code> affect the horizontal sides, while <code>gap-*</code> spaces items in a layout container.</p>
+                <p>Prefer layout gaps for spacing between flex or grid children when possible. This keeps the relationship on the parent and avoids unexpected margin collapse or inconsistent edge spacing. Use <code>max-w-*</code> to limit readable content width and responsive sizing where the design should adapt to its container.</p>
+                <p>More space is not automatically better: oversized padding can crowd small screens, while fixed widths can cause overflow or truncation. Test with realistic content and narrow viewports. When a scale value is nearly right, first check whether a neighboring token better preserves consistency before choosing an arbitrary value.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The section is centered and capped in width; padding protects its edge, while space-y separates its direct children. The paragraph has an even narrower reading measure.</p>
+                <pre class="lesson-code"><code>&lt;section class=&quot;mx-auto max-w-2xl space-y-4 p-6&quot;&gt;
+  &lt;h2 class=&quot;text-2xl font-bold&quot;&gt;Course notes&lt;/h2&gt;
+  &lt;p class=&quot;max-w-prose&quot;&gt;A readable measure makes longer explanations easier to follow.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Build a profile panel with a maximum width, inner padding, and even spacing between its heading, description, and action. Resize the viewport to check it.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-colors-backgrounds.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Colors &amp; Backgrounds</a>
+                <a href="tailwind-typography.html" class="nav-btn next-btn">Typography &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

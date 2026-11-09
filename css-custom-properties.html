@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Custom Properties | CSS | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="css-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html" class="active">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="CSS tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">CSS Custom Properties</h1><p class="intro-text">Explore css custom properties through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Custom properties store reusable values in the cascade, making design tokens easy to update consistently.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>A custom property begins with two hyphens and is read with <code>var()</code>. Because it participates in the cascade, a value declared on an element is available to that element and its descendants unless a nearer declaration overrides it.</p><h3>How to apply it</h3><p>Shared tokens for colors, spacing, or type scales make a design easier to update consistently. A fallback inside <code>var()</code> can supply a value when the referenced custom property is missing or invalid at the point of use.</p><h3>Common pitfalls</h3><p>Custom properties store token values, not complete selector rules, and their inheritance can make an override affect more descendants than expected. Name tokens by purpose and check the computed value when a declaration appears not to change.</p></div>
+<pre class="lesson-code"><code>:root { --color-brand: #0369a1; --space-card: 1.25rem; }
+.card { border-color: var(--color-brand); padding: var(--space-card, 1rem); }</code></pre>
+<p>Change the token once and find every component that responds; then override it on one section to see how cascade inheritance scopes the change.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Create color and spacing tokens, use them in two components, and update a token once.</p><p>When ready, continue to <a href="css-organization.html">Organizing Stylesheets</a>. You can return to the <a href="css.html">CSS course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="css-transitions.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Transitions and Motion</a>
+<a href="css-organization.html" class="nav-btn next-btn">Next: Organizing Stylesheets &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

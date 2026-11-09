@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Data Types | CodeLab</title>
+    <link rel="stylesheet" href="data.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    <!-- Top Sticky Navigation Bar -->
+    <nav id="emo">
+        <a href="index.html">Home</a>
+        <a href="python.html" class="active">Python</a>
+        <a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a>
+        <a href="tailwind.html">Tailwind</a>
+        <a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a>
+        <a href="sql.html">SQL</a>
+        <a href="react.html">React</a>
+        <a href="c++.html">C++</a>
+        <a href="php.html">PHP</a>
+    </nav>
+
+    <!-- Main Page Layout (Sidebar + Content) -->
+    <div class="page-wrapper">
+        <!-- W3Schools Left Sidebar -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title"><i class="fa-brands fa-python"></i> Python Tutorial</h3>
+            <a href="python.html">Python Intro</a>
+            <a href="pythongetstarted.html">Python Get Started</a>
+            <a href="pythonsinax.html">Python Syntax</a>
+            <a href="pythoncommet.html">Python Comments</a>
+            <a href="pythonvariable.html">Python Variables</a>
+            <a href="data.html" class="active">Python Data Types</a>
+            <a href="numbers.html">Python Numbers</a>
+            <a href="casting.html">Python Casting</a>
+            <a href="python-strings.html">Python Strings</a>
+            <a href="python-booleans.html">Python Booleans</a>
+            <a href="python-operators.html">Python Operators</a>
+            <a href="python-lists.html">Python Lists</a>
+            <a href="python-advanced.html#tuples">Python Tuples</a>
+            <a href="python-advanced.html#sets">Python Sets</a>
+            <a href="python-advanced.html#dictionaries">Python Dictionaries</a>
+            <a href="python-advanced.html#ifelse">Python If...Else</a>
+            <a href="python-advanced.html#whileloops">Python While Loops</a>
+            <a href="python-advanced.html#forloops">Python For Loops</a>
+            <a href="python-advanced.html#functions">Python Functions</a>
+            <a href="python-advanced.html#lambda">Python Lambda</a>
+            <a href="python-advanced.html#arrays">Python Arrays</a>
+            <a href="python-advanced.html#classes">Python Classes/Objects</a>
+        </aside>
+
+        <!-- Main Content Panel -->
+        <main id="python-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Python Data Types</h1>
+                <p class="intro-text">A data type describes what kind of value an object represents and which operations make sense for it. Python determines the type of each value at runtime, and a variable name can later refer to a value of another type.</p>
+            </section>
+
+            <div class="wave-divider"></div>
+
+            <!-- Built-in Data Types Section -->
+            <section class="content-section animate-fade">
+                <h2>Getting the Data Type</h2>
+                <p class="desc-text">You can get the data type of any object by using the <code>type()</code> function:</p>
+                <p class="desc-text">For example, the integer <code>5</code> and the text <code>"5"</code> look similar, but they support different operations: one can be added numerically, while the other is text. <code>type()</code> is useful when exploring values or diagnosing unexpected behavior; in larger programs, clear data flow is often better than repeatedly checking types.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span><i class="fa-solid fa-code"></i> Type Example</span>
+                    </div>
+                    <pre><code>x = 5
+print(type(x))</code></pre>
+                </div>
+            </section>
+
+            <div class="wave-divider"></div>
+
+            <!-- Data Types Table -->
+            <section class="content-section animate-fade">
+                <h2>Python Built-in Data Types</h2>
+                <p class="desc-text">Python has the following data types built-in by default, in these categories:</p>
+                <p class="desc-text">Text values (<code>str</code>) hold characters, numeric types represent quantities, and sequence types keep values in an order. A <code>list</code> can be changed, while a <code>tuple</code> is fixed after creation; a <code>range</code> represents a sequence of integers without storing every item at once.</p>
+
+                <div class="types-grid">
+                    <div class="type-card">
+                        <span class="type-badge">Text Type</span>
+                        <h3>str</h3>
+                        <p><code>x = "Hello World"</code></p>
+                    </div>
+                    <div class="type-card">
+                        <span class="type-badge">Numeric Types</span>
+                        <h3>int, float, complex</h3>
+                        <p><code>x = 20</code>, <code>20.5</code>, <code>1j</code></p>
+                    </div>
+                    <div class="type-card">
+                        <span class="type-badge">Sequence Types</span>
+                        <h3>list, tuple, range</h3>
+                        <p><code>x = ["apple", "banana"]</code></p>
+                    </div>
+                    <div class="type-card">
+                        <span class="type-badge">Mapping Type</span>
+                        <h3>dict</h3>
+                        <p><code>x = {"name" : "John", "age" : 36}</code></p>
+                    </div>
+                    <div class="type-card">
+                        <span class="type-badge">Boolean Type</span>
+                        <h3>bool</h3>
+                        <p><code>x = True</code></p>
+                    </div>
+                </div>
+                <p class="desc-text">A <code>dict</code> maps unique keys to values for labeled lookup, while <code>bool</code> represents <code>True</code> or <code>False</code> and is commonly used in conditions. Choose a type based on how the data will be used: for example, use a list for an ordered collection that changes, or a dictionary when values need meaningful keys.</p>
+            </section>
+
+            <div class="wave-divider"></div>
+
+            <!-- Interactive Try It Yourself Sandbox -->
+            <section class="content-section animate-fade">
+                <h2><i class="fa-solid fa-laptop-code"></i> Try It Yourself (Interactive Sandbox)</h2>
+                <p class="desc-text">The browser preview supports basic assignments and print statements, not every Python type operation. To inspect an actual type, run <code>print(type(value))</code> in a local interpreter; this preview may not reproduce that built-in's behavior.</p>
+
+                <div class="editor-wrapper">
+                    <div class="editor-column">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-code"></i> Python Input Code</span>
+                            <button class="copy-btn" onclick="copyEditorCode()"><i class="fa-solid fa-copy"></i> Copy</button>
+                        </div>
+                        <textarea id="pythonEditor" spellcheck="false"># Check data types
+x = "Welcome to CodeLab"
+y = 42
+z = 3.14
+is_awesome = True
+
+print(x)
+print(y)
+print(z)
+print(is_awesome)</textarea>
+                        <div class="editor-actions">
+                            <button class="run-btn" onclick="runPythonCode()"><i class="fa-solid fa-play"></i> Run Code</button>
+                        </div>
+                    </div>
+
+                    <div class="editor-column">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-terminal"></i> Output Window</span>
+                            <button class="clear-btn" onclick="clearOutput()"><i class="fa-solid fa-trash"></i> Clear</button>
+                        </div>
+                        <div id="pythonOutput" class="terminal-box">Click "Run Code" to view output...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Previous and Next Chapter Navigation Buttons -->
+            <div class="chapter-navigation">
+                <a href="python-variables.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> &laquo; Previous</a>
+                <a href="python-numbers.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <!-- Interactive Execution Script -->
+    <script>
+        function runPythonCode() {
+            const input = document.getElementById('pythonEditor').value;
+            const output = document.getElementById('pythonOutput');
+            output.innerHTML = "";
+
+            let logs = [];
+            try {
+                const lines = input.split('\n');
+                let simulatedVars = {};
+
+                lines.forEach(line => {
+                    let trimmed = line.trim();
+                    if (trimmed.startsWith('#') || trimmed === '') return;
+
+                    if (trimmed.startsWith('print(') && trimmed.endsWith(')')) {
+                        let inner = trimmed.substring(6, trimmed.length - 1);
+                        if (inner.includes('"') || inner.includes("'")) {
+                            let parts = inner.split(',');
+                            let lineOut = parts.map(p => p.replace(/['"]/g, '').trim()).join(' ');
+                            logs.push(lineOut);
+                        } else if (simulatedVars[inner] !== undefined) {
+                            logs.push(simulatedVars[inner]);
+                        } else {
+                            try { logs.push(eval(inner)); } catch (e) { logs.push(inner); }
+                        }
+                    } else if (trimmed.includes('=')) {
+                        let [varName, val] = trimmed.split('=').map(s => s.trim());
+                        try { simulatedVars[varName] = eval(val); } catch (e) { simulatedVars[varName] = val; }
+                    }
+                });
+
+                if (logs.length > 0) {
+                    output.innerHTML = logs.map(l => `<div class="log-line">> ${l}</div>`).join('');
+                } else {
+                    output.innerHTML = `<span style="color: #94a3b8;">Program executed successfully.</span>`;
+                }
+            } catch (err) {
+                output.innerHTML = `<span style="color: #ef4444;">SyntaxError: ${err.message}</span>`;
+            }
+        }
+
+        function clearOutput() {
+            document.getElementById('pythonOutput').innerHTML = 'Click "Run Code" to view output...';
+        }
+
+        function copyEditorCode() {
+            const text = document.getElementById('pythonEditor').value;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Code copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+</html>

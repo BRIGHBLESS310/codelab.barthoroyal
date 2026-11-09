@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Syntax and Output | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html">Java Intro</a><a href="java-get-started.html">Java Get Started</a>
+            <a href="java-syntax.html" class="active">Java Syntax & Output</a><a href="java-variables.html">Variables & Data Types</a>
+            <a href="java-operators.html">Operators & Math</a><a href="java-conditions.html">Conditions & Switch</a>
+            <a href="java-loops.html">Java Loops</a><a href="java-arrays.html">Java Arrays</a>
+            <a href="java-methods.html">Java Methods</a><a href="java-classes.html">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card"><h1 class="glow-text">Java Syntax and Output</h1><p class="intro-text">Java uses classes, methods, braces, and semicolons to organize a program. Consistent formatting makes its structure easier to read.</p></section>
+            <section class="content-section">
+                <h2>Understand the program structure</h2>
+                <pre class="lesson-code"><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+    }
+}</code></pre>
+                <ul class="feature-list">
+                    <li><strong class="highlight">Class:</strong> <code>Main</code> names a class, the basic building block for Java code.</li>
+                    <li><strong class="highlight">Method:</strong> <code>main</code> is the entry point used to start this application.</li>
+                    <li><strong class="highlight">Braces:</strong> <code>{ }</code> mark the beginning and end of class and method bodies.</li>
+                    <li><strong class="highlight">Statement:</strong> The instruction ends with a semicolon.</li>
+                </ul>
+                <p>Read the sample from the outside inward: the class contains the <code>main</code> method, and that method contains the print statement. Each pair of braces must match; indentation does not change Java's meaning, but it reveals which statements belong to which block.</p>
+                <p>The words in the method signature also have specific roles: <code>public</code> makes it accessible to the launcher, <code>static</code> lets it run without first creating a <code>Main</code> object, and <code>void</code> means it returns no value. <code>String[] args</code> receives optional command-line arguments.</p>
+            </section>
+            <section class="content-section">
+                <h2>Print output</h2>
+                <p><code>System.out.println()</code> prints a value and starts a new line. <code>System.out.print()</code> prints without adding a line break.</p>
+                <pre class="lesson-code"><code>System.out.print("Hello ");
+System.out.println("there!");
+System.out.println(3 + 4);</code></pre>
+                <p>Output:</p><pre class="lesson-code"><code>Hello there!
+7</code></pre>
+                <p><code>println</code> adds a line separator after the value, while <code>print</code> leaves the cursor on the same line. Java evaluates the expression passed to the method first, so <code>3 + 4</code> becomes <code>7</code> before it is displayed.</p>
+                <p>Text in double quotes is a string literal, while the numbers in the example are numeric values. When you combine text and a number with <code>+</code>, Java converts the other value to text and concatenates it; use parentheses when arithmetic should happen before that concatenation.</p>
+            </section>
+            <section class="content-section">
+                <h2>Comments and readable code</h2>
+                <p>Comments document intent for people reading your program. The compiler ignores comments.</p>
+                <pre class="lesson-code"><code>// A short, single-line comment
+int score = 10;
+
+/* A comment can continue
+   over several lines. */</code></pre>
+                <p>Prefer clear names and simple formatting. A comment should explain why a decision was made rather than repeat what an obvious line already says.</p>
+                <p>A single-line comment begins with <code>//</code> and ends at the line break. A block comment starts with <code>/*</code> and ends with <code>*/</code>; unlike documentation comments, these ordinary comments are not included in generated API documentation.</p>
+                <p>Comments do not repair code or affect execution. If a comment and the code disagree, readers must guess which is correct, so update or remove comments whenever the implementation changes. Use comments for context that cannot be expressed clearly by names and structure.</p>
+            </section>
+            <section class="content-section"><h2>Practice</h2><p>Write a program that prints your name and a number on separate lines. Add a comment that explains what the program does, then compile and run it.</p></section>
+            <div class="chapter-navigation"><a href="java-get-started.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</a><a href="java-variables.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p><div class="social-links"><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></div></footer>
+</body>
+</html>

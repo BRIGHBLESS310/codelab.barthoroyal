@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Components | Bootstrap | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="bootstrap-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html" class="active">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="Bootstrap tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Interactive Components</h1><p class="intro-text">Explore interactive components through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Bootstrap JavaScript plugins enable modals, dropdowns, and collapsible content. Their triggers connect to targets with data attributes.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>Bootstrap's interactive components use JavaScript plugins to manage behavior such as modal visibility, dropdown state, and collapsible panels. Their data attributes connect controls to targets, while the plugin coordinates state and events.</p><h3>How to apply it</h3><p>Interactive patterns need correct semantics and state communication: buttons should expose what they control, expanded or pressed state should be accurate, and focus should move appropriately into and out of a modal.</p><h3>Common pitfalls</h3><p>A visual state change alone is not enough for accessibility, and a modal must not trap a person outside the dialog or leave focus lost after closing. Load the matching bundle and test all controls by keyboard.</p></div>
+<pre class="lesson-code"><code>&lt;button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal"&gt;View details&lt;/button&gt;
+&lt;div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoTitle" aria-hidden="true"&gt;
+ &lt;div class="modal-dialog"&gt;&lt;div class="modal-content"&gt;&lt;div class="modal-header"&gt;
+  &lt;h2 class="modal-title fs-5" id="infoTitle"&gt;Details&lt;/h2&gt;
+  &lt;button class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+ &lt;/div&gt;&lt;div class="modal-body"&gt;More information.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>For each trigger in the example, find its target and state attribute, then open and close it using only the keyboard.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Add a details modal and test opening, closing, and keyboard focus. Include a clear title and close control.</p><p>When ready, continue to <a href="bootstrap-customization.html">Customization and Theming</a>. You can return to the <a href="bootstrap.html">Bootstrap course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="bootstrap-images-tables.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Responsive Images and Tables</a>
+<a href="bootstrap-customization.html" class="nav-btn next-btn">Next: Customization and Theming &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

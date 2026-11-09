@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input Types | HTML | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="html-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html" class="active">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="HTML tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Input Types</h1><p class="intro-text">Explore input types through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Input types communicate the kind of data expected and can offer helpful controls on different devices. A placeholder is not a label.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>The <code>type</code> of an input communicates the expected value and can provide a suitable on-screen keyboard or native control. For example, <code>email</code>, <code>number</code>, <code>date</code>, and <code>checkbox</code> each offer behavior suited to a different kind of data.</p><h3>How to apply it</h3><p>The input type participates in browser validation and exposes meaning to assistive technology and autofill. Use <code>name</code> to identify the submitted value, and pair each control with a visible label and any needed instructions.</p><h3>Common pitfalls</h3><p>Do not pick an input type just for its appearance; a number control is not appropriate for a postal code that may start with zero or contain letters. Native validation is a helpful user aid, not a security boundary or a replacement for server-side checks.</p></div>
+<pre class="lesson-code"><code>&lt;label for="date"&gt;Visit date&lt;/label&gt;
+&lt;input id="date" name="date" type="date"&gt;
+&lt;label for="guests"&gt;Guests&lt;/label&gt;
+&lt;input id="guests" name="guests" type="number" min="1" max="8"&gt;</code></pre>
+<p>Test each type with both a realistic value and a deliberately unsuitable one, and note the behavior supplied by the browser rather than by custom code.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Add date and checkbox controls to a form. Give them appropriate labels and constraints.</p><p>When ready, continue to <a href="html-form-validation.html">Form Validation</a>. You can return to the <a href="html.html">HTML course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="html-forms.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Forms and Labels</a>
+<a href="html-form-validation.html" class="nav-btn next-btn">Next: Form Validation &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

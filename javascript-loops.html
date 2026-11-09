@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loops | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="loops">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Loops</h1><p class="intro-text">Loops repeat work. A for loop is useful when you need an index or known count; for...of iterates over values in an iterable such as an array.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Repeat work over values or conditions</h3><p>A loop repeats a block of statements. A <code>for</code> loop groups initialization, condition, and update; <code>while</code> repeats while a condition holds; <code>for...of</code> iterates values in an iterable such as an array.</p><h3>Ensure the loop makes progress</h3><p>The condition is checked repeatedly, so the body must eventually make it false or exit another way. Use <code>break</code> to stop and <code>continue</code> to skip an iteration when it improves clarity. Check index bounds carefully.</p><h3>Match iteration to the task</h3><p>A boundary like <code>i &lt;= items.length</code> visits one invalid index. Avoid modifying a collection in a way that skips elements. Array methods can express transformations clearly, while loops fit custom control flow.</p></section><section class="content-section"><h2>Iterate through values</h2><p>Make sure loop conditions eventually become false. For arrays, use array methods when they make the operation clearer.</p><pre class="lesson-code"><code>const colors = ["blue", "green", "gold"];
+for (const color of colors) {
+    console.log(color);
+}</code></pre><h2>Practice</h2><p>Loop through a list of names and print each one with a greeting.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

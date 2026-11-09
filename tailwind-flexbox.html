@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Flexbox | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Align items with flexbox</h1>
+                <p class="intro-text">Flex utilities expose the CSS flex layout model. Use flex for arranging items along one primary axis, aligning them, and distributing available space.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Choose row or column based on the content flow. Add gap for deliberate spacing rather than relying on child margins, and let important controls wrap when space is limited.</p>
+            </section>
+            <section class="content-section">
+                <h2>Choose axes before alignment utilities</h2>
+                <p>Flexbox lays out children along one main axis and one cross axis. With <code>flex-row</code>, the main axis runs horizontally; with <code>flex-col</code>, it runs vertically. <code>justify-*</code> distributes items on the main axis, while <code>items-*</code> aligns them on the cross axis.</p>
+                <p>This axis relationship is more useful than memorizing class names. For example, switching a row to a column also changes what “justify” means visually. If items refuse to shrink or wrap as expected, inspect flex sizing, available container width, and whether <code>flex-wrap</code> is needed.</p>
+                <p>Flexbox is especially effective for one-dimensional patterns such as toolbars, navigation, and aligned card actions. For a page with simultaneous row-and-column placement, CSS Grid is usually easier to reason about. Selecting the layout model first prevents piling alignment utilities onto the wrong container.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The outer flex container aligns brand and navigation, while the inner container spaces links. Wrapping lets the header adapt when the viewport narrows.</p>
+                <pre class="lesson-code"><code>&lt;header class=&quot;flex flex-wrap items-center justify-between gap-4&quot;&gt;
+  &lt;a class=&quot;font-bold&quot; href=&quot;/&quot;&gt;CodeLab&lt;/a&gt;
+  &lt;nav class=&quot;flex flex-wrap gap-3&quot; aria-label=&quot;Main&quot;&gt;
+    &lt;a href=&quot;/lessons&quot;&gt;Lessons&lt;/a&gt;
+    &lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Make a toolbar with a title on the left and two actions on the right. Add wrapping and a gap, then test at narrow widths.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-typography.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Typography</a>
+                <a href="tailwind-grid.html" class="nav-btn next-btn">Grid &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

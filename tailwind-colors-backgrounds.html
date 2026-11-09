@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Colors &amp; Backgrounds | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Use color with purpose</h1>
+                <p class="intro-text">Color utilities set text, background, border, and other color properties. Tailwind&#x27;s palette provides named shades; projects can use a theme palette so product colors stay consistent.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Choose colors for contrast and meaning, not decoration alone. Pair status colors with text or an icon, and check foreground/background contrast for the actual rendered pair.</p>
+            </section>
+            <section class="content-section">
+                <h2>Build a deliberate color system</h2>
+                <p>Color utilities can set text, backgrounds, borders, and accents using Tailwind's palette. A numbered shade often represents a step in a scale, which makes it easier to choose related colors consistently than to invent a new value for every element.</p>
+                <p>Use color to reinforce information hierarchy and meaning, but do not make color the only way to distinguish success, warnings, or errors. Add text, icons, or other cues, and verify contrast between foreground text and its background—especially for small or low-weight text.</p>
+                <p>Consider the complete component rather than one swatch: links need to remain recognizable, disabled text must stay legible, and a surface needs enough separation from the page behind it. This foundation also makes dark-mode variants and theme tokens easier to apply consistently.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The pale background and dark text form a status message with two levels of text. The words communicate success even if color cannot be perceived.</p>
+                <pre class="lesson-code"><code>&lt;div class=&quot;rounded-lg bg-emerald-50 p-4 text-emerald-950&quot;&gt;
+  &lt;p class=&quot;font-semibold&quot;&gt;Saved successfully&lt;/p&gt;
+  &lt;p class=&quot;mt-1 text-sm&quot;&gt;Your changes are up to date.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create success, warning, and error messages. Give each a distinct label or icon as well as color, and check the text remains readable.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-utility-fundamentals.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Utility Fundamentals</a>
+                <a href="tailwind-spacing-sizing.html" class="nav-btn next-btn">Spacing &amp; Sizing &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

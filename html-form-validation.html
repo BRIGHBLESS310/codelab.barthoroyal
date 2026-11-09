@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation | HTML | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="html-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html" class="active">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="HTML tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Form Validation</h1><p class="intro-text">Explore form validation through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Built-in constraints catch common input mistakes before submission. A server must still validate submitted data.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>HTML constraint attributes such as <code>required</code>, <code>minlength</code>, <code>max</code>, and <code>type="email"</code> let the browser catch common input mistakes before submission. The constraint should match a real rule the user can understand.</p><h3>How to apply it</h3><p>Validation works best when the form identifies the problem and explains how to fix it. Keep labels and instructions available before entry, preserve the user's values after an error, and provide a clear success or error state rather than relying only on color.</p><h3>Common pitfalls</h3><p>Client-side checks can be bypassed, so the server must validate and safely handle every received value. Avoid constraints that reject legitimate user input, and do not claim a format is valid merely because it passes a browser's basic syntax check.</p></div>
+<pre class="lesson-code"><code>&lt;label for="username"&gt;Username&lt;/label&gt;
+&lt;input id="username" name="username" required minlength="3" maxlength="20"&gt;
+&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input id="email" name="email" type="email" required&gt;</code></pre>
+<p>Try an empty required field and a malformed email in the example; compare the browser's immediate feedback with the validation the receiving service would still need.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Add required and length constraints to a registration form. Try submitting empty and invalid values.</p><p>When ready, continue to <a href="html-audio-video.html">Audio and Video</a>. You can return to the <a href="html.html">HTML course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="html-input-types.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Input Types</a>
+<a href="html-audio-video.html" class="nav-btn next-btn">Next: Audio and Video &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

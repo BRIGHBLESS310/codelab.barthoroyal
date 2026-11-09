@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="events">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Events</h1><p class="intro-text">Events report actions or changes such as clicks, key presses, and page loading. Register a listener with addEventListener() to run code in response.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Events report what happened</h3><p>An event is the browser?s notification of an interaction or system change, such as a click, key press, submit, or load. Register a callback with <code>addEventListener()</code>; the browser invokes it when that event reaches the target.</p><h3>Use event details and propagation</h3><p>The callback receives an event object with information such as the target and event type. Events can bubble from descendants to ancestors, so a parent can handle many child interactions through delegation. This often simplifies dynamic lists.</p><h3>Avoid accidental defaults and duplicate effects</h3><p>Form submission and link clicks have browser defaults; call <code>preventDefault()</code> only when intentionally replacing them. Repeated listener registration can cause repeated actions. Event handlers connect DOM selection to interactive updates and should have a focused responsibility.</p></section><section class="content-section"><h2>Listen for an event</h2><p>Use event delegation for many similar child elements when it simplifies event handling.</p><pre class="lesson-code"><code>const button = document.querySelector("#hello");
+button?.addEventListener("click", () =&gt; {
+    console.log("Button clicked");
+});</code></pre><h2>Practice</h2><p>Add a click listener that updates a paragraph on your page.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

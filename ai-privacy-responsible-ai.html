@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence: Privacy &amp; Responsible AI | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html" class="active">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Artificial Intelligence tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Use AI with appropriate safeguards</h1>
+                <p class="intro-text">Responsible AI practice considers privacy, transparency, security, accessibility, fairness, and human oversight. The necessary safeguards depend on the data, users, purpose, and consequences.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Minimize data collection, respect consent and retention rules, restrict access, and explain when AI contributes to a decision. Seek qualified review for regulated or high-impact uses.</p>
+            </section>
+            <section class="content-section">
+                <h2>Responsible use begins with purpose and boundaries</h2>
+                <p>Before using AI, identify the purpose, who may be affected, what information is necessary, and what decision the system will influence. Collecting more data than needed increases privacy exposure without guaranteeing better results. Prefer approved, minimized inputs and explain the intended use clearly.</p>
+                <p>Privacy, fairness, accessibility, transparency, and human oversight are related design concerns. A user should know when AI is involved where that matters, understand meaningful limits, and have a route to correct important errors. A human reviewer needs enough context and authority to make an independent judgment.</p>
+                <p>Safeguards should be proportionate to impact: low-stakes assistance may need clear caveats and feedback, while consequential uses demand stronger validation, review, and governance. Revisit the risk when the data, model, or user population changes; responsible practice continues after launch.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>This sketch highlights data minimization and user recourse. Real systems need policies and technical controls appropriate to their context.</p>
+                <pre class="lesson-code"><code>request = minimize_fields(user_input)
+result = process(request)
+
+# Keep only the data needed for the defined purpose.
+# Explain the feature and provide an appropriate review path.</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>For an AI feature, write a short notice explaining what it does, what data it uses, and how a user can get help or request correction.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-limitations-bias.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Limitations &amp; Bias</a>
+                <a href="ai-applications-project.html" class="nav-btn next-btn">Applications &amp; Project Practice &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

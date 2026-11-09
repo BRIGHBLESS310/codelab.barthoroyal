@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forms and Labels | HTML | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="html-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html" class="active">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="HTML tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Forms and Labels</h1><p class="intro-text">Explore forms and labels through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Forms collect user input. A label gives each control a visible and programmatic name; a form groups controls for submission.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>A form groups controls that collect values and submit them for processing. Each control needs an understandable name, an appropriate type, and an association with its label; the form's <code>action</code> and <code>method</code> describe how data is sent.</p><h3>How to apply it</h3><p>A <code>label</code> connected with a control's <code>for</code> and matching <code>id</code> makes the control easier to identify and gives its clickable target a useful size. Group related options with <code>fieldset</code> and <code>legend</code> when a shared question needs context.</p><h3>Common pitfalls</h3><p>A placeholder is an example or hint, not a replacement for a persistent label. Choose button types deliberately—an omitted type inside a form defaults to submit—and do not assume that styling a control alone makes its purpose accessible.</p></div>
+<pre class="lesson-code"><code>&lt;form action="/signup" method="post"&gt;
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input id="email" name="email" type="email" required&gt;
+  &lt;button type="submit"&gt;Sign up&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p>Click each label in the example and confirm it focuses its control; then identify exactly what is submitted when the form's button is activated.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Create a contact form with name, email, and message fields. Label every control and choose sensible names.</p><p>When ready, continue to <a href="html-input-types.html">Input Types</a>. You can return to the <a href="html.html">HTML course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="html-semantic-layout.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Semantic Page Layout</a>
+<a href="html-input-types.html" class="nav-btn next-btn">Next: Input Types &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

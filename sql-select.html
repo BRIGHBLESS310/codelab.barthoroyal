@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECT and FROM | SQL | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="sql-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html" class="active">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="SQL tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">SELECT and FROM</h1>
+                <p class="intro-text">SELECT chooses the columns to return and FROM identifies the table. Name only columns you need: explicit selections are easier to read and avoid transferring unnecessary data. Aliases give result columns clearer names.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>A SELECT query has two essential parts: SELECT names the values to return, and FROM names the source table. This is projection: choosing useful columns instead of copying every field into the result.</p>
+                <p>An alias introduced with AS changes a result column's label without renaming the stored column. Clear aliases help reports and application code communicate what a value means, especially when expressions or joins are involved.</p>
+                <p>Prefer explicit column names to SELECT *. A later schema change can otherwise widen a result, expose an unnecessary field, or break code that depends on a particular column order.</p>
+                <p>The example returns two fields for every row in customers; it does not filter or sort them yet. The next topics add WHERE and ORDER BY, so consider each clause one step in shaping a result set.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>SELECT name AS customer_name, city
+FROM customers;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Select two columns from a sample table and add a useful alias.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="sql-get-started.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Get Started</a>
+                <a href="sql-filtering.html" class="nav-btn next-btn">Filtering and Sorting &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

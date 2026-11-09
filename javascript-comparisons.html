@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Comparisons | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="comparisons">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Comparisons</h1><p class="intro-text">Comparison operators return a boolean. Prefer strict equality (===) and strict inequality (!==) so JavaScript does not first coerce different types.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Comparisons produce a boolean</h3><p>Comparison operators answer a question and return <code>true</code> or <code>false</code>. Equality, ordering, and identity checks can guide an <code>if</code>, be stored in a variable, combined with logical operators, or returned from a function.</p><h3>Prefer explicit equality</h3><p>Strict equality (<code>===</code>) compares without first converting operand types; loose equality (<code>==</code>) can apply surprising coercions. Relational operators compare two strings lexicographically, but compare numerically when both operands are numbers. Convert deliberately before comparing unlike types.</p><h3>Check boundaries and unusual numbers</h3><p>A condition <code>score &gt; 10</code> excludes 10; decide whether it should be inclusive. <code>NaN</code> is not equal to itself, so use <code>Number.isNaN()</code> to test it. Precise comparisons make conditions and validation more dependable.</p></section><section class="content-section"><h2>Compare values</h2><p>When comparing objects and arrays, equality checks whether they are the same reference, not whether their contents match.</p><pre class="lesson-code"><code>console.log(5 === "5");
+console.log(5 !== 4);
+console.log(3 &lt;= 3);</code></pre><h2>Practice</h2><p>Compare values with the same and different types using == and ===, then explain the results.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

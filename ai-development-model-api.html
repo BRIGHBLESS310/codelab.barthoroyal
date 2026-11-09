@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Models &amp; APIs | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Integrate a model service safely</h1>
+                <p class="intro-text">A model API usually accepts a request and returns a response over a network. Integration needs authentication, request limits, timeouts, error handling, version awareness, and a way to control cost.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Keep provider credentials on a trusted server, never in browser code or a public repository. Send only necessary data and follow the provider&#x27;s current retention and usage terms.</p>
+            </section>
+            <section class="content-section">
+                <h2>Treat the model provider as a dependency</h2>
+                <p>A model API lets an application send an input and receive a model response over a network. The request contract may include a model identifier, instructions, messages, generation settings, and output limits; the response may contain text, usage metadata, or a structured error.</p>
+                <p>Keep credentials on a trusted server, never in browser code or a repository. Send only the data the task requires, set timeouts, handle rate limits and provider failures, and avoid logging sensitive request content by default. These are application responsibilities even when a provider manages the model infrastructure.</p>
+                <p>Provider models and APIs can change, so isolate integration details behind a service boundary. Pin or explicitly select model versions where possible and test behavior when changing them. Evaluate the complete feature, including latency and cost, rather than assuming an API response is ready to show a user.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The client applies an input bound and timeout, then validates the returned value. Production code also needs authentication, rate limiting, logging controls, and provider-specific error handling.</p>
+                <pre class="lesson-code"><code>async def summarize(text):
+    response = await model_client.generate(
+        input=limit_length(text),
+        timeout_seconds=20,
+    )
+    return validate_response(response)</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Sketch a server endpoint that calls a model. Mark where credentials live, which user data is sent, and what happens on timeout or a quota error.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-data-readiness.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Data Readiness</a>
+                <a href="ai-development-architecture.html" class="nav-btn next-btn">Application Architecture &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

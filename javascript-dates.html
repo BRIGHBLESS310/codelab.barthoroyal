@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dates | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="dates">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Dates</h1><p class="intro-text">The Date object represents a point in time. Date display depends on locale and time zone, so use explicit formatting for user-facing dates.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>A Date represents a moment</h3><p>The <code>Date</code> object represents a point on the timeline as milliseconds relative to the Unix epoch. Create one with <code>new Date()</code> for the current time or supply a timestamp. Date objects can be compared using their numeric time value.</p><h3>Time zones affect display</h3><p><code>getFullYear()</code> and <code>getMonth()</code> use local time; UTC variants use Coordinated Universal Time. Months are zero-based, a common off-by-one error. Use ISO representations for machine exchange and <code>Intl.DateTimeFormat</code> for locale-aware display.</p><h3>Parse dates intentionally</h3><p>Ambiguous date strings can be interpreted unexpectedly; invalid input yields an invalid Date whose numeric value is <code>NaN</code>. Decide whether a calendar date represents an instant and which time zone applies. Clear parsing and formatting choices prevent scheduling errors.</p></section><section class="content-section"><h2>Format a date</h2><p>For complex time-zone and calendar requirements, select a date-time solution that fits the application's needs.</p><pre class="lesson-code"><code>const now = new Date();
+const formatted = new Intl.DateTimeFormat("en", {
+    dateStyle: "long"
+}).format(now);
+console.log(formatted);</code></pre><h2>Practice</h2><p>Display today's date with Intl.DateTimeFormat and compare it with a date of your choice.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

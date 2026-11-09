@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typography | CSS | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="css-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html" class="active">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="CSS tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Typography</h1><p class="intro-text">Explore typography through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Typography choices affect readability and hierarchy. CSS can set font family, size, weight, line height, and spacing.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>Typography rules control font family, size, weight, line height, and spacing. A readable line height and a measure that is not too wide help readers keep their place, while a consistent type scale distinguishes headings from body copy.</p><h3>How to apply it</h3><p>Specify a fallback font stack because the preferred font may not be installed or may fail to load. Relative font sizing supports user preferences, and line height is often best kept unitless so it scales with the element's text size.</p><h3>Common pitfalls</h3><p>Decorative font choices and tightly packed lines can reduce readability; visual hierarchy should not depend on font size alone. Preserve sufficient contrast and avoid setting text so small that users must zoom to read it.</p></div>
+<pre class="lesson-code"><code>body { font-family: system-ui, sans-serif; line-height: 1.6; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; }
+p { max-width: 65ch; }</code></pre>
+<p>Compare the example's type choices at different zoom levels and verify that the hierarchy remains clear when the preferred font is unavailable.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Style an article with a clear heading scale and readable paragraph width. Test zoom and narrow screens.</p><p>When ready, continue to <a href="css-backgrounds-borders.html">Backgrounds and Borders</a>. You can return to the <a href="css.html">CSS course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="css-box-model.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: The Box Model</a>
+<a href="css-backgrounds-borders.html" class="nav-btn next-btn">Next: Backgrounds and Borders &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

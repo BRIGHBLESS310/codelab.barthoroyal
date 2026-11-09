@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Strings | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="python.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav id="emo">
+        <a href="index.html">Home</a><a href="python.html" class="active">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Python tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-python"></i> Python Tutorial</h3>
+            <a href="python.html">Python Intro</a><a href="pythongetstarted.html">Python Get Started</a>
+            <a href="pythonsinax.html">Python Syntax</a><a href="pythoncommet.html">Python Comments</a>
+            <a href="pythonvariable.html">Python Variables</a><a href="data.html">Python Data Types</a>
+            <a href="numbers.html">Python Numbers</a><a href="casting.html">Python Casting</a>
+            <a href="python-strings.html" class="active">Python Strings</a><a href="python-booleans.html">Python Booleans</a>
+            <a href="python-operators.html">Python Operators</a><a href="python-lists.html">Python Lists</a>
+            <a href="python-advanced.html#tuples">Python Tuples</a><a href="python-advanced.html#sets">Python Sets</a>
+            <a href="python-advanced.html#dictionaries">Python Dictionaries</a><a href="python-advanced.html#ifelse">Python If...Else</a>
+            <a href="python-advanced.html#whileloops">Python While Loops</a><a href="python-advanced.html#forloops">Python For Loops</a>
+            <a href="python-advanced.html#functions">Python Functions</a><a href="python-advanced.html#lambda">Python Lambda</a>
+            <a href="python-advanced.html#arrays">Python Arrays</a><a href="python-advanced.html#classes">Python Classes/Objects</a>
+        </aside>
+    <main id="python-container">
+        <section class="hero-card"><h1 class="glow-text">Python Strings</h1><p class="intro-text">A string (<code>str</code>) is an immutable sequence of text characters. Write it with matching single or double quotes; triple quotes can preserve line breaks in multi-line text.</p></section>
+        <section class="content-section">
+            <h2>Work with text</h2>
+            <pre class="lesson-code"><code>name = "Ada"
+greeting = f"Hello, {name}!"
+print(greeting)
+print(name.upper())
+print("red,blue".split(","))</code></pre>
+            <p>Strings are immutable: methods return new strings instead of changing the original value. Use f-strings to insert values into text.</p>
+            <p>Immutability means an operation such as <code>name.upper()</code> gives you a new string and leaves <code>name</code> unchanged. If you need the transformed text later, assign the result to a variable. F-strings evaluate expressions inside braces when the string is created, which is convenient for readable messages.</p>
+        </section>
+        <section class="content-section">
+            <h2>Useful operations</h2>
+            <ul class="feature-list">
+                <li><strong class="highlight">Index and slice:</strong> Get a character with <code>text[0]</code> or a portion with <code>text[1:4]</code>.</li>
+                <li><strong class="highlight">Length:</strong> Use <code>len(text)</code> to count characters.</li>
+                <li><strong class="highlight">Search:</strong> Use <code>in</code> to check whether a substring appears.</li>
+                <li><strong class="highlight">Methods:</strong> Explore <code>strip()</code>, <code>replace()</code>, <code>split()</code>, and <code>join()</code>.</li>
+                <li><strong class="highlight">Formatting:</strong> Prefer f-strings for readable interpolation.</li>
+            </ul>
+            <p>String indexes start at zero, and negative indexes count from the end. A slice such as <code>text[start:stop]</code> includes the start position but excludes the stop position, so its length is often <code>stop - start</code>. This convention makes adjacent slices easy to join without overlap.</p>
+            <p>Methods such as <code>strip()</code> and <code>split()</code> are useful when cleaning input, but they do not mutate the source string. For example, remove surrounding spaces before checking a name, and use <code>"-".join(parts)</code> to combine a sequence of strings; the separator is the string that calls <code>join()</code>.</p>
+        </section>
+        <section class="content-section">
+            <h2>Practice</h2>
+            <p>Ask for a person's name and print a friendly greeting using an f-string. Try trimming extra spaces with <code>strip()</code> first.</p>
+            <p><a href="casting.html">Learn Python Casting</a> or continue to <a href="python-booleans.html">Python Booleans</a>.</p>
+        </section>
+        <section class="content-section animate-fade" data-python-sandbox>
+            <h2><i class="fa-solid fa-laptop-code"></i> Try It Yourself</h2>
+            <p class="desc-text">Edit the sample and press Run Code. This lightweight preview supports basic assignments and <code>print()</code>, not string methods or all Python syntax; run string-operation examples in a local interpreter.</p>
+            <div class="editor-wrapper">
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-code"></i> Python Input Code</span><button class="copy-btn" data-action="copy" type="button"><i class="fa-solid fa-copy"></i> Copy Code</button></div>
+                    <textarea class="python-editor" aria-label="Python code editor" spellcheck="false">name = "Ada"
+greeting = "Hello, CodeLab!"
+print(name)
+print(greeting)</textarea>
+                    <div class="editor-actions"><button class="run-btn" data-action="run" type="button"><i class="fa-solid fa-play"></i> Run Code</button></div>
+                </div>
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-terminal"></i> Output Window</span><button class="clear-btn" data-action="clear" type="button"><i class="fa-solid fa-trash"></i> Clear</button></div>
+                    <div class="terminal-box" aria-live="polite">Click "Run Code" to view output...</div>
+                </div>
+            </div>
+        </section>
+        <div class="chapter-navigation">
+            <a href="casting.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> &laquo; Previous</a>
+            <a href="python-booleans.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+    <script src="python-sandbox.js"></script>
+</body>
+</html>

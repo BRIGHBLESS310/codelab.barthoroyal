@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Browser Storage | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="storage">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Browser Storage</h1><p class="intro-text">localStorage stores string values in the browser across sessions. Use JSON to store structured data, and handle malformed or unavailable stored values.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Browser storage persists small values</h3><p><code>localStorage</code> and <code>sessionStorage</code> store string key-value pairs. Local storage usually remains between browser sessions; session storage belongs to a tab page session. Both APIs are synchronous and suited to small amounts of data.</p><h3>Serialize structured data</h3><p>Storage values are strings, so use <code>JSON.stringify()</code> and <code>JSON.parse()</code> for structured data. Handle absent keys and malformed text; saved data may become outdated after an application changes. Storage access can fail in restricted settings, so account for errors.</p><h3>Stored data is not secret or inherently trusted</h3><p>Browser-profile users can inspect or modify web storage, so never put passwords or sensitive credentials there. Validate restored values and save only what the interface needs. Sensitive or authoritative data belongs on a properly secured server.</p></section><section class="content-section"><h2>Save a preference</h2><p>Do not store passwords, access tokens, or other sensitive secrets in browser storage.</p><pre class="lesson-code"><code>const preferences = { theme: "dark" };
+localStorage.setItem("preferences", JSON.stringify(preferences));
+const saved = localStorage.getItem("preferences");
+if (saved) {
+    const restored = JSON.parse(saved);
+    console.log(restored.theme);
+}</code></pre><h2>Practice</h2><p>Save a display preference and read it again when the page loads.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

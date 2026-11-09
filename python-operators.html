@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Operators | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="python.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav id="emo">
+        <a href="index.html">Home</a><a href="python.html" class="active">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Python tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-python"></i> Python Tutorial</h3>
+            <a href="python.html">Python Intro</a><a href="pythongetstarted.html">Python Get Started</a>
+            <a href="pythonsinax.html">Python Syntax</a><a href="pythoncommet.html">Python Comments</a>
+            <a href="pythonvariable.html">Python Variables</a><a href="data.html">Python Data Types</a>
+            <a href="numbers.html">Python Numbers</a><a href="casting.html">Python Casting</a>
+            <a href="python-strings.html">Python Strings</a><a href="python-booleans.html">Python Booleans</a>
+            <a href="python-operators.html" class="active">Python Operators</a><a href="python-lists.html">Python Lists</a>
+            <a href="python-advanced.html#tuples">Python Tuples</a><a href="python-advanced.html#sets">Python Sets</a>
+            <a href="python-advanced.html#dictionaries">Python Dictionaries</a><a href="python-advanced.html#ifelse">Python If...Else</a>
+            <a href="python-advanced.html#whileloops">Python While Loops</a><a href="python-advanced.html#forloops">Python For Loops</a>
+            <a href="python-advanced.html#functions">Python Functions</a><a href="python-advanced.html#lambda">Python Lambda</a>
+            <a href="python-advanced.html#arrays">Python Arrays</a><a href="python-advanced.html#classes">Python Classes/Objects</a>
+        </aside>
+    <main id="python-container">
+        <section class="hero-card"><h1 class="glow-text">Python Operators</h1><p class="intro-text">Operators are symbols and keywords that perform work on values. They support arithmetic, comparisons, logic, membership checks, and updates to variables.</p></section>
+        <section class="content-section">
+            <h2>Operator examples</h2>
+            <pre class="lesson-code"><code>price = 12.50
+quantity = 3
+total = price * quantity
+is_large_order = quantity >= 3
+
+print(total)
+print(is_large_order)</code></pre>
+            <p>Here, multiplication calculates a total and the comparison produces a Boolean value. Operators connect the values and variables introduced earlier to practical calculations and the decision-making in the Boolean and conditional lessons.</p>
+        </section>
+        <section class="content-section">
+            <h2>Main operator groups</h2>
+            <ul class="feature-list">
+                <li><strong class="highlight">Arithmetic:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, and <code>**</code>.</li>
+                <li><strong class="highlight">Comparison:</strong> Compare values with <code>==</code>, <code>!=</code>, <code>&lt;</code>, and related operators.</li>
+                <li><strong class="highlight">Logical:</strong> Combine conditions with <code>and</code>, <code>or</code>, and <code>not</code>.</li>
+                <li><strong class="highlight">Assignment:</strong> Update a variable with operators such as <code>+=</code> and <code>*=</code>.</li>
+                <li><strong class="highlight">Membership:</strong> Use <code>in</code> to check whether a value occurs in a collection.</li>
+            </ul>
+            <p>Parentheses make complex expressions easier to read and help control evaluation order.</p>
+            <p>Arithmetic operators include true division (<code>/</code>), floor division (<code>//</code>), remainder (<code>%</code>), and exponentiation (<code>**</code>). Floor division rounds down to the next integer, which matters for negative numbers; for example, <code>-7 // 3</code> is <code>-3</code>. Use parentheses when precedence is not obvious rather than relying on a reader to remember every rule.</p>
+            <p>Comparison operators create conditions, while <code>and</code>, <code>or</code>, and <code>not</code> combine them. Membership with <code>in</code> checks whether a value occurs in a string or collection. Assignment operators such as <code>+=</code> update a variable, but they are not comparisons: <code>=</code> assigns, whereas <code>==</code> tests equality.</p>
+        </section>
+        <section class="content-section">
+            <h2>Practice</h2>
+            <p>Calculate the remainder when 29 is divided by 5 with <code>%</code>. Then use that operator to check whether a number is even.</p>
+            <p><a href="python-booleans.html">Review Booleans</a> or continue to <a href="python-lists.html">Python Lists</a>.</p>
+        </section>
+        <section class="content-section animate-fade" data-python-sandbox>
+            <h2><i class="fa-solid fa-laptop-code"></i> Try It Yourself</h2>
+            <p class="desc-text">Edit the sample and press Run Code. This lightweight preview supports only basic assignments and <code>print()</code>; arithmetic and comparison examples are illustrative, so test them with a local Python interpreter.</p>
+            <div class="editor-wrapper">
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-code"></i> Python Input Code</span><button class="copy-btn" data-action="copy" type="button"><i class="fa-solid fa-copy"></i> Copy Code</button></div>
+                    <textarea class="python-editor" aria-label="Python code editor" spellcheck="false">remainder = 29 % 5
+print(remainder)</textarea>
+                    <div class="editor-actions"><button class="run-btn" data-action="run" type="button"><i class="fa-solid fa-play"></i> Run Code</button></div>
+                </div>
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-terminal"></i> Output Window</span><button class="clear-btn" data-action="clear" type="button"><i class="fa-solid fa-trash"></i> Clear</button></div>
+                    <div class="terminal-box" aria-live="polite">Click "Run Code" to view output...</div>
+                </div>
+            </div>
+        </section>
+        <div class="chapter-navigation">
+            <a href="python-booleans.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> &laquo; Previous</a>
+            <a href="python-lists.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+    <script src="python-sandbox.js"></script>
+</body>
+</html>

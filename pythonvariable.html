@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Variables | CodeLab</title>
+    <link rel="stylesheet" href="virable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    <!-- Top Sticky Navigation Bar -->
+    <nav id="emo">
+        <a href="index.html">Home</a>
+        <a href="python.html" class="active">Python</a>
+        <a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a>
+        <a href="tailwind.html">Tailwind</a>
+        <a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a>
+        <a href="sql.html">SQL</a>
+        <a href="react.html">React</a>
+        <a href="c++.html">C++</a>
+        <a href="php.html">PHP</a>
+    </nav>
+
+    <!-- Main Page Layout (Sidebar + Content) -->
+    <div class="page-wrapper">
+        <!-- W3Schools Left Sidebar -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title"><i class="fa-brands fa-python"></i> Python Tutorial</h3>
+            <a href="python.html">Python Intro</a>
+            <a href="pythongetstarted.html">Python Get Started</a>
+            <a href="pythonsinax.html">Python Syntax</a>
+            <a href="pythoncommet.html">Python Comments</a>
+            <a href="pythonvariable.html" class="active">Python Variables</a>
+            <a href="data.html">Python Data Types</a>
+            <a href="numbers.html">Python Numbers</a>
+            <a href="casting.html">Python Casting</a>
+            <a href="python-strings.html">Python Strings</a>
+            <a href="python-booleans.html">Python Booleans</a>
+            <a href="python-operators.html">Python Operators</a>
+            <a href="python-lists.html">Python Lists</a>
+            <a href="python-advanced.html#tuples">Python Tuples</a>
+            <a href="python-advanced.html#sets">Python Sets</a>
+            <a href="python-advanced.html#dictionaries">Python Dictionaries</a>
+            <a href="python-advanced.html#ifelse">Python If...Else</a>
+            <a href="python-advanced.html#whileloops">Python While Loops</a>
+            <a href="python-advanced.html#forloops">Python For Loops</a>
+            <a href="python-advanced.html#functions">Python Functions</a>
+            <a href="python-advanced.html#lambda">Python Lambda</a>
+            <a href="python-advanced.html#arrays">Python Arrays</a>
+            <a href="python-advanced.html#classes">Python Classes/Objects</a>
+        </aside>
+
+        <!-- Main Content Panel -->
+        <main id="python-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Python Variables</h1>
+                <p class="intro-text">A variable is a name that refers to a value. In Python, assignment creates or rebinds that name, so you can begin using a variable as soon as you give it a value.</p>
+            </section>
+
+            <div class="wave-divider"></div>
+
+            <!-- Creating Variables Section -->
+            <section class="content-section animate-fade">
+                <h2>Creating Variables</h2>
+                <p class="desc-text">Python has no command for declaring a variable. A variable is created the moment you first assign a value to it:</p>
+                <p class="desc-text">The equals sign here is an assignment operator: it binds the name on the left to the result on the right. Names can then be used in later expressions, which makes programs easier to change than repeating literal values throughout the code.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span><i class="fa-solid fa-code"></i> Basic Variables Example</span>
+                    </div>
+                    <pre><code>x = 5
+y = "John"
+print(x)
+print(y)</code></pre>
+                </div>
+
+                <p class="desc-text" style="margin-top: 15px;">Python is dynamically typed: values have types, while variable names are not permanently declared with one type. Reassigning a name to a different kind of value is allowed, but doing so unnecessarily can make code harder to understand. Clear names and consistent roles help prevent accidental mix-ups.</p>
+            </section>
+
+            <div class="wave-divider"></div>
+
+            <!-- Variable Names Rules Section -->
+            <section class="content-section animate-fade">
+                <h2>Variable Names & Rules</h2>
+                <p class="desc-text">A variable can have a short name (like <code>x</code> and <code>y</code>) or a more descriptive name (<code>age</code>, <code>carname</code>, <code>total_volume</code>).</p>
+                <ul class="rules-list">
+                    <li><i class="fa-solid fa-check"></i> Must start with a letter or the underscore character.</li>
+                    <li><i class="fa-solid fa-xmark"></i> Cannot start with a number.</li>
+                    <li><i class="fa-solid fa-check"></i> Can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).</li>
+                    <li><i class="fa-solid fa-triangle-exclamation"></i> Variable names are <strong>case-sensitive</strong> (<code>age</code>, <code>Age</code>, and <code>AGE</code> are three different variables).</li>
+                </ul>
+                <p class="desc-text">Names are case-sensitive, so <code>age</code> and <code>Age</code> refer to different variables. Prefer descriptive <code>snake_case</code> names for ordinary variables; avoid using Python keywords such as <code>if</code> or <code>class</code>, because they already have a language-defined role.</p>
+            </section>
+
+            <div class="wave-divider"></div>
+
+            <!-- Interactive Try It Yourself Sandbox -->
+            <section class="content-section animate-fade">
+                <h2><i class="fa-solid fa-laptop-code"></i> Try It Yourself (Interactive Sandbox)</h2>
+                <p class="desc-text">The browser preview can demonstrate basic assignments and <code>print()</code> output, but it does not implement all Python expressions or types. Use the installed interpreter when testing behavior beyond these simple examples.</p>
+
+                <div class="editor-wrapper">
+                    <div class="editor-column">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-code"></i> Python Input Code</span>
+                            <button class="copy-btn" onclick="copyEditorCode()"><i class="fa-solid fa-copy"></i> Copy</button>
+                        </div>
+                        <textarea id="pythonEditor" spellcheck="false"># Create variables
+name = "CodeLab"
+version = 3.11
+
+print(name)
+print(version)
+
+# Reassign variable
+x = 100
+print(x)</textarea>
+                        <div class="editor-actions">
+                            <button class="run-btn" onclick="runPythonCode()"><i class="fa-solid fa-play"></i> Run Code</button>
+                        </div>
+                    </div>
+
+                    <div class="editor-column">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-terminal"></i> Output Window</span>
+                            <button class="clear-btn" onclick="clearOutput()"><i class="fa-solid fa-trash"></i> Clear</button>
+                        </div>
+                        <div id="pythonOutput" class="terminal-box">Click "Run Code" to view output...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Previous and Next Chapter Navigation Buttons -->
+            <div class="chapter-navigation">
+                <a href="python-comments.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> &laquo; Previous</a>
+                <a href="python-datatypes.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <!-- Interactive Execution Script -->
+    <script>
+        function runPythonCode() {
+            const input = document.getElementById('pythonEditor').value;
+            const output = document.getElementById('pythonOutput');
+            output.innerHTML = "";
+
+            let logs = [];
+            try {
+                const lines = input.split('\n');
+                let simulatedVars = {};
+
+                lines.forEach(line => {
+                    let trimmed = line.trim();
+                    if (trimmed.startsWith('#') || trimmed === '') return;
+
+                    if (trimmed.startsWith('print(') && trimmed.endsWith(')')) {
+                        let inner = trimmed.substring(6, trimmed.length - 1);
+                        if (inner.includes('"') || inner.includes("'")) {
+                            let parts = inner.split(',');
+                            let lineOut = parts.map(p => p.replace(/['"]/g, '').trim()).join(' ');
+                            logs.push(lineOut);
+                        } else if (simulatedVars[inner] !== undefined) {
+                            logs.push(simulatedVars[inner]);
+                        } else {
+                            try { logs.push(eval(inner)); } catch (e) { logs.push(inner); }
+                        }
+                    } else if (trimmed.includes('=')) {
+                        let [varName, val] = trimmed.split('=').map(s => s.trim());
+                        try { simulatedVars[varName] = eval(val); } catch (e) { simulatedVars[varName] = val; }
+                    }
+                });
+
+                if (logs.length > 0) {
+                    output.innerHTML = logs.map(l => `<div class="log-line">> ${l}</div>`).join('');
+                } else {
+                    output.innerHTML = `<span style="color: #94a3b8;">Program executed successfully.</span>`;
+                }
+            } catch (err) {
+                output.innerHTML = `<span style="color: #ef4444;">SyntaxError: ${err.message}</span>`;
+            }
+        }
+
+        function clearOutput() {
+            document.getElementById('pythonOutput').innerHTML = 'Click "Run Code" to view output...';
+        }
+
+        function copyEditorCode() {
+            const text = document.getElementById('pythonEditor').value;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Code copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Design and Data Types | SQL | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="sql-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html" class="active">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="SQL tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Table Design and Data Types</h1>
+                <p class="intro-text">CREATE TABLE defines a table&#x27;s shape. Choose types that represent the values and constraints that enforce rules close to the data. Exact type behavior can vary between database engines.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>CREATE TABLE defines the columns a row can contain. Choose types that represent the data accurately, and add NOT NULL, DEFAULT, CHECK, and PRIMARY KEY constraints to make invalid states harder to store.</p>
+                <p>A constraint is enforced for every writer, including scripts that bypass form validation. Application checks still improve error messages, but the schema is the shared integrity boundary for data.</p>
+                <p>Type systems differ between engines. SQLite is more flexible about storage classes than PostgreSQL, so do not assume a type name guarantees identical validation everywhere. Check the target engine before relying on type behavior.</p>
+                <p>The example defines an identifier, a required title, a default priority, and a range check. The constraints document the domain in the schema; choose limits from requirements and consider how future migrations may change them.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>CREATE TABLE tasks (
+  task_id INTEGER PRIMARY KEY,
+  title TEXT NOT NULL,
+  priority INTEGER NOT NULL DEFAULT 1
+    CHECK (priority BETWEEN 1 AND 5)
+);</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Design a tasks or books table with a primary key, a required field, and a suitable default.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="sql-subqueries.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Subqueries and CTEs</a>
+                <a href="sql-keys.html" class="nav-btn next-btn">Keys and Relationships &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

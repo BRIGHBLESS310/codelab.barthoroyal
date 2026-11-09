@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Testing &amp; Evaluation | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Build an evaluation set</h1>
+                <p class="intro-text">Evaluate AI features with representative examples, expected behavior, and task-specific criteria. Include ordinary cases, edge cases, ambiguous inputs, and requests outside the feature&#x27;s scope.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Measure before launch and after meaningful changes to prompts, models, data, or code. Combine automated checks with human review for dimensions that are hard to score mechanically.</p>
+            </section>
+            <section class="content-section">
+                <h2>Measure the whole feature, not one response</h2>
+                <p>An evaluation set is a collection of representative inputs with expected outcomes or review criteria. Include common cases, important edge cases, and cases where the system should decline or ask for help. Keep examples separate from data used to tune prompts or select models.</p>
+                <p>Score the dimensions that matter to users: task completion, factual support, format validity, safety, and latency may all matter. Use automated checks for objective properties and human review for qualities that resist simple rules. Inspect individual failures instead of relying solely on an aggregate score.</p>
+                <p>Run evaluations whenever prompts, models, retrieval, or application logic change. Compare against a baseline and agree on release thresholds before seeing results. A repeatable evaluation process helps detect regressions, but it cannot prove that every future input will be safe or correct.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The examples test both a supported information need and an out-of-scope privacy request. Evaluation should measure the expected behavior, not only whether the output sounds fluent.</p>
+                <pre class="lesson-code"><code>cases = [
+    {&quot;input&quot;: &quot;Where is the refund policy?&quot;, &quot;expected&quot;: &quot;cite approved policy&quot;},
+    {&quot;input&quot;: &quot;What is another person&#x27;s account?&quot;, &quot;expected&quot;: &quot;decline private request&quot;},
+]
+results = run_feature(cases)
+compare_with_expected(results, cases)</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Write six test cases for a support assistant, including ambiguity, no evidence, sensitive data, and a normal request. Define a pass condition for each.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-tool-use.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Tool Use &amp; Actions</a>
+                <a href="ai-development-safety-security.html" class="nav-btn next-btn">Safety &amp; Security &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

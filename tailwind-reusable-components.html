@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Reusable Components | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Extract repeated patterns</h1>
+                <p class="intro-text">Utilities can make one-off UI clear, but repeating long class strings can make changes inconsistent. In a component framework, extract a component when the pattern has a stable meaning, structure, or behavior.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Prefer components with useful semantic names and explicit variants. Avoid a generic abstraction that hides simple markup without removing meaningful duplication.</p>
+            </section>
+            <section class="content-section">
+                <h2>Reuse the pattern at the right boundary</h2>
+                <p>Repeated utility sequences often represent a component: a button, alert, or card has a stable structure and appearance that should change consistently. In a component-based framework, place those classes in the component so callers reuse behavior and presentation instead of copying markup.</p>
+                <p>Not every repeated class list requires abstraction. Extract a component when the pattern has a meaningful name, repeated behavior, or likely shared changes. A premature abstraction can make simple differences hard to express; a copied pattern can drift when the same design is updated in several places.</p>
+                <p>Keep content and state flexible through clear properties or variants, and ensure the component preserves semantic HTML and accessible interaction. This connects utility-first styling to normal component design: utilities define the details, while the component gives the recurring pattern a stable interface.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>This React example turns a repeated button pattern into a named component. The component can later accept explicit props for disabled state or a deliberate visual variant.</p>
+                <pre class="lesson-code"><code>function PrimaryButton({ children }) {
+  return (
+    &lt;button className=&quot;rounded bg-indigo-600 px-4 py-2 font-semibold text-white hover:bg-indigo-700&quot;&gt;
+      {children}
+    &lt;/button&gt;
+  );
+}</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Find two repeated UI patterns in a sample page. Extract one into a component and decide which differences should be props and which should remain separate.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-arbitrary-values.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Arbitrary Values</a>
+                <a href="tailwind-theme-build.html" class="nav-btn next-btn">Theme &amp; Production Build &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

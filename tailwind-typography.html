@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Typography | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Build a readable type hierarchy</h1>
+                <p class="intro-text">Typography utilities control font family, size, weight, line height, and letter spacing. A small, consistent hierarchy helps readers tell headings, body copy, labels, and supporting text apart.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Use body text that remains comfortable at narrow widths, and give paragraphs enough line height. Avoid relying on color or font size alone to communicate meaning.</p>
+            </section>
+            <section class="content-section">
+                <h2>Hierarchy should support reading</h2>
+                <p>Typography utilities control font family, size, weight, line height, letter spacing, and text color. Together, these properties establish hierarchy: a heading should be distinct from body copy, while body text should remain comfortable to scan across the available line length.</p>
+                <p>Size alone does not create good hierarchy. Tight line height can make multi-line headings collide, and very wide paragraphs slow reading. Combine a sensible text size with readable leading and a restrained maximum width; adjust these choices at breakpoints only when the content benefits.</p>
+                <p>Visual styling and document semantics are related but not interchangeable. Use real heading elements in a logical order rather than styling a generic element to look like a heading. That preserves navigation for assistive technology while the utilities shape its appearance.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The label, heading, and paragraph have distinct roles. Leading and width improve the reading experience beyond choosing a font size.</p>
+                <pre class="lesson-code"><code>&lt;article class=&quot;max-w-prose text-slate-700&quot;&gt;
+  &lt;p class=&quot;text-sm font-semibold uppercase tracking-wide text-indigo-700&quot;&gt;Lesson 01&lt;/p&gt;
+  &lt;h1 class=&quot;mt-2 text-3xl font-bold leading-tight text-slate-950&quot;&gt;Design for clarity&lt;/h1&gt;
+  &lt;p class=&quot;mt-4 text-base leading-7&quot;&gt;A clear type scale makes a page easier to understand.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create a card with an eyebrow label, a heading, body copy, and a caption. Use a consistent hierarchy and check readability on a phone-sized viewport.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-spacing-sizing.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Spacing &amp; Sizing</a>
+                <a href="tailwind-flexbox.html" class="nav-btn next-btn">Flexbox &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

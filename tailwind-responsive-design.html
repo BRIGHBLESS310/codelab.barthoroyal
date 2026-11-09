@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Responsive Design | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Adapt from small screens upward</h1>
+                <p class="intro-text">Tailwind&#x27;s responsive variants apply utilities at and above configured breakpoints. Unprefixed classes define the base layout; prefixes such as sm: and lg: override or add styles for larger screens.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Design the narrow layout first, then add only the breakpoint changes that the content needs. Breakpoints are minimum widths, not device labels.</p>
+            </section>
+            <section class="content-section">
+                <h2>Breakpoints are minimum-width conditions</h2>
+                <p>In Tailwind's mobile-first model, an unprefixed utility supplies the base style, and a breakpoint prefix such as <code>md:</code> applies an override at that minimum viewport width and above. It does not mean “tablet only.” For example, <code>grid-cols-1 md:grid-cols-2</code> changes from one to two columns at the breakpoint and keeps two columns on wider screens unless another rule overrides it.</p>
+                <p>Start with the narrow layout because constrained space exposes content-order and overflow problems early. Add a breakpoint when the design genuinely needs a change—not simply because a device category exists. Breakpoints are tools for responding to available space, not labels for specific phones or tablets.</p>
+                <p>Test the transitions as well as the endpoints. Long words, translated text, and controls can overflow between familiar device widths. Responsive layout should preserve readable line lengths, touch-friendly controls, and a sensible reading order at every width.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The page is a single column by default. From the medium breakpoint, it becomes a two-column grid with a wider article and a sidebar.</p>
+                <pre class="lesson-code"><code>&lt;section class=&quot;grid grid-cols-1 gap-6 p-4 md:grid-cols-[minmax(0,2fr)_minmax(14rem,1fr)] md:p-8&quot;&gt;
+  &lt;article&gt;Primary article content&lt;/article&gt;
+  &lt;aside&gt;Related links&lt;/aside&gt;
+&lt;/section&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create a page that stacks a main article and a related-links panel on a phone, then places them side by side when there is room. Check for horizontal overflow.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-grid.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Grid</a>
+                <a href="tailwind-hover-focus-states.html" class="nav-btn next-btn">Hover &amp; Focus States &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joins | SQL | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="sql-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html" class="active">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="SQL tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Joins</h1>
+                <p class="intro-text">Joins combine rows from related tables. INNER JOIN returns matching pairs; LEFT JOIN keeps every row from its left table and uses NULL for missing matches. One-to-many relationships can produce multiple result rows per parent.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>A join combines rows according to a relationship condition. ON states which key values match; qualifying table names or aliases keeps similarly named columns clear and makes the relationship easy to review.</p>
+                <p>An inner JOIN returns matching pairs. A LEFT JOIN preserves every row from its left input and fills right-side columns with NULL when there is no match. Choose based on whether unmatched parents should remain.</p>
+                <p>Joins can multiply rows: a customer with several orders appears once per matching order. This is expected one-to-many behavior, not necessarily duplicate data. COUNT after a join therefore counts joined rows unless you deliberately count distinct entities.</p>
+                <p>The example links each order to its customer and returns the name with the order date. Verify the key relationship and expected row count before adding aggregates or additional joins.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>SELECT customers.name, orders.order_date
+FROM customers
+JOIN orders ON orders.customer_id = customers.customer_id;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Join two related tables and determine how multiple child records affect the result count.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="sql-aggregates.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Functions and Aggregates</a>
+                <a href="sql-subqueries.html" class="nav-btn next-btn">Subqueries and CTEs &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metadata and the Head | HTML | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="html-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html" class="active">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="HTML tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Metadata and the Head</h1><p class="intro-text">Explore metadata and the head through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>The head contains metadata and references that describe or configure a page. Most head elements are not shown in the body.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>Metadata in the <code>head</code> describes or configures a document rather than appearing as ordinary page content. The character encoding, viewport, title, description, and linked stylesheets serve different consumers, including browsers, search previews, and assistive technologies.</p><h3>How to apply it</h3><p>The <code>title</code> should identify this particular page, not merely repeat a site name. A meta description can summarize the page for a search-result preview, while the viewport declaration helps the browser map CSS pixels to a device's available width.</p><h3>Common pitfalls</h3><p>Metadata is not a substitute for visible, well-structured content: a description does not create a page heading, and a title does not label an on-page section. Keep metadata inside <code>head</code> and avoid duplicate or misleading titles across pages.</p></div>
+<pre class="lesson-code"><code>&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;meta name="description" content="A guide to urban gardening."&gt;
+  &lt;title&gt;Urban Gardening Guide&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+<p>For each head entry, identify which browser or external service uses it; then compare the document title with the visible main heading.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Write the head for a recipe page with a useful title, description, viewport, and stylesheet link.</p><p>When ready, continue to <a href="html.html">Course Overview</a>. You can return to the <a href="html.html">HTML course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="html-accessibility.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Accessibility Essentials</a>
+<a href="html.html" class="nav-btn next-btn">Next: Course Overview &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Let and Const | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="let-const">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript let and const</h1><p class="intro-text">let and const are block-scoped: they are available only within the block where they are declared. A const declaration must be initialized and cannot be reassigned.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Block-scoped bindings</h3><p><code>let</code> and <code>const</code> are scoped to the nearest enclosing block. <code>let</code> permits reassignment; <code>const</code> requires an initial value and prevents reassignment. They avoid many confusing behaviors associated with function-scoped <code>var</code>.</p><h3>Choose based on whether a binding changes</h3><p>Prefer <code>const</code> when a variable continues to refer to the same value, and use <code>let</code> when it must be updated, such as a counter. A const object can still have changed properties: the binding is fixed, not necessarily its contents.</p><h3>Scope prevents accidental collisions</h3><p>A block-scoped name is unavailable before initialization and cannot be redeclared in the same scope. Do not confuse a constant binding with an immutable value. Clear names and limited scope make control flow easier to follow.</p></section><section class="content-section"><h2>Bindings and values</h2><p>The array binding stays the same even though its contents change. Prefer const unless reassignment is needed, and keep variables in the smallest useful scope.</p><pre class="lesson-code"><code>const names = ["Ada"];
+names.push("Lin");
+
+let score = 0;
+score += 10;</code></pre><h2>Practice</h2><p>Try reassigning names and then adding an item to it. Observe which operation is allowed.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Design | CSS | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="css-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html" class="active">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="CSS tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Responsive Design</h1><p class="intro-text">Explore responsive design through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Responsive design adapts to available space rather than assuming a device. Flexible layouts can reduce the need for many breakpoints.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>Responsive design responds to available space and user settings instead of targeting one named device. Flexible containers, fluid media, and readable line lengths handle many screen sizes before any breakpoint is needed.</p><h3>How to apply it</h3><p>A media query applies a rule only when its condition, such as a minimum viewport width, is met. Choose breakpoints where the content no longer fits comfortably, then add a small number of layout changes rather than a separate design for every device model.</p><h3>Common pitfalls</h3><p>A viewport meta tag in HTML is needed for expected CSS-pixel behavior on mobile browsers. Test intermediate widths, zoom, and text enlargement too; a page that looks good at two preset widths can still fail between them.</p></div>
+<pre class="lesson-code"><code>.page { width: min(100% - 2rem, 70rem); margin-inline: auto; }
+@media (min-width: 48rem) { .layout { grid-template-columns: 2fr 1fr; } }</code></pre>
+<p>Narrow the browser gradually and identify the point where the content needs a layout change, rather than choosing a breakpoint based on a phone model.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Make a one-column mobile layout and a two-column wider layout. Test intermediate widths too.</p><p>When ready, continue to <a href="css-pseudo-classes.html">Pseudo-classes and States</a>. You can return to the <a href="css.html">CSS course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="css-grid.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: CSS Grid</a>
+<a href="css-pseudo-classes.html" class="nav-btn next-btn">Next: Pseudo-classes and States &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

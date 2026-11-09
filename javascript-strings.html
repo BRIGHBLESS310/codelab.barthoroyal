@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Strings | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="strings">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Strings</h1><p class="intro-text">Strings represent text and are immutable. Use template literals with backticks to interpolate values or write multi-line strings.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Text values are strings</h3><p>A string is immutable text written with single quotes, double quotes, or backticks. Template literals interpolate expressions and support multiline text. Its <code>length</code> reports UTF-16 code units, not always the number of characters people perceive.</p><h3>Combine and interpolate text</h3><p><code>+</code> concatenates strings; template literals insert expressions with <code>${...}</code>. Interpolation evaluates JavaScript, so move complex calculations into named variables. Convert other values intentionally when the distinction matters.</p><h3>Text operations create new values</h3><p>Operations that seem to change a string actually return a new string; save the result to keep it. Unicode symbols can occupy multiple code units, so length and indexing may differ from visible characters. String fundamentals support methods, JSON, and form input.</p></section><section class="content-section"><h2>Build and inspect text</h2><p>String indexes start at zero. Methods such as slice() return part of a string without changing the original.</p><pre class="lesson-code"><code>const learner = "Ada";
+const greeting = `Welcome, ${learner}!`;
+console.log(greeting);</code></pre><h2>Practice</h2><p>Create a sentence from a name and a course title, then print part of that sentence.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

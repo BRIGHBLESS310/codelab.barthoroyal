@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fetch | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="fetch">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Fetch</h1><p class="intro-text">The Fetch API makes HTTP requests and returns a promise. Check response.ok; HTTP error status codes do not automatically reject the fetch promise.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Fetch makes an HTTP request</h3><p><code>fetch()</code> starts a network request and returns a promise that fulfills with a <code>Response</code>. Options specify details such as method, headers, and body. Read the response body separately, for example with <code>response.json()</code> for JSON.</p><h3>Check status before using the body</h3><p>Fetch usually rejects for network failures, but an HTTP status such as 404 still fulfills with a response. Check <code>response.ok</code> or <code>response.status</code> before treating it as success. Body parsing is asynchronous and can fail if the response is malformed.</p><h3>Network results may be slow or unexpected</h3><p>A request can fail, return no body, or return a different shape than expected. Handle loading, success, and error states, and validate data before use. Cross-origin access also depends on the server?s CORS policy. Fetch builds on promises and async/await.</p></section><section class="content-section"><h2>Request and check data</h2><p>Handle network failures and validate returned data before using it. Do not send sensitive information to untrusted endpoints.</p><pre class="lesson-code"><code>async function loadData() {
+    const response = await fetch("/data.json");
+    if (!response.ok) {
+        throw new Error("Request failed: " + response.status);
+    }
+    return response.json();
+}</code></pre><h2>Practice</h2><p>Fetch a local JSON file and display loading, success, and error states.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

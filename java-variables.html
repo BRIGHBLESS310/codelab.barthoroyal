@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Variables and Data Types | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html">Java Intro</a><a href="java-get-started.html">Java Get Started</a><a href="java-syntax.html">Java Syntax & Output</a>
+            <a href="java-variables.html" class="active">Variables & Data Types</a><a href="java-operators.html">Operators & Math</a>
+            <a href="java-conditions.html">Conditions & Switch</a><a href="java-loops.html">Java Loops</a><a href="java-arrays.html">Java Arrays</a>
+            <a href="java-methods.html">Java Methods</a><a href="java-classes.html">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card"><h1 class="glow-text">Java Variables and Data Types</h1><p class="intro-text">A variable is a named place to store a value. Java is statically typed, so each variable has a declared type that determines which values it can hold and which operations are available.</p></section>
+            <section class="content-section">
+                <h2>Declare and initialize variables</h2>
+                <p>A declaration gives a variable a type and name. An assignment stores a value in it. Choose names that describe what the value represents.</p>
+                <pre class="lesson-code"><code>String studentName = "Ada";
+int completedLessons = 3;
+double courseProgress = 0.75;
+boolean isEnrolled = true;</code></pre>
+                <p>Java distinguishes uppercase and lowercase letters. By convention, variable and method names use <code>camelCase</code>.</p>
+                <p>The declaration's type is part of the variable's contract: an <code>int</code> cannot later hold a <code>String</code>. A local variable must be assigned before it is read, while fields receive default values automatically; initialize values explicitly so their intended starting state is clear.</p>
+                <p>A variable name refers to a value, and assignment replaces the value stored under that name. Prefer descriptive names such as <code>completedLessons</code> over vague names such as <code>x</code>, especially when values have different units or meanings.</p>
+            </section>
+            <section class="content-section">
+                <h2>Primitive and reference types</h2>
+                <p>Java has eight primitive types. Common ones include integers (<code>int</code>), decimal values (<code>double</code>), single characters (<code>char</code>), and true/false values (<code>boolean</code>). A <code>String</code> is an object reference type.</p>
+                <pre class="lesson-code"><code>int count = 12;
+long population = 8000000L;
+double price = 19.95;
+char grade = 'A';
+boolean available = false;
+String language = "Java";</code></pre>
+                <p>Pick a type that fits the value. For money in real systems, consider decimal-safe types such as <code>BigDecimal</code> rather than binary floating-point.</p>
+                <p>Primitive variables hold simple values directly. A reference variable such as <code>String</code> holds a reference to an object, so it can also be <code>null</code> when it refers to no object. Calling an instance method through a null reference causes a <code>NullPointerException</code>.</p>
+                <p>Integer types have finite ranges, and arithmetic can overflow those ranges without automatically producing a larger type. Choose among <code>int</code>, <code>long</code>, and floating-point types based on the domain; literals that need to be <code>long</code> use an <code>L</code> suffix.</p>
+            </section>
+            <section class="content-section">
+                <h2>Constants with final</h2>
+                <p>Add <code>final</code> when a variable should only be assigned once. This makes the value's intent clear and prevents accidental reassignment.</p>
+                <pre class="lesson-code"><code>final int DAYS_IN_WEEK = 7;
+final double TAX_RATE = 0.075;</code></pre>
+                <p>A <code>final</code> local or field can be assigned only once. For a reference, <code>final</code> prevents reassignment of the reference; it does not necessarily make the referenced object's contents immutable.</p>
+                <p>Constants shared by a class are commonly declared <code>static final</code> and named in uppercase with underscores. A named constant communicates why a value is used and gives one place to update it safely.</p>
+            </section>
+            <section class="content-section">
+                <h2>Type conversion and casting</h2>
+                <p>Some conversions, such as an <code>int</code> to a <code>double</code>, are widening conversions and happen automatically. A narrowing conversion needs an explicit cast because information may be lost.</p>
+                <pre class="lesson-code"><code>int count = 7;
+double exactCount = count;
+
+double measurement = 9.8;
+int wholePart = (int) measurement;
+System.out.println(wholePart); // 9</code></pre>
+                <p>Casting a decimal to an integer truncates the fractional part; it does not round to the nearest integer.</p>
+                <p>Widening conversions generally preserve the original value's magnitude, while narrowing conversions can discard fractional digits or high-order bits. The compiler asks for an explicit cast where data loss is possible, but the cast does not check whether that loss is acceptable to your application.</p>
+                <p>Mixed arithmetic follows Java's numeric promotion rules. For example, dividing two <code>int</code> values truncates before the result is assigned; converting the result afterward cannot restore the fraction. Convert an operand first or use a decimal literal when fractional arithmetic is intended.</p>
+            </section>
+            <section class="content-section"><h2>Practice</h2><p>Declare a product name, quantity, and unit price. Calculate the subtotal, then try changing the quantity and observe how the result changes.</p></section>
+            <div class="chapter-navigation"><a href="java-syntax.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</a><a href="java-operators.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p><div class="social-links"><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></div></footer>
+</body>
+</html>

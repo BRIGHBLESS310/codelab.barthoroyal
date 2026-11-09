@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Links and Navigation | HTML | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="html-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html" class="active">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="HTML tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Links and Navigation</h1><p class="intro-text">Explore links and navigation through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Anchors navigate to another resource with href. Link text should explain its destination even when read out of context.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>An anchor with an <code>href</code> points to a destination: a relative or absolute URL, a fragment identifier, or another supported resource. Relative paths resolve from the current document's location, so a link that works on one page may need a different path in a nested folder.</p><h3>How to apply it</h3><p>Link text is the accessible name people use to decide whether to follow a link. Describe the destination or action in context instead of relying on repeated phrases such as “click here”; fragment links also need a matching, unique destination <code>id</code>.</p><h3>Common pitfalls</h3><p>A link navigates to a resource, whereas a button performs an action on the current interface. Do not use a placeholder <code>#</code> as a finished destination, and use <code>target="_blank"</code> only when opening a new tab is intentional and made clear.</p></div>
+<pre class="lesson-code"><code>&lt;nav aria-label="Main navigation"&gt;
+  &lt;a href="index.html"&gt;Home&lt;/a&gt;
+  &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+<p>Follow the example's URL from the current file, then verify both the destination and whether the link text makes sense when read out of context.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Create a three-link site navigation. Use descriptive text and relative links for pages in your site.</p><p>When ready, continue to <a href="html-images.html">Images and Alternative Text</a>. You can return to the <a href="html.html">HTML course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="html-text-headings.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Text and Headings</a>
+<a href="html-images.html" class="nav-btn next-btn">Next: Images and Alternative Text &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

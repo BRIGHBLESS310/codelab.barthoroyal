@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Get Started | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Set up Tailwind CSS</h1>
+                <p class="intro-text">Tailwind scans your project files for class names and generates the CSS your page uses. Setup differs by framework and Tailwind version, so follow the installation guide for the version selected by your project.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">A typical workflow has three parts: install the version-specific package, connect Tailwind to your build tool, and include the generated stylesheet in the app entry point. In current projects, the setup command and configuration format may differ from older v3 tutorials.</p>
+            </section>
+            <section class="content-section">
+                <h2>What happens during setup</h2>
+                <p>Tailwind is a build-time CSS generator, not a browser runtime that styles every class it sees. Its scanner examines configured source files, recognizes utility candidates, and emits the CSS rules needed by those candidates. This is why a class in a file the build does not scan can appear in the markup but have no visible effect.</p>
+                <p>The installation guide must match both the Tailwind major version and the project's bundler. Version 3 commonly uses a configuration file and directives such as <code>@tailwind</code>; version 4 uses a CSS-first setup and different integration packages. Copying instructions across versions can leave the scanner or stylesheet disconnected.</p>
+                <p>After setup, verify the whole path: the source file is included, the CSS entry point is imported, and the development build refreshes after a class change. The browser's computed styles help distinguish a missing generated rule from a selector conflict or an incorrect utility name.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>Keep the build tool responsible for generating CSS; a class name in HTML does not create styles until Tailwind has scanned the file and emitted the matching rule.</p>
+                <pre class="lesson-code"><code>/* app.css: the exact directive depends on your Tailwind version */
+@import &quot;tailwindcss&quot;;
+
+/* In your application entry point, import app.css. */
+/* Then write utilities in markup: */
+&lt;div class=&quot;p-6 text-lg font-semibold&quot;&gt;Ready to style&lt;/div&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create a small page, connect its stylesheet through the project build, and confirm that changing a utility changes the rendered page. Record the Tailwind version and use its matching setup instructions.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Tailwind CSS Intro</a>
+                <a href="tailwind-utility-fundamentals.html" class="nav-btn next-btn">Utility Fundamentals &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

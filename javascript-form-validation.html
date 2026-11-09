@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form Validation | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="form-validation">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Form Validation</h1><p class="intro-text">HTML provides built-in constraints such as required, input types, and length limits. JavaScript can add user-friendly feedback, but client-side checks are not a substitute for server-side validation.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Validation checks whether input meets rules</h3><p>Form validation checks submitted values against requirements such as presence, length, format, or range. HTML constraints like <code>required</code>, <code>type="email"</code>, and <code>minlength</code> provide built-in checks; JavaScript adds contextual rules.</p><h3>Give actionable feedback</h3><p>A submit handler can inspect values, use <code>checkValidity()</code>, and show a message near the relevant field. Explain what needs correction, retain entered values, and consider validation while editing. Users should be able to identify and fix each problem.</p><h3>Client validation is not a security boundary</h3><p>Users can bypass browser code, so a server must validate data independently before accepting it. Do not rely only on color to show an error; provide text and accessible state. Validation combines forms and events to help people correct mistakes.</p></section><section class="content-section"><h2>Use browser validity checks</h2><p>Explain what the user needs to correct and associate error messages with their fields.</p><pre class="lesson-code"><code>const email = document.querySelector("#email");
+if (email?.validity.valid) {
+    console.log("Email field passes browser validation");
+} else {
+    email?.reportValidity();
+}</code></pre><h2>Practice</h2><p>Add required and type=email to a field, then test invalid and valid submissions.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

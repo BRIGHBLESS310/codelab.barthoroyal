@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Deployment &amp; Monitoring | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Release carefully and monitor outcomes</h1>
+                <p class="intro-text">Deployment includes a controlled rollout, configuration management, access control, monitoring, and a way to roll back. Monitoring should track system health and quality without collecting more personal content than necessary.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Track latency, errors, cost, user corrections, and evaluation results. Review changes in model behavior and data sources; define an owner and thresholds for pausing the feature.</p>
+            </section>
+            <section class="content-section">
+                <h2>Release with observability and a rollback path</h2>
+                <p>Before deployment, verify the production configuration, access controls, provider credentials, data handling, and evaluation results. A staged rollout limits exposure while the team checks real latency and user outcomes. Keep a way to disable or roll back the feature without redeploying unrelated functionality.</p>
+                <p>Monitor operational signals such as availability, timeouts, cost, and traffic, as well as privacy-preserving quality indicators. Avoid collecting more prompt or response content than needed for debugging. Monitoring should have owners and thresholds that lead to a defined action.</p>
+                <p>Real inputs and user behavior can differ from test data, and models or source documents may change. Review feedback and failures regularly, update evaluations, and communicate material changes. Deployment begins an operating lifecycle; it does not certify the system as permanently reliable.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>Quality sampling and operational signals are combined to support a release decision. Logging should be privacy-conscious and access-controlled.</p>
+                <pre class="lesson-code"><code>metrics = {
+    &quot;latency_ms&quot;: measure_latency(),
+    &quot;error_rate&quot;: measure_errors(),
+    &quot;reviewed_quality&quot;: sample_quality_checks(),
+}
+
+if exceeds_release_threshold(metrics):
+    pause_rollout_and_investigate()</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Write a launch checklist with a small initial rollout, quality and service metrics, a named owner, a rollback trigger, and a user feedback path.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-reliability.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Reliability &amp; Fallbacks</a>
+                <a href="ai-development-project-practice.html" class="nav-btn next-btn">Project Practice &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

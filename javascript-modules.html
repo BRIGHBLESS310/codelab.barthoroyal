@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Modules | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="modules">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Modules</h1><p class="intro-text">Modules split code into files and explicitly share values with export and import. In a browser, load an entry file with type=module.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Split a program into reusable files</h3><p>ES modules explicitly export values from one file and import them in another. This makes dependencies visible and encourages each module to have a focused responsibility. Named exports can expose several values; a default export is the module?s primary value.</p><h3>Imports and exports follow rules</h3><p>An imported binding is read-only in the importing module, and paths must resolve to the intended file. Browsers load entry files with <code>&lt;script type="module"&gt;</code>; modules are deferred by default and use strict mode. Excessive re-export layers can obscure dependencies.</p><h3>Modules differ from classic scripts</h3><p>Modules have their own scope rather than placing top-level declarations on the global object. Circular imports can expose values before initialization, so avoid unnecessary cycles. Modules organize functions and objects into maintainable code.</p></section><section class="content-section"><h2>Export and import</h2><p>Modules help separate responsibilities and avoid relying on a large set of global variables.</p><pre class="lesson-code"><code>// math.js
+export function add(a, b) {
+    return a + b;
+}
+
+// app.js
+import { add } from "./math.js";</code></pre><h2>Practice</h2><p>Move a helper function to a separate file, export it, and import it into your main script.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

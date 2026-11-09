@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Choose an Approach | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Select the smallest effective approach</h1>
+                <p class="intro-text">Possible choices include rules, search, a hosted model, a model running in your environment, or a custom-trained model. Compare quality needs with cost, latency, data handling, maintenance, and operational capability.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Use the simplest option that meets the requirement. A custom model is not automatically more private or reliable; understand where processing occurs and what the provider retains.</p>
+            </section>
+            <section class="content-section">
+                <h2>Compare options against evidence and risk</h2>
+                <p>Start with the least complex approach that could meet the defined need. Rules work well for stable, explicit conditions; conventional machine learning can classify or estimate from suitable examples; a generative model may help with flexible language tasks. Each option has different data, explainability, and operating requirements.</p>
+                <p>Compare candidates with a baseline using the same representative test cases. Include quality, latency, cost, privacy, and failure impact—not just a demo's apparent fluency. A model's general capability does not mean it is the right fit for a particular workflow or user population.</p>
+                <p>Record the reason for choosing an approach and the evidence that would cause you to change it. This prevents tool preference from substituting for product judgment and makes it easier to simplify, defer, or abandon a feature when it does not meet the need.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>A decision table makes tradeoffs explicit instead of selecting by popularity. Validate provider and deployment claims against current documentation and agreements.</p>
+                <pre class="lesson-code"><code>options = [&quot;keyword search&quot;, &quot;hosted model&quot;, &quot;custom model&quot;]
+criteria = [&quot;quality&quot;, &quot;latency&quot;, &quot;cost&quot;, &quot;data controls&quot;]
+
+# Compare each option against the same criteria.</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Make a small decision matrix for a document summarizer. Include quality, privacy, latency, cost, and who will maintain it.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-problem-framing.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Problem Framing</a>
+                <a href="ai-development-data-readiness.html" class="nav-btn next-btn">Data Readiness &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

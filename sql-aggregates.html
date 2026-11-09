@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions and Aggregates | SQL | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="sql-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html" class="active">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="SQL tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Functions and Aggregates</h1>
+                <p class="intro-text">COUNT, SUM, AVG, MIN, and MAX summarize rows. GROUP BY creates one summary per group. WHERE filters input rows before grouping; HAVING filters the groups after aggregation.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>Aggregate functions summarize rows: COUNT counts rows or non-NULL values, SUM adds values, AVG computes a mean, and MIN or MAX finds an extreme. COUNT(*) counts every row; COUNT(column) skips NULLs in that column.</p>
+                <p>GROUP BY partitions rows that share listed values, then calculates an aggregate for each group. Selected expressions should either be grouped or aggregated; engines differ in how strictly they enforce this rule.</p>
+                <p>WHERE filters individual rows before groups form; HAVING filters completed groups. An aggregate condition belongs in HAVING, while a condition on an input row usually belongs in WHERE for clarity and efficiency.</p>
+                <p>The query counts customers per city, keeps cities with at least two records, then sorts by count. Alias use in GROUP BY or HAVING varies by database, so repeating the aggregate expression may be more portable.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>SELECT city, COUNT(*) AS customer_count
+FROM customers
+GROUP BY city
+HAVING COUNT(*) &gt;= 2
+ORDER BY customer_count DESC;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Count records per category and use HAVING to show groups above a threshold.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="sql-changes.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> INSERT, UPDATE, DELETE</a>
+                <a href="sql-joins.html" class="nav-btn next-btn">Joins &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

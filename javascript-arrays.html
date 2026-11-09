@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="arrays">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Arrays</h1><p class="intro-text">Arrays store ordered collections. Their indexes start at zero, and their length changes as items are added or removed.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>An ordered collection</h3><p>An array stores multiple values in an ordered collection. Positions are identified by numeric indexes starting at zero, making the final index <code>length - 1</code>. Arrays can contain different kinds of values, though a consistent shape often makes application code easier to understand.</p><h3>Read, update, and grow the collection</h3><p>Bracket notation reads or replaces a position, and <code>length</code> reports the number of elements. <code>push()</code> and <code>pop()</code> add or remove at the end; <code>unshift()</code> and <code>shift()</code> operate at the beginning. Use <code>for...of</code> to process each value.</p><h3>Indexes are not one-based</h3><p>Index <code>length</code> is one past the final element, so an out-of-range read returns <code>undefined</code>. <code>const</code> prevents reassignment of an array variable but does not freeze its contents. These rules underpin the array methods used to search, transform, and filter data.</p></section><section class="content-section"><h2>Store and access values</h2><p>Use const when the array binding should not be reassigned; the array's contents can still change.</p><pre class="lesson-code"><code>const lessons = ["Syntax", "Functions"];
+lessons.push("Arrays");
+console.log(lessons[0]);
+console.log(lessons.length);</code></pre><h2>Practice</h2><p>Create an array of favorite topics, add one, and print each topic.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

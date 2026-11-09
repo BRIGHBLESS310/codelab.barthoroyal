@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="functions">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Functions</h1><p class="intro-text">Functions package reusable behavior. A function can accept parameters and return a value. Arrow functions are concise and are commonly used for callbacks.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Reusable behavior with inputs and outputs</h3><p>A function packages statements into a named unit of behavior. Parameters receive inputs, and <code>return</code> sends a result to the caller. Functions divide a problem into reusable, testable pieces and avoid repeating logic.</p><h3>Calls create local execution contexts</h3><p>Parameters and local variables are available during a call. A function without explicit <code>return</code> produces <code>undefined</code>. Function declarations are hoisted; function expressions and arrow functions are initialized according to their variable declarations.</p><h3>Returning differs from logging</h3><p>Logging displays a value for a developer; returning makes it available to the rest of the program. A common mistake is omitting <code>return</code>. Arrow functions are concise callbacks, but their <code>this</code> behavior differs from regular functions.</p></section><section class="content-section"><h2>Define and call functions</h2><p>Functions should have clear responsibilities and names. A function without an explicit return value returns undefined.</p><pre class="lesson-code"><code>function add(left, right) {
+    return left + right;
+}
+
+const double = value =&gt; value * 2;
+console.log(add(2, 3), double(4));</code></pre><h2>Practice</h2><p>Write a function that converts a temperature and returns the result.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

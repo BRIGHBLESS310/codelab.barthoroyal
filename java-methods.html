@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Methods | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html">Java Intro</a><a href="java-get-started.html">Java Get Started</a><a href="java-syntax.html">Java Syntax & Output</a>
+            <a href="java-variables.html">Variables & Data Types</a><a href="java-operators.html">Operators & Math</a>
+            <a href="java-conditions.html">Conditions & Switch</a><a href="java-loops.html">Java Loops</a>
+            <a href="java-arrays.html">Java Arrays</a><a href="java-methods.html" class="active">Java Methods</a><a href="java-classes.html">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card"><h1 class="glow-text">Java Methods</h1><p class="intro-text">A method is a named block of code that performs a task. Methods make programs easier to reuse, test, and understand by giving operations clear names.</p></section>
+            <section class="content-section">
+                <h2>Define and call a method</h2>
+                <p>A method declaration includes a return type, name, parameters, and body. Call the method by its name and provide arguments that match its parameters.</p>
+                <pre class="lesson-code"><code>static int add(int left, int right) {
+    return left + right;
+}
+
+int result = add(3, 4);
+System.out.println(result);</code></pre>
+                <p><code>int</code> is the return type here. A method that returns nothing uses <code>void</code>.</p>
+                <p>The declaration's parts describe how callers use the method: <code>static</code> means it belongs to the class rather than a particular object, the return type tells what comes back, and parameters define the inputs. A call executes the body and can store the returned result for later work.</p>
+                <p>A non-<code>void</code> method must return a value of the declared type on every path. Returning a result instead of printing it keeps calculation separate from presentation, so callers can display, compare, or combine that result as needed.</p>
+            </section>
+            <section class="content-section">
+                <h2>Parameters and return values</h2>
+                <p>Parameters describe the inputs a method needs. Returning a value lets the caller use the result in another expression or store it.</p>
+                <pre class="lesson-code"><code>static double calculateArea(double width, double height) {
+    return width * height;
+}
+
+double area = calculateArea(4.0, 2.5);</code></pre>
+                <p>Give parameters meaningful names and keep each method focused on one job.</p>
+                <p>Arguments are the actual values supplied at a call site, while parameters are the local names receiving those values. Java is pass-by-value: for an object parameter the copied value is a reference, so mutating the referenced object may be visible to the caller, but reassigning the parameter does not change the caller's variable.</p>
+                <p>Validate assumptions at the boundary of a method when invalid inputs could cause confusing results. A method with a small, clear contract is easier to reuse and test than one that silently depends on unrelated program state.</p>
+            </section>
+            <section class="content-section">
+                <h2>Void methods</h2>
+                <p>A <code>void</code> method performs an action without returning a value.</p>
+                <pre class="lesson-code"><code>static void printWelcome(String name) {
+    System.out.println("Welcome, " + name + "!");
+}
+
+printWelcome("Ada");</code></pre>
+                <p>A <code>void</code> method is appropriate when the purpose is an action, such as displaying a message or updating an object. It can still accept parameters to customize that action, but it does not produce a value for an expression.</p>
+                <p>Keep side effects understandable: a method named <code>printWelcome</code> indicates output, whereas a method named <code>formatWelcome</code> would more naturally return text. Clear method names help callers know whether a call changes or displays anything.</p>
+            </section>
+            <section class="content-section">
+                <h2>Method overloading</h2>
+                <p>Methods may share a name when their parameter lists differ. The compiler selects the matching version from the argument types and number of arguments.</p>
+                <pre class="lesson-code"><code>static int square(int value) {
+    return value * value;
+}
+
+static double square(double value) {
+    return value * value;
+}</code></pre>
+                <p>Changing only the return type is not enough to overload a method.</p>
+                <p>Overloading provides several convenient ways to perform a related task, such as accepting different numeric types. The compiler resolves which declaration to call from argument types and conversions before execution; the runtime type of an argument does not dynamically select an overload.</p>
+                <p>Avoid overload sets whose signatures are ambiguous or whose behavior differs unexpectedly. If two operations mean different things, distinct names can be clearer than relying on subtle conversion rules.</p>
+            </section>
+            <section class="content-section"><h2>Practice</h2><p>Write a method that accepts a temperature in Celsius and returns its Fahrenheit equivalent. Call it with several values and print the results.</p></section>
+            <div class="chapter-navigation"><a href="java-arrays.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</a><a href="java-classes.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p><div class="social-links"><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></div></footer>
+</body>
+</html>

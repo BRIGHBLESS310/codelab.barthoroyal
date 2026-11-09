@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Grid System | Bootstrap | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="bootstrap-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html" class="active">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="Bootstrap tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">The Grid System</h1><p class="intro-text">Explore the grid system through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Bootstrap’s grid uses containers, rows, and columns built on flexbox. Column classes define their share of a row.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>Bootstrap's grid composes a container, a row, and columns; the row handles horizontal alignment and gutters while column classes set their responsive share. The familiar 12-column system lets a layout combine widths that add up to a row.</p><h3>How to apply it</h3><p>Classes can specify different spans at successive breakpoints, so a main region can fill a small screen and share space with a sidebar on a wider one. Grid columns are flex items, which allows them to adapt to available space.</p><h3>Common pitfalls</h3><p>Place columns as children of a row and rows inside a container to preserve the intended spacing. Column counts that exceed the row's available span wrap, so check the total widths at each breakpoint.</p></div>
+<pre class="lesson-code"><code>&lt;div class="container"&gt;&lt;div class="row"&gt;
+  &lt;main class="col-12 col-md-8"&gt;Main&lt;/main&gt;
+  &lt;aside class="col-12 col-md-4"&gt;Sidebar&lt;/aside&gt;
+&lt;/div&gt;&lt;/div&gt;</code></pre>
+<p>Add the example's column spans at each breakpoint and verify that the columns occupy a full row without exceeding the grid's total.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Create three feature columns on large screens that stack on a phone.</p><p>When ready, continue to <a href="bootstrap-gutters.html">Grid Gutters</a>. You can return to the <a href="bootstrap.html">Bootstrap course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="bootstrap-containers-breakpoints.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Containers and Breakpoints</a>
+<a href="bootstrap-gutters.html" class="nav-btn next-btn">Next: Grid Gutters &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

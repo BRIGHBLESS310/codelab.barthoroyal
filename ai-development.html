@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn AI Development | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text"><i class="fa-solid fa-gears"></i> AI Development Tutorial</h1>
+                <p class="intro-text">AI development turns an AI capability into a dependable product feature. It includes understanding the user need, selecting an approach, integrating a model, validating behavior, and monitoring outcomes.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>Learning goal:</strong> Plan and prototype an AI feature with clear boundaries, protected data, measurable quality, and graceful failure behavior. Follow the lessons in the sidebar; each topic has its own page with explanations, an example, and a practice task.</p></div>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Course overview</h2>
+                <p class="desc-text">Move from problem framing to data, model and API choices, prompting, retrieval, validation, evaluation, safeguards, and operations. Lessons use small examples and emphasize boundaries and safe fallbacks.</p>
+                <p>Choose any topic from the expanded sidebar, or start with <a href="ai-development-problem-framing.html">Problem Framing</a>.</p>
+            </section>
+            <section class="content-section">
+                <h2>Follow the feature lifecycle</h2>
+                <p>AI development is product engineering around a probabilistic capability. Start by framing a specific user problem and comparing approaches; then prepare data, select a model interface, and define the application boundary that protects user and system responsibilities.</p>
+                <p>Prompts, retrieval, and tool calls shape what the model can do, while structured-output validation and evaluation determine whether its responses meet an explicit contract. Privacy, security, and safety requirements should influence those choices from the start rather than being added after a working demo.</p>
+                <p>Finally, design for timeouts and uncertain output, deploy gradually, monitor outcomes, and keep a rollback path. Each stage informs the next: evaluation findings may change the prompt or approach, and production feedback may expose new data or reliability needs. The goal is a useful, bounded feature—not merely a successful API call.</p>
+            </section>
+            <section class="content-section">
+                <h2>A first example</h2>
+                <p>Use this small example as a starting point. The lessons explain the ideas behind it and how to adapt them to a real project.</p>
+                <pre class="lesson-code"><code>def answer_question(question, approved_docs):
+    context = retrieve(question, approved_docs)
+    if not context:
+        return &quot;I could not find this in the provided materials.&quot;
+    draft = generate_answer(question, context)
+    return validate_and_present(draft, context)</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>How to practice</h2>
+                <ol class="lang-grid">
+                    <li>Read one lesson and identify the key idea in your own words.</li>
+                    <li>Type or adapt its example, then predict what will happen before you run or inspect it.</li>
+                    <li>Complete the practice task and test at least one edge case.</li>
+                    <li>Review limitations and accessibility, privacy, or reliability concerns that apply.</li>
+                </ol>
+            </section>
+            <div class="chapter-navigation">
+                <a href="index.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Home</a>
+                <a href="ai-development-problem-framing.html" class="nav-btn next-btn">Problem Framing &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

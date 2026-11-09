@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Privacy &amp; Data Handling | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Minimize and protect user data</h1>
+                <p class="intro-text">Privacy-aware development considers what data is collected, where it is processed, who can access it, how long it is retained, and how users can exercise applicable rights.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Use data minimization and purpose limitation. Redact unnecessary sensitive fields, restrict logs, set retention rules, and assess legal or contractual requirements with qualified stakeholders.</p>
+            </section>
+            <section class="content-section">
+                <h2>Minimize data across the entire request path</h2>
+                <p>Privacy planning begins with identifying personal or sensitive information in user inputs, retrieved context, logs, evaluation data, and provider requests. Decide what is necessary for the task and remove or transform unrelated details before they leave the trusted boundary.</p>
+                <p>Understand the model provider's retention, processing, and access terms; do not assume an API request is private by default. Protect credentials, restrict data access, set retention limits, and ensure logs do not casually capture full prompts or responses. Follow applicable organizational and legal requirements.</p>
+                <p>Data minimization also reduces harm if an account, log, or service is exposed. Explain relevant collection and use to users, provide deletion or correction routes where appropriate, and reassess data flows when a feature changes. Privacy is an architectural property as well as a policy statement.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The payload includes only fields needed for the feature and avoids routine logging of full content. Exact controls depend on the system and applicable obligations.</p>
+                <pre class="lesson-code"><code>payload = {
+    &quot;question&quot;: redact_unneeded_identifiers(user_question),
+    &quot;locale&quot;: required_locale,
+}
+
+# Do not log full prompts or responses by default.</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create a data-flow inventory for an AI feature: fields, purpose, destination, retention, access, and deletion path.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-safety-security.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Safety &amp; Security</a>
+                <a href="ai-development-reliability.html" class="nav-btn next-btn">Reliability &amp; Fallbacks &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

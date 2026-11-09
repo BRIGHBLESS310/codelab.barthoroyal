@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Lists | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="python.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav id="emo">
+        <a href="index.html">Home</a><a href="python.html" class="active">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Python tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-python"></i> Python Tutorial</h3>
+            <a href="python.html">Python Intro</a><a href="pythongetstarted.html">Python Get Started</a>
+            <a href="pythonsinax.html">Python Syntax</a><a href="pythoncommet.html">Python Comments</a>
+            <a href="pythonvariable.html">Python Variables</a><a href="data.html">Python Data Types</a>
+            <a href="numbers.html">Python Numbers</a><a href="casting.html">Python Casting</a>
+            <a href="python-strings.html">Python Strings</a><a href="python-booleans.html">Python Booleans</a>
+            <a href="python-operators.html">Python Operators</a><a href="python-lists.html" class="active">Python Lists</a>
+            <a href="python-advanced.html#tuples">Python Tuples</a><a href="python-advanced.html#sets">Python Sets</a>
+            <a href="python-advanced.html#dictionaries">Python Dictionaries</a><a href="python-advanced.html#ifelse">Python If...Else</a>
+            <a href="python-advanced.html#whileloops">Python While Loops</a><a href="python-advanced.html#forloops">Python For Loops</a>
+            <a href="python-advanced.html#functions">Python Functions</a><a href="python-advanced.html#lambda">Python Lambda</a>
+            <a href="python-advanced.html#arrays">Python Arrays</a><a href="python-advanced.html#classes">Python Classes/Objects</a>
+        </aside>
+    <main id="python-container">
+        <section class="hero-card"><h1 class="glow-text">Python Lists</h1><p class="intro-text">A list stores an ordered, mutable sequence of values. Lists can contain different types, though keeping related items consistent usually makes a collection easier to understand and process.</p></section>
+        <section class="content-section">
+            <h2>Create and update a list</h2>
+            <pre class="lesson-code"><code>fruits = ["apple", "pear", "mango"]
+fruits.append("orange")
+first_fruit = fruits[0]
+
+for fruit in fruits:
+    print(fruit)</code></pre>
+            <p>List indexes start at zero. Use <code>append()</code> to add an item and slices such as <code>fruits[1:3]</code> to get a portion.</p>
+            <p>Because lists preserve order, an index identifies an item's position: index <code>0</code> is the first item, and <code>-1</code> is the last. A slice includes its starting index and excludes its ending index. An index outside the list's valid range raises <code>IndexError</code>, so check the list length when positions may vary.</p>
+            <p>Lists are mutable, meaning methods such as <code>append()</code> change the existing list. This is useful for collecting results, but assigning the same list to another variable does not create an independent copy; both names then refer to the same object.</p>
+        </section>
+        <section class="content-section">
+            <h2>Useful list operations</h2>
+            <ul class="feature-list">
+                <li><strong class="highlight">Length:</strong> Get the number of items with <code>len(items)</code>.</li>
+                <li><strong class="highlight">Membership:</strong> Check for an item with <code>value in items</code>.</li>
+                <li><strong class="highlight">Remove:</strong> Use <code>remove(value)</code> or <code>pop(index)</code> when appropriate.</li>
+                <li><strong class="highlight">Comprehensions:</strong> Build a new list from an iterable with a concise expression.</li>
+                <li><strong class="highlight">Copying:</strong> Remember that assigning a list to another variable does not make an independent copy.</li>
+            </ul>
+            <p><code>remove(value)</code> deletes the first matching value and raises an error if it is absent; <code>pop(index)</code> removes and returns the item at an index (the last item by default). These different behaviors matter when handling optional values. Avoid changing a list's size while looping directly over it, because items can be skipped as positions shift.</p>
+            <p>A list comprehension creates a new list from an iterable, often with a transformation or filter. For small, clear transformations it is concise; if the expression becomes difficult to read, use a regular loop instead. Lists are a natural next step after operators because they let one variable hold a sequence for iteration.</p>
+        </section>
+        <section class="content-section">
+            <h2>Practice</h2>
+            <p>Create a list of numbers and calculate their sum with a loop or the built-in <code>sum()</code> function. Add a new value and print the updated list.</p>
+            <p><a href="python-operators.html">Review Operators</a> or continue to <a href="python-advanced.html#tuples">Python Tuples</a>.</p>
+        </section>
+        <section class="content-section animate-fade" data-python-sandbox>
+            <h2><i class="fa-solid fa-laptop-code"></i> Try It Yourself</h2>
+            <p class="desc-text">Edit the sample and press Run Code. This lightweight preview supports basic assignments and <code>print()</code>, not list operations or loops; use a local Python interpreter to try the examples.</p>
+            <div class="editor-wrapper">
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-code"></i> Python Input Code</span><button class="copy-btn" data-action="copy" type="button"><i class="fa-solid fa-copy"></i> Copy Code</button></div>
+                    <textarea class="python-editor" aria-label="Python code editor" spellcheck="false">fruits = ["apple", "pear", "mango"]
+print(fruits)</textarea>
+                    <div class="editor-actions"><button class="run-btn" data-action="run" type="button"><i class="fa-solid fa-play"></i> Run Code</button></div>
+                </div>
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-terminal"></i> Output Window</span><button class="clear-btn" data-action="clear" type="button"><i class="fa-solid fa-trash"></i> Clear</button></div>
+                    <div class="terminal-box" aria-live="polite">Click "Run Code" to view output...</div>
+                </div>
+            </div>
+        </section>
+        <div class="chapter-navigation">
+            <a href="python-operators.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> &laquo; Previous</a>
+            <a href="python-advanced.html#tuples" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+    <script src="python-sandbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | React | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="react-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html" class="active">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="React tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Get Started</h1>
+                <p class="intro-text">React components are JavaScript functions that describe interface output. Use a maintained project setup from the official React documentation; its build tools support JSX and module imports. JavaScript fundamentals make the course easier.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>React describes interfaces as a tree of components. A component is usually a JavaScript function that receives inputs and returns JSX; React renders that description into the DOM and updates parts that change.</p>
+                <p>A project needs tooling that understands JSX and JavaScript modules. Start with a maintained setup recommended by React's official documentation; this example uses createRoot from react-dom/client rather than the legacy rendering API.</p>
+                <p>The HTML page supplies the element with id root, createRoot connects React to it, and render mounts App. If the element is missing or the import path is wrong, the app cannot mount.</p>
+                <p>A development server rebuilds files and reports syntax errors. React does not require one router or data library, so add tools only when the application needs them and keep the first component small.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>import { createRoot } from &quot;react-dom/client&quot;;
+import App from &quot;./App.jsx&quot;;
+
+createRoot(document.getElementById(&quot;root&quot;)).render(&lt;App /&gt;);</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create a starter app, change its first heading, and confirm the page updates when saved.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="react.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Course Overview</a>
+                <a href="react-jsx.html" class="nav-btn next-btn">JSX and Rendering &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

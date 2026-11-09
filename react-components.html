@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components and Props | React | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="react-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html" class="active">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="React tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Components and Props</h1>
+                <p class="intro-text">Components split an interface into reusable units. Props are read-only inputs from a parent, useful for configuring child components without hard-coding repeated markup.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>A component is a reusable unit of interface. Modern React components are commonly JavaScript functions whose names begin with a capital letter; lower-case JSX tags name built-in HTML elements.</p>
+                <p>Props are inputs supplied by a parent, much like function arguments. They let a component vary its content without duplicating markup. Treat props as read-only; a child should notify its parent through a callback when an action changes data.</p>
+                <p>Destructuring props in the function parameter makes the values used by the component visible. Give each component a focused responsibility and stable name so repeated visual patterns can be changed consistently.</p>
+                <p>The parent passes Ada through the name prop, and Welcome renders it in a heading. Reusing the component with a different value changes its output without changing its markup.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>function Welcome({ name }) {
+  return &lt;h2&gt;Welcome, {name}!&lt;/h2&gt;;
+}
+
+function App() {
+  return &lt;Welcome name=&quot;Ada&quot; /&gt;;
+}</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create a Badge component with label and tone props; render it with two different labels.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="react-jsx.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> JSX and Rendering</a>
+                <a href="react-conditional-ui.html" class="nav-btn next-btn">Conditional UI &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

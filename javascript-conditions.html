@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditions | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="conditions">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Conditions</h1><p class="intro-text">Use if, else if, and else to choose code based on a condition. Conditions are evaluated as truthy or falsy values.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Choose a path from a condition</h3><p>A conditional runs different code depending on whether an expression is truthy or falsy. <code>if</code> handles a case, <code>else if</code> adds alternatives, and <code>else</code> supplies a fallback. This is how programs respond to state and user choices.</p><h3>Branches are tested in order</h3><p>JavaScript evaluates branches top to bottom and executes only the first matching branch. Put specific cases before broad ones and use braces so later edits do not change which statements are controlled. Parentheses help show how combined logical conditions are grouped.</p><h3>Truthiness is not a precise test</h3><p>Zero, empty string, <code>NaN</code>, <code>null</code>, and <code>undefined</code> are falsy; empty arrays and objects are truthy. A truthiness check can mistakenly reject a valid zero. Use explicit comparisons when the requirement concerns a particular value or missing state.</p></section><section class="content-section"><h2>Choose a branch</h2><p>Use clear comparisons rather than relying on truthiness when a value's exact meaning matters.</p><pre class="lesson-code"><code>const score = 82;
+if (score &gt;= 90) {
+    console.log("Excellent");
+} else if (score &gt;= 60) {
+    console.log("Passed");
+} else {
+    console.log("Keep practicing");
+}</code></pre><h2>Practice</h2><p>Change the score and test the program at the boundaries between each result.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

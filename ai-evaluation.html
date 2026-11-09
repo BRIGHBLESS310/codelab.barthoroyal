@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence: Evaluation &amp; Metrics | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html" class="active">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Artificial Intelligence tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Measure what matters</h1>
+                <p class="intro-text">Evaluation compares system outputs with an appropriate reference or user outcome. Accuracy can be useful, but precision, recall, error costs, latency, and human ratings may matter more for a particular task.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Choose measures based on consequences. A high overall score can hide poor performance for a smaller group or a critical edge case; inspect slices and representative failures.</p>
+            </section>
+            <section class="content-section">
+                <h2>Match the metric to the decision</h2>
+                <p>Evaluation compares model outputs with a reference outcome on examples that were not used to fit the model. Accuracy is easy to understand, but it can hide poor performance on rare classes. Precision describes how often positive predictions are correct; recall describes how many actual positives were found.</p>
+                <p>There is usually a trade-off: changing the decision threshold can catch more positives while also creating more false alarms. Choose metrics and thresholds by considering the real cost of each error, not by maximizing a score in isolation. Inspect performance for relevant subgroups as well as overall averages.</p>
+                <p>Keep test examples representative of the intended use and separate them from prompt tuning or repeated model selection. For generative outputs, use a mix of criteria such as factual support, task completion, consistency, and human review. Document limitations so a score is interpreted within its scope.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The tiny calculation gives two correct predictions out of three. It is not enough on its own: a larger, representative set and task-appropriate metrics are needed.</p>
+                <pre class="lesson-code"><code>predicted = [&quot;billing&quot;, &quot;account&quot;, &quot;billing&quot;]
+expected = [&quot;billing&quot;, &quot;billing&quot;, &quot;billing&quot;]
+
+correct = sum(p == y for p, y in zip(predicted, expected))
+accuracy = correct / len(expected)</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create a five-example evaluation set for a classifier. Identify one error that is more costly than the others and choose a metric or review step to reflect that.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-prompting.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Prompting Basics</a>
+                <a href="ai-limitations-bias.html" class="nav-btn next-btn">Limitations &amp; Bias &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

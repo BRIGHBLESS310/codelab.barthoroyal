@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Prompt Design | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Design prompts as part of the interface</h1>
+                <p class="intro-text">A prompt can specify role, task, context, format, and boundaries. It is application logic and should be versioned and tested rather than improvised only after deployment.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Prompts cannot guarantee correct or safe behavior. Avoid including secrets; separate trusted instructions from user-provided content and validate the output independently.</p>
+            </section>
+            <section class="content-section">
+                <h2>Make the instruction testable</h2>
+                <p>A well-designed prompt specifies the task, trusted context, output expectations, and what to do when evidence is missing. These parts reduce ambiguity and make the model's job narrower. Delimit user content clearly so it is treated as data to process rather than as an instruction that overrides the task.</p>
+                <p>Prompts are not security controls and cannot guarantee truth. Validate important claims and keep policy enforcement in application code. If output must follow a format, describe that format precisely and use provider-supported structured output when available, followed by local validation.</p>
+                <p>Version prompts alongside code and test them against representative examples, including adversarially phrased, ambiguous, and unsupported requests. Compare changes on the same evaluation set to see whether one improvement creates regressions elsewhere. This treats prompt design as an engineered interface.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The instruction sets a constrained task and a response shape. A real implementation should use the provider&#x27;s supported message roles and still verify the returned structure and citations.</p>
+                <pre class="lesson-code"><code>instruction = &quot;&quot;&quot;
+Task: answer using only the supplied reference.
+If the reference is insufficient, say so.
+Return a concise answer and list source titles.
+&quot;&quot;&quot;
+request = {&quot;instruction&quot;: instruction, &quot;reference&quot;: context, &quot;question&quot;: question}</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Write a prompt for an approved-document assistant. Include source boundaries, a rule for unsupported questions, and a format that can be checked.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-architecture.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Application Architecture</a>
+                <a href="ai-development-structured-output.html" class="nav-btn next-btn">Structured Output &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

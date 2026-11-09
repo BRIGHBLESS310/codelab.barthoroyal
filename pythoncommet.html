@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Comments | CodeLab</title>
+    <link rel="stylesheet" href="pythoncommet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    <!-- Top Sticky Navigation Bar -->
+    <nav id="emo">
+        <a href="index.html">Home</a>
+        <a href="python.html" class="active">Python</a>
+        <a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a>
+        <a href="tailwind.html">Tailwind</a>
+        <a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a>
+        <a href="sql.html">SQL</a>
+        <a href="react.html">React</a>
+        <a href="c++.html">C++</a>
+        <a href="php.html">PHP</a>
+    </nav>
+
+    <!-- Main Page Layout (Sidebar + Content) -->
+    <div class="page-wrapper">
+        <!-- W3Schools Left Sidebar -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title"><i class="fa-brands fa-python"></i> Python Tutorial</h3>
+            <a href="python.html">Python Intro</a>
+            <a href="pythongetstarted.html">Python Get Started</a>
+            <a href="pythonsinax.html">Python Syntax</a>
+            <a href="pythoncommet.html" class="active">Python Comments</a>
+            <a href="pythonvariable.html">Python Variables</a>
+            <a href="data.html">Python Data Types</a>
+            <a href="numbers.html">Python Numbers</a>
+            <a href="casting.html">Python Casting</a>
+            <a href="python-strings.html">Python Strings</a>
+            <a href="python-booleans.html">Python Booleans</a>
+            <a href="python-operators.html">Python Operators</a>
+            <a href="python-lists.html">Python Lists</a>
+            <a href="python-advanced.html#tuples">Python Tuples</a>
+            <a href="python-advanced.html#sets">Python Sets</a>
+            <a href="python-advanced.html#dictionaries">Python Dictionaries</a>
+            <a href="python-advanced.html#ifelse">Python If...Else</a>
+            <a href="python-advanced.html#whileloops">Python While Loops</a>
+            <a href="python-advanced.html#forloops">Python For Loops</a>
+            <a href="python-advanced.html#functions">Python Functions</a>
+            <a href="python-advanced.html#lambda">Python Lambda</a>
+            <a href="python-advanced.html#arrays">Python Arrays</a>
+            <a href="python-advanced.html#classes">Python Classes/Objects</a>
+        </aside>
+
+        <!-- Main Content Panel -->
+        <main id="python-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Python Comments</h1>
+                <p class="intro-text">A comment is a note for people reading a program; Python does not execute it as a statement. Comments can explain intent, clarify a non-obvious choice, or temporarily disable a line while you investigate behavior.</p>
+            </section>
+
+            <div class="wave-divider"></div>
+
+            <!-- Creating a Comment Section -->
+            <section class="content-section animate-fade">
+                <h2>Creating a Comment</h2>
+                <p class="desc-text">Comments in Python start with a hash symbol <code>#</code>, and Python will ignore everything from the hash mark to the end of the line:</p>
+                <p class="desc-text">A comment can appear on its own line or after executable code. Keep it accurate and focused on why the code exists, rather than restating an obvious operation; stale comments can be more confusing than no comment.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span><i class="fa-solid fa-code"></i> Single-line Comment Example</span>
+                    </div>
+                    <pre><code># This is a comment
+print("Hello, World!")</code></pre>
+                </div>
+
+                <p class="desc-text" style="margin-top: 15px;">Comments can be placed at the end of a line, and Python will ignore the rest of the line:</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span><i class="fa-solid fa-code"></i> Inline Comment Example</span>
+                    </div>
+                    <pre><code>print("Hello, World!") # This is also a comment</code></pre>
+                </div>
+            </section>
+
+            <div class="wave-divider"></div>
+
+            <!-- Multi-line Comments Section -->
+            <section class="content-section animate-fade">
+                <h2>Multi-line Comments</h2>
+                <p class="desc-text">Python does not actually have a built-in syntax for multi-line comments. To add a multi-line comment, you could insert a <code>#</code> for each line:</p>
+                <p class="desc-text">Putting a hash at the beginning of each line makes every line unambiguously a comment. Editors can usually add or remove these markers across a selected block, which is safer than relying on a string literal to hide code.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span><i class="fa-solid fa-code"></i> Multiple Hash Example</span>
+                    </div>
+                    <pre><code># This is a comment
+# written in
+# more than just one line
+print("Hello, World!")</code></pre>
+                </div>
+
+                <p class="desc-text" style="margin-top: 15px;">Triple-quoted text is a string literal, not a special multi-line comment. An unassigned string expression may be discarded, but strings at the start of a module, class, or function can become documentation strings (<em>docstrings</em>). Prefer <code>#</code> for comments and use docstrings when documenting a module, class, or function.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span><i class="fa-solid fa-code"></i> Multiline String Comment</span>
+                    </div>
+                    <pre><code>"""
+This is a comment
+written in
+more than just one line
+"""
+print("Hello, World!")</code></pre>
+                </div>
+            </section>
+
+            <div class="wave-divider"></div>
+
+            <!-- Interactive Try It Yourself Sandbox -->
+            <section class="content-section animate-fade">
+                <h2><i class="fa-solid fa-laptop-code"></i> Try It Yourself (Interactive Sandbox)</h2>
+                <p class="desc-text">This browser preview handles basic assignments and print statements and skips lines that begin with <code>#</code>; it is not a full Python interpreter. Use a local interpreter to test docstrings or other multi-line constructs.</p>
+
+                <div class="editor-wrapper">
+                    <div class="editor-column">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-code"></i> Python Input Code</span>
+                            <button class="copy-btn" onclick="copyEditorCode()"><i class="fa-solid fa-copy"></i> Copy</button>
+                        </div>
+                        <textarea id="pythonEditor" spellcheck="false"># This program prints a greeting
+print("Hello from CodeLab!")
+
+# print("This line is commented out and won't run")
+
+print("Comments are super useful!")</textarea>
+                        <div class="editor-actions">
+                            <button class="run-btn" onclick="runPythonCode()"><i class="fa-solid fa-play"></i> Run Code</button>
+                        </div>
+                    </div>
+
+                    <div class="editor-column">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-terminal"></i> Output Window</span>
+                            <button class="clear-btn" onclick="clearOutput()"><i class="fa-solid fa-trash"></i> Clear</button>
+                        </div>
+                        <div id="pythonOutput" class="terminal-box">Click "Run Code" to view output...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Previous and Next Chapter Navigation Buttons -->
+            <div class="chapter-navigation">
+                <a href="python-syntax.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> &laquo; Previous</a>
+                <a href="python-variables.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© Blessed Ovenseri Development Team</p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <!-- Interactive Execution Script -->
+    <script>
+        function runPythonCode() {
+            const input = document.getElementById('pythonEditor').value;
+            const output = document.getElementById('pythonOutput');
+            output.innerHTML = "";
+
+            let logs = [];
+            try {
+                const lines = input.split('\n');
+                lines.forEach(line => {
+                    let trimmed = line.trim();
+                    if (trimmed.startsWith('#') || trimmed === '') return;
+
+                    if (trimmed.startsWith('print(') && trimmed.endsWith(')')) {
+                        let inner = trimmed.substring(6, trimmed.length - 1);
+                        if (inner.includes('"') || inner.includes("'")) {
+                            let parts = inner.split(',');
+                            let lineOut = parts.map(p => p.replace(/['"]/g, '').trim()).join(' ');
+                            logs.push(lineOut);
+                        } else {
+                            try { logs.push(eval(inner)); } catch (e) { logs.push(inner); }
+                        }
+                    }
+                });
+
+                if (logs.length > 0) {
+                    output.innerHTML = logs.map(l => `<div class="log-line">> ${l}</div>`).join('');
+                } else {
+                    output.innerHTML = `<span style="color: #94a3b8;">Program executed successfully.</span>`;
+                }
+            } catch (err) {
+                output.innerHTML = `<span style="color: #ef4444;">SyntaxError: ${err.message}</span>`;
+            }
+        }
+
+        function clearOutput() {
+            document.getElementById('pythonOutput').innerHTML = 'Click "Run Code" to view output...';
+        }
+
+        function copyEditorCode() {
+            const text = document.getElementById('pythonEditor').value;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Code copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+</html>

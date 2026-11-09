@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Spread and Rest | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="spread-rest">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Spread and Rest</h1><p class="intro-text">Spread syntax expands iterable items or object properties. Rest syntax collects remaining values; both use three dots, and their meaning depends on where they appear.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Expand values or collect the remainder</h3><p>Spread expands iterable values into individual items or copies enumerable object properties. Rest collects remaining function arguments or destructured values into an array or object. Both use <code>...</code>, but their positions distinguish expanding from collecting.</p><h3>Calls, arrays, objects, and parameters</h3><p>Spread can pass an array as arguments, combine arrays, or create a shallow object copy. Rest parameters gather extra arguments and must be last. In destructuring, rest collects positions or properties not already selected.</p><h3>Copies are shallow and later properties win</h3><p>Nested objects remain shared after spreading. In object literals, later properties overwrite earlier ones, so order matters, especially when combining external data. Understand mutation and precedence when using spread to compose values.</p></section><section class="content-section"><h2>Expand or collect values</h2><p>Object spread creates a shallow copy. Nested objects are still shared references unless copied separately.</p><pre class="lesson-code"><code>const first = [1, 2];
+const combined = [...first, 3];
+
+function sum(...values) {
+    return values.reduce((total, value) =&gt; total + value, 0);
+}</code></pre><h2>Practice</h2><p>Combine two arrays with spread syntax and write a function that sums any number of arguments.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Errors | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="errors">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Errors</h1><p class="intro-text">Errors indicate that an operation could not complete as expected. Use try...catch when code can recover or show a useful message, and do not silently ignore failures.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Errors reveal failed operations or assumptions</h3><p>Syntax errors prevent parsing; runtime errors happen during execution; logic errors produce a valid but incorrect result. Recognizing the kind of failure narrows the search. An error object can provide a message and stack trace to help locate where execution went wrong.</p><h3>Throw and catch with purpose</h3><p>Use <code>throw</code> when a function cannot continue under its contract, and catch where the program can recover or communicate clearly. Keep <code>try</code>/<code>catch</code> narrow so unrelated failures are not hidden; inspect the error rather than discarding useful context.</p><h3>Do not silently swallow failures</h3><p>An empty <code>catch</code> leaves confusing behavior and hides bugs. Validate external input at boundaries, but avoid redundant checks. Asynchronous operations may reject promises, so handle failures with <code>catch</code> or <code>try</code>/<code>await</code>; error handling complements debugging.</p></section><section class="content-section"><h2>Handle expected failures</h2><p>When creating your own errors, include enough context to help diagnose the problem without exposing sensitive data.</p><pre class="lesson-code"><code>try {
+    const settings = JSON.parse("{ invalid }");
+    console.log(settings);
+} catch (error) {
+    console.error("Settings could not be read.", error);
+}</code></pre><h2>Practice</h2><p>Wrap parsing of a user-provided JSON string in try...catch and display a helpful error.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

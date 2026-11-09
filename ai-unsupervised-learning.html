@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence: Unsupervised Learning | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html" class="active">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Artificial Intelligence tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Find structure without labels</h1>
+                <p class="intro-text">Unsupervised methods look for structure in data without a supplied target label. Clustering can group similar records, while dimensionality reduction can make patterns easier to inspect.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">A cluster is a mathematical grouping, not automatically a meaningful human category. Validate interpretations with domain knowledge and avoid making consequential decisions from unexplained group assignments.</p>
+            </section>
+            <section class="content-section">
+                <h2>Patterns are discovered, not supplied</h2>
+                <p>Unsupervised learning works with examples that lack a target label. Clustering methods group records by similarity in their chosen feature space; dimensionality-reduction methods create a smaller representation that can make structure easier to inspect. The method reveals patterns according to its assumptions, not necessarily categories people already recognize.</p>
+                <p>Feature choices and scaling strongly affect what counts as “similar.” A numeric feature with a large range can dominate distance calculations unless values are prepared appropriately. Results also depend on method parameters, so different settings may produce different groupings.</p>
+                <p>Treat clusters as hypotheses for investigation rather than ground truth. Inspect representative records, ask whether the grouping is useful for the intended purpose, and check for sensitive or spurious patterns. Unlabeled structure can support exploration, but it does not by itself establish a causal explanation.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The method groups points based on a similarity definition. A person still needs to inspect what those groups represent and whether the result is useful.</p>
+                <pre class="lesson-code"><code>points = [[1.0, 1.2], [1.1, 0.9], [8.8, 9.0]]
+groups = cluster(points, count=2)
+
+# Inspect examples in each group before naming it.</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Imagine a collection of support messages with no labels. Suggest a similarity feature, then write why a discovered group might be misleading.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-supervised-learning.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Supervised Learning</a>
+                <a href="ai-neural-networks.html" class="nav-btn next-btn">Neural Networks &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

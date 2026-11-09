@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="variables">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Variables</h1><p class="intro-text">Variables give names to values. Use const when a binding will not be reassigned and let when it will. Avoid var in new code because its function-scoped behavior can be surprising.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Names make values reusable</h3><p>A variable is a named binding that lets code refer to a value. Descriptive names make calculations and decisions understandable; reassignment changes what a mutable binding refers to. Variables can hold primitives, objects, functions, and expression results.</p><h3>Declaration, initialization, reassignment</h3><p>A declaration introduces a name; initialization gives it a value; reassignment changes it later. <code>let</code> permits reassignment and <code>const</code> prevents it. Older <code>var</code> is function-scoped and can behave unexpectedly around blocks.</p><h3>Choose a stable meaning and narrow scope</h3><p>Reusing a variable for unrelated meanings makes debugging harder. Prefer <code>const</code> unless reassignment is needed and declare values close to their use. A constant object reference does not make the object immutable; these choices connect to scope and data types.</p></section><section class="content-section"><h2>Declare and update values</h2><p>Choose descriptive names that explain a value's purpose. A const object can still have its properties changed; const prevents reassignment of the variable itself.</p><pre class="lesson-code"><code>const course = "JavaScript";
+let lessonCount = 1;
+lessonCount += 1;
+console.log(course, lessonCount);</code></pre><h2>Practice</h2><p>Create a course variable and a progress count, then update the count.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

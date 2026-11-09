@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Selectors | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="dom-selectors">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript DOM Selectors</h1><p class="intro-text">querySelector() returns the first matching element, while querySelectorAll() returns a collection of all matches. Both use CSS selector syntax.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Find the element you intend to change</h3><p>DOM selectors locate nodes so JavaScript can read or update a page. <code>querySelector()</code> returns the first match for a CSS selector; <code>querySelectorAll()</code> returns a static NodeList of all matches. IDs, classes, attributes, and element names target page content.</p><h3>Scope and timing matter</h3><p>Calling a selector on a container searches only its subtree. A query made before the markup exists may return <code>null</code>; defer the script or wait until the document is ready. Check a single-element result before using its properties.</p><h3>Selectors must match the document</h3><p>A misspelled class or invalid selector can yield no match. When many elements match, iterate over the NodeList rather than treating it as one element. Reliable selectors connect DOM structure to events and rendering while keeping code resilient to page changes.</p></section><section class="content-section"><h2>Select page elements</h2><p>Check that an element exists before using it when the script may run on pages without that element.</p><pre class="lesson-code"><code>const card = document.querySelector(".card");
+const buttons = document.querySelectorAll("button");
+buttons.forEach(button =&gt; {
+    button.disabled = false;
+});</code></pre><h2>Practice</h2><p>Select all links in a page and count them with querySelectorAll().</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

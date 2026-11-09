@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selectors | CSS | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="css-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html" class="active">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="CSS tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Selectors</h1><p class="intro-text">Explore selectors through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>Selectors identify which elements receive declarations. Simple selectors include element names, classes, and IDs.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>Selectors match elements in the document tree. Type selectors target element names, class selectors target reusable class tokens, ID selectors target a specific identifier, and attribute selectors can match elements based on their attributes.</p><h3>How to apply it</h3><p>Combinators express relationships such as descendants or direct children, letting a rule be scoped to a part of the page. Selector choice affects both where the style applies and how difficult it is for a later rule to override it.</p><h3>Common pitfalls</h3><p>Use classes for reusable styling and keep IDs unique; very long, deeply nested selectors couple CSS to a fragile HTML structure. A selector that matches too broadly can create accidental side effects elsewhere in the page.</p></div>
+<pre class="lesson-code"><code>h1 { color: #075985; }
+.card { padding: 1rem; }
+.card a { text-decoration: underline; }
+#site-header { border-bottom: 1px solid #cbd5e1; }</code></pre>
+<p>For each selector, predict which nodes match before opening developer tools, then inspect the matched elements to confirm your reading.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Write type, class, ID, and descendant selectors to style a card and its link.</p><p>When ready, continue to <a href="css-cascade.html">Cascade and Specificity</a>. You can return to the <a href="css.html">CSS course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="css-syntax.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: CSS Syntax and Rules</a>
+<a href="css-cascade.html" class="nav-btn next-btn">Next: Cascade and Specificity &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

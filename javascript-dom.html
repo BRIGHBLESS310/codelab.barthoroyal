@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="dom">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript DOM</h1><p class="intro-text">The Document Object Model represents a web page as objects JavaScript can inspect and update. Select an element, then change its text or attributes in response to user actions.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>The DOM is a model of the page</h3><p>The Document Object Model represents parsed HTML as a tree of nodes that JavaScript can inspect and change. Scripts can update text, attributes, classes, and structure without replacing the whole page. This is the foundation of interactive browser interfaces.</p><h3>Change content safely</h3><p>Use <code>textContent</code> for plain text and DOM methods such as <code>createElement()</code> and <code>append()</code> to build elements. <code>innerHTML</code> parses markup and is useful for trusted templates, but inserting untrusted strings can enable injection. Choose the narrowest update that meets the need.</p><h3>DOM state can differ from source HTML</h3><p>The DOM reflects parsed and modified page state, not just original source. Replacing a node can remove listeners attached to it. Selectors identify nodes, events report actions, and careful DOM updates turn user input into visible feedback.</p></section><section class="content-section"><h2>Update page content</h2><p>Prefer setting textContent for plain text. Avoid inserting untrusted strings as HTML.</p><pre class="lesson-code"><code>const heading = document.querySelector("h1");
+if (heading) {
+    heading.textContent = "Welcome to JavaScript";
+}</code></pre><h2>Practice</h2><p>Select a heading in a test page and update its text after a button click.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

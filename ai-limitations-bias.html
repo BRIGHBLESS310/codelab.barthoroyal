@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence: Limitations &amp; Bias | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html" class="active">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Artificial Intelligence tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Recognize error and bias</h1>
+                <p class="intro-text">Models learn from data and objectives chosen by people. Historical inequalities, poor coverage, ambiguous labels, and mismatched deployment conditions can lead to unfair or unreliable outcomes.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Look beyond aggregate averages. Consider who may be missing from the data, who bears the cost of errors, and whether a human can challenge or correct a result.</p>
+            </section>
+            <section class="content-section">
+                <h2>Errors have patterns and consequences</h2>
+                <p>A model's performance reflects its training data, objectives, and evaluation coverage. Bias can enter through missing representation, historical inequities, inconsistent labels, or a target that measures the wrong thing. A single overall score cannot reveal every difference in how errors affect people.</p>
+                <p>Look at false positives and false negatives separately and examine them across relevant contexts. A system can be accurate on average yet fail repeatedly for a smaller group or a less common input. The right response may be to collect better evidence, change the decision process, limit the feature, or not use AI for that task.</p>
+                <p>Communicate known limitations in language users can understand, and provide human review or recourse when outcomes matter. Monitoring can reveal new failures after deployment, but it does not replace careful design before release. Responsible use includes a plan to respond when the model is wrong.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>Group-level evaluation can reveal uneven behavior, but the choice of groups, data quality, and context need careful review. No single score establishes that a system is fair.</p>
+                <pre class="lesson-code"><code>for group, examples in evaluation_by_group.items():
+    score = evaluate(model, examples)
+    print(group, score)
+
+# Investigate gaps; do not treat a score as a full fairness proof.</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Imagine an automated résumé sorter. List stakeholders, possible sources of bias, and a meaningful way for a person to contest an incorrect result.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-evaluation.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Evaluation &amp; Metrics</a>
+                <a href="ai-privacy-responsible-ai.html" class="nav-btn next-btn">Privacy &amp; Responsible AI &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

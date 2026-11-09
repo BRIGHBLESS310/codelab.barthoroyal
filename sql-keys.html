@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keys and Relationships | SQL | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="sql-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html" class="active">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="SQL tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Keys and Relationships</h1>
+                <p class="intro-text">Primary keys uniquely identify rows. A foreign key links a column to a referenced key. Relationships can be one-to-one, one-to-many, or many-to-many; a join table commonly represents the last type.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>A primary key uniquely identifies a row and should remain stable; it can be one column or a carefully chosen composite. A foreign key references a key in another table, connecting records while preserving referential integrity.</p>
+                <p>A one-to-many relationship places the parent's key in the child table, as customer_id does in orders. A many-to-many relationship normally uses a junction table with a foreign key for each side.</p>
+                <p>NOT NULL and foreign-key constraints prevent missing references, but enforcement settings vary. Verify integrity is enabled in your engine and decide whether deletes should be blocked, cascaded, or handled explicitly.</p>
+                <p>The schema fragment gives each order a primary key and requires a customer and date. A foreign key alone does not make the relationship one-to-one; use uniqueness constraints when only one related row is allowed.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>CREATE TABLE orders (
+  order_id INTEGER PRIMARY KEY,
+  customer_id INTEGER NOT NULL,
+  order_date TEXT NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Sketch an authors-and-books relationship and label its primary and foreign keys.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="sql-schema.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Table Design and Data Types</a>
+                <a href="sql-transactions.html" class="nav-btn next-btn">Transactions &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

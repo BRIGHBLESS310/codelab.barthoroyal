@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="string-methods">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript String Methods</h1><p class="intro-text">String methods inspect or create text without changing the original string. Common methods include trim(), includes(), startsWith(), replace(), and split().</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Methods inspect and produce strings</h3><p>String methods search, extract, replace, and transform text. <code>includes()</code>, <code>slice()</code>, <code>replace()</code>, and <code>trim()</code> cover common tasks. Strings are immutable, so these operations return a new string instead of changing the original.</p><h3>Indexes and matching details matter</h3><p><code>slice(start, end)</code> excludes the end position, and <code>includes()</code> is case-sensitive. JavaScript string indexes count UTF-16 code units, so a visible character made from several units needs more careful handling.</p><h3>Save the result when needed</h3><p>Calling <code>trim()</code> without assigning its result leaves the source unchanged. Distinguish substring search from exact equality, and choose locale-aware behavior for human language text. String methods support regex matching and safe input processing.</p></section><section class="content-section"><h2>Clean and split text</h2><p>Choose methods based on the input format, and validate data rather than assuming it always matches expectations.</p><pre class="lesson-code"><code>const input = "  JavaScript basics  ";
+const clean = input.trim();
+console.log(clean.includes("basics"));
+console.log(clean.split(" "));</code></pre><h2>Practice</h2><p>Clean a text value with trim(), then split it into words.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

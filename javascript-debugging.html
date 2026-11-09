@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Debugging | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="debugging">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Debugging</h1><p class="intro-text">Use browser developer tools to understand errors and inspect program state. The console reports errors, and the debugger lets you pause at breakpoints.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Debugging is a repeatable investigation</h3><p>Debugging finds why actual behavior differs from expected behavior. Reproduce the issue reliably and reduce it to a small case; writing down the expected and actual result turns a vague symptom into a testable question.</p><h3>Use browser developer tools</h3><p>The console shows errors and values. Breakpoints pause execution so you can inspect local variables, the call stack, and the branch taken; stepping shows state changes. Conditional breakpoints help when a problem only appears with a particular input.</p><h3>Verify the cause and nearby behavior</h3><p>Changing many things at once obscures which change mattered. Read the stack trace, inspect types and boundaries, and make one focused fix. Re-run the failing case plus a nearby normal case; this connects debugging with careful testing.</p></section><section class="content-section"><h2>A practical debugging process</h2><p>Read the error message, inspect values near the problem, reduce the code to a reproducible example, and test boundary cases.</p><pre class="lesson-code"><code>const values = [2, 4, 6];
+const total = values.reduce((sum, value) =&gt; sum + value, 0);
+console.log({ values, total });</code></pre><h2>Practice</h2><p>Set a breakpoint in a loop and inspect how a variable changes on each iteration.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence: AI Approaches | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html" class="active">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Artificial Intelligence tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Compare rules, learning, and generation</h1>
+                <p class="intro-text">Rule-based software follows explicit instructions. Machine-learning systems estimate patterns from examples. Generative systems create new content based on learned patterns and an input prompt. A product may combine these approaches.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">The right approach depends on the task, available data, need for explainability, operating cost, and impact of mistakes. More complex does not automatically mean more effective.</p>
+            </section>
+            <section class="content-section">
+                <h2>Distinguish the approach from the task</h2>
+                <p>Rule-based systems apply conditions written by people, which makes their behavior direct and inspectable when the rules cover the situation. Machine learning instead fits a model from examples, allowing it to generalize patterns but also introducing uncertainty and dependence on the training data.</p>
+                <p>Generative AI is a kind of model behavior that produces new text, images, audio, or other content from learned patterns. It is not a synonym for all AI, and generated output should not be assumed to be factual. Systems can combine rules, predictive models, and generation—for example, rules can enforce workflow boundaries around a language model.</p>
+                <p>Choose by comparing the cost of mistakes, available evidence, transparency needs, and expected benefit. A simple deterministic rule may be better than a model for a stable, explicit policy; a model may help when inputs vary too much for a practical set of rules. Complexity should earn its place through measured value.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>This hybrid example uses a clear rule for a known case and a model for other messages. A real system should also define confidence and fallback behavior.</p>
+                <pre class="lesson-code"><code>if message_contains(&quot;reset password&quot;):
+    route = &quot;account&quot;
+else:
+    route = model.predict(message)
+
+# A person can review uncertain routes.</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Pick a small task and compare a rule-based solution with a learned one. List one benefit and one risk for each.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-fundamentals.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> AI Fundamentals</a>
+                <a href="ai-data.html" class="nav-btn next-btn">Data &amp; Representation &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

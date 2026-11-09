@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Loops | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html">Java Intro</a><a href="java-get-started.html">Java Get Started</a><a href="java-syntax.html">Java Syntax & Output</a>
+            <a href="java-variables.html">Variables & Data Types</a><a href="java-operators.html">Operators & Math</a>
+            <a href="java-conditions.html">Conditions & Switch</a><a href="java-loops.html" class="active">Java Loops</a>
+            <a href="java-arrays.html">Java Arrays</a><a href="java-methods.html">Java Methods</a><a href="java-classes.html">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card"><h1 class="glow-text">Java Loops</h1><p class="intro-text">Loops repeat a block of code. Pick the loop that makes the stopping condition and number of repetitions easy to understand.</p></section>
+            <section class="content-section">
+                <h2>While loop</h2>
+                <p>A <code>while</code> loop checks its condition before each iteration. Update the values used by the condition so that it eventually becomes false.</p>
+                <pre class="lesson-code"><code>int count = 3;
+while (count > 0) {
+    System.out.println(count);
+    count--;
+}
+System.out.println("Go!");</code></pre>
+                <p>If the condition never becomes false, the loop will continue indefinitely. This is called an infinite loop.</p>
+                <p>Think of a <code>while</code> loop as “repeat while this condition is true.” The condition is checked before the body, so it may execute zero times; this is useful when the number of repetitions depends on input or some changing state.</p>
+                <p>To reason about termination, identify which value affects the condition and how the body changes it. Missing an update, or updating in the wrong direction, is a common reason a loop never stops.</p>
+            </section>
+            <section class="content-section">
+                <h2>For loop</h2>
+                <p>A traditional <code>for</code> loop puts initialization, continuation condition, and update in one place. It is often useful when counting iterations.</p>
+                <pre class="lesson-code"><code>for (int number = 1; number <= 5; number++) {
+    System.out.println(number);
+}</code></pre>
+                <p>The three parts are initialization (<code>int number = 1</code>), continuation test (<code>number &lt;= 5</code>), and update (<code>number++</code>). After each iteration, the update runs and then the condition is checked again; when it becomes false, execution continues after the loop.</p>
+                <p>Pay attention to inclusive and exclusive bounds. A loop with <code>&lt; 5</code> runs for values 1 through 4, while <code>&lt;= 5</code> includes 5. Consistent bounds become especially important when indexing arrays.</p>
+            </section>
+            <section class="content-section">
+                <h2>Enhanced for loop</h2>
+                <p>Use the enhanced for loop to visit every element of an array or collection when you do not need to change the index.</p>
+                <pre class="lesson-code"><code>String[] names = {"Ada", "Lin", "Sam"};
+for (String name : names) {
+    System.out.println(name);
+}</code></pre>
+                <p>Each iteration assigns the next element to the loop variable, so the loop naturally reads every value without manually managing an index. This makes the enhanced form less error-prone when position is not relevant.</p>
+                <p>The loop variable is a local variable for the loop body. Reassigning it does not replace the corresponding element in the array; use an indexed loop when you need to update elements by position.</p>
+            </section>
+            <section class="content-section">
+                <h2>Break and continue</h2>
+                <p><code>break</code> exits the nearest loop. <code>continue</code> skips the rest of the current iteration and proceeds to the next one.</p>
+                <pre class="lesson-code"><code>for (int number = 1; number <= 6; number++) {
+    if (number == 2) {
+        continue;
+    }
+    if (number == 5) {
+        break;
+    }
+    System.out.println(number);
+}</code></pre>
+                <p>Use these statements sparingly; a clear loop condition is usually easier to follow.</p>
+                <p><code>break</code> ends only the nearest enclosing loop, and <code>continue</code> skips to that loop's next iteration. In nested loops, be sure you understand which loop a jump affects; extracting a task into a method can sometimes make early exits clearer.</p>
+                <p>Before adding a jump, check whether you can express the same behavior in the loop condition or with a well-named helper. Straight-line flow makes it easier to verify that every value is processed exactly once.</p>
+            </section>
+            <section class="content-section"><h2>Practice</h2><p>Print the multiples of 3 from 3 to 30. Then change the loop to calculate their total instead of printing each value.</p></section>
+            <div class="chapter-navigation"><a href="java-conditions.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</a><a href="java-arrays.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p><div class="social-links"><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></div></footer>
+</body>
+</html>

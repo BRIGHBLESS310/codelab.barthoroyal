@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Java Topics | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html">Java Intro</a><a href="java-get-started.html">Java Get Started</a>
+            <a href="java-syntax.html">Java Syntax & Output</a><a href="java-variables.html">Variables & Data Types</a>
+            <a href="java-operators.html">Operators & Math</a><a href="java-conditions.html">Conditions & Switch</a>
+            <a href="java-loops.html">Java Loops</a><a href="java-arrays.html">Java Arrays</a>
+            <a href="java-methods.html">Java Methods</a><a href="java-classes.html">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card">
+                <h1 class="glow-text">More Java Topics</h1>
+                <p class="intro-text">Continue the Java course with methods, object-oriented programming, collections, error handling, and other commonly used features. Choose a topic from this page's sidebar.</p>
+                <p>These topics build on the fundamentals: methods help divide a problem into steps, classes model related data and behavior, and collections let programs work with groups of values. Error handling, file APIs, and debugging help make those programs dependable outside a small example.</p>
+                <p>For each topic, focus first on the problem the feature solves and the guarantees it provides. Then run a short example, change its inputs, and observe how the behavior changes before combining it with other features.</p>
+            </section>
+            <section class="content-section" id="user-input"><h2>Java User Input</h2>
+                <p>The <code>Scanner</code> class reads input from a source such as the keyboard. Create one scanner for standard input, then choose a method that matches the kind of value you expect.</p>
+                <pre class="lesson-code"><code>import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+System.out.print("What is your name? ");
+String name = scanner.nextLine();
+System.out.println("Hello, " + name + "!");
+scanner.close();</code></pre>
+                <p>Validate input before using it. For example, check <code>hasNextInt()</code> before reading a number so unexpected text can be handled clearly.</p>
+                <p><code>nextLine()</code> reads the entire line, including spaces, while methods such as <code>nextInt()</code> read a token. Mixing token reads and line reads can make the next line appear empty because the line break after the token is still waiting in the input stream.</p>
+                <p>For a longer-running program, keep the scanner open while it is needed and close it when input is finished. Closing a scanner around <code>System.in</code> also closes standard input, so do not close it early if another part of the program must keep reading.</p>
+            </section>
+            <section class="content-section" id="string-methods"><h2>String Methods</h2>
+                <p>The <code>String</code> class provides methods for inspecting and creating text. Strings are immutable, so methods return results rather than changing the original string.</p>
+                <pre class="lesson-code"><code>String text = "  Learn Java  ";
+System.out.println(text.trim());
+System.out.println(text.toUpperCase());
+System.out.println(text.contains("Java"));
+System.out.println(text.replace("Java", "Code"));</code></pre>
+                <p>Use <code>equals()</code> for case-sensitive value comparison and <code>equalsIgnoreCase()</code> when case should not matter. Avoid <code>==</code> for comparing string contents.</p>
+                <p><code>trim()</code> removes leading and trailing whitespace, <code>contains()</code> checks for a substring, and <code>replace()</code> creates a new string with matching text changed. Since strings are immutable, the original <code>text</code> remains unchanged unless you assign the returned value to a variable.</p>
+                <p>String indexes count UTF-16 code units, not necessarily user-perceived characters, so indexing is not always a safe way to split arbitrary international text. For ordinary comparison and formatting, prefer the built-in string methods and be explicit about whether case and surrounding whitespace matter.</p>
+            </section>
+            <section class="content-section" id="scope"><h2>Java Scope</h2>
+                <p>Scope determines where a variable can be accessed. A local variable belongs to the method or block where it is declared; a field belongs to an object or class.</p>
+                <pre class="lesson-code"><code>class Example {
+    private int field = 1;
+
+    void show() {
+        int local = 2;
+        if (local > 0) {
+            int blockValue = 3;
+            System.out.println(field + local + blockValue);
+        }
+    }
+}</code></pre>
+                <p>Keep variables in the smallest scope that makes sense. This reduces accidental changes and makes code easier to understand.</p>
+                <p>A variable declared inside a block such as an <code>if</code> or loop cannot be used after that block ends. A local variable is created when execution enters its scope, and it must be assigned before use; unlike fields, locals do not receive default values.</p>
+                <p>Fields are associated with an object (or with a class when declared <code>static</code>) and remain available to that object's methods. Avoid introducing a field when a value is needed only during one method call, since wider scope makes hidden dependencies and accidental state changes more likely.</p>
+            </section>
+            <section class="content-section" id="method-parameters"><h2>Method Parameters</h2>
+                <p>Parameters name the inputs a method expects. Java passes argument values to parameters; for object references, the reference value is copied, so a method can change the object's contents but cannot replace the caller's reference variable.</p>
+                <pre class="lesson-code"><code>static double addTax(double price, double rate) {
+    return price + price * rate;
+}
+
+double total = addTax(20.0, 0.075);</code></pre>
+                <p>Use parameter types that describe the required data and return a result when the caller needs to use it.</p>
+                <p>Java passes every argument by value. For primitive arguments the method receives a copy of the primitive value; for objects it receives a copy of the reference. The method can mutate the referenced object, but assigning a different object to its parameter does not replace the caller's reference.</p>
+                <p>Parameters form part of a method's contract. Validate values when invalid input would make the result misleading or unsafe, and use a descriptive parameter name to communicate units and meaning, such as <code>rate</code> rather than a generic <code>x</code>.</p>
+            </section>
+            <section class="content-section" id="method-overloading"><h2>Method Overloading</h2>
+                <p>Overloaded methods share a name but have different parameter lists. Java chooses a matching overload based on the number, types, and order of arguments.</p>
+                <pre class="lesson-code"><code>static int max(int left, int right) {
+    return left > right ? left : right;
+}
+
+static double max(double left, double right) {
+    return left > right ? left : right;
+}</code></pre>
+                <p>A different return type alone does not create a valid overload.</p>
+                <p>Overloading is resolved at compile time from the declared argument types, number, and order. The compiler may widen a value to match a parameter, but it does not wait until runtime to choose an overload from the object's actual subtype.</p>
+                <p>Keep overloads consistent in purpose and avoid signatures that make calls ambiguous, especially when both boxed and primitive forms are present. Distinct names are often clearer when the methods do substantially different work.</p>
+            </section>
+            <section class="content-section" id="recursion"><h2>Java Recursion</h2>
+                <p>Recursion occurs when a method calls itself. A recursive method needs a base case that stops the calls, and a recursive step that moves toward that case.</p>
+                <pre class="lesson-code"><code>static int factorial(int number) {
+    if (number <= 1) {
+        return 1;
+    }
+    return number * factorial(number - 1);
+}</code></pre>
+                <p>For large inputs, a loop may use less call-stack space. Check that inputs are valid and that recursion always reaches its base case.</p>
+                <p>The base case answers the smallest version of the problem directly; the recursive case reduces the input and combines its answer with the smaller result. For factorial, each call works on one smaller positive integer until it reaches the base value.</p>
+                <p>Each recursive call uses stack space, so deep recursion can cause a <code>StackOverflowError</code>. Also consider the valid input domain: the sample treats every value at or below one as one, which is appropriate only if negative inputs are either excluded or intentionally handled that way.</p>
+            </section>
+            <section class="content-section" id="constructors"><h2>Java Constructors</h2>
+                <p>A constructor initializes a new object. Its name matches the class name, and it has no return type. Define constructors to ensure objects begin in a valid state.</p>
+                <pre class="lesson-code"><code>class Book {
+    private final String title;
+
+    Book(String title) {
+        this.title = title;
+    }
+}</code></pre>
+                <p>If you do not declare a constructor, Java provides a default no-argument constructor. Declaring another constructor means you need to add a no-argument version yourself if you still need one.</p>
+                <p>Constructors establish an object's initial invariants. A constructor can validate its arguments and reject impossible state instead of allowing an invalid object to be created and corrected later.</p>
+                <p>A constructor has no return type, not even <code>void</code>; writing a return type would declare a method instead. Constructors can be overloaded to support different valid initialization choices, and one constructor may delegate to another to avoid repeating setup.</p>
+            </section>
+            <section class="content-section" id="this-keyword"><h2>The this Keyword</h2>
+                <p><code>this</code> refers to the current object. It is often used to distinguish a field from a constructor or method parameter with the same name.</p>
+                <pre class="lesson-code"><code>class User {
+    private final String name;
+
+    User(String name) {
+        this.name = name;
+    }
+}</code></pre>
+                <p>In a constructor, <code>this(...)</code> can also call another constructor in the same class and must be its first statement.</p>
+                <p>Use <code>this.field</code> whenever it makes object state explicit, even if a parameter has a different name. The keyword is also useful when passing the current object to another method, though doing so during construction should be done carefully before initialization is complete.</p>
+                <p>Constructor delegation with <code>this(...)</code> centralizes initialization, but it must be the first statement because Java needs to choose the constructor chain before running the rest of the body. A constructor cannot use <code>this(...)</code> and <code>super(...)</code> together as separate first calls.</p>
+            </section>
+            <section class="content-section" id="access-modifiers"><h2>Java Access Modifiers</h2>
+                <p>Access modifiers control where classes and members can be used. <code>private</code> limits access to the declaring class; <code>public</code> makes a member accessible wherever its containing type is accessible.</p>
+                <pre class="lesson-code"><code>public class Account {
+    private double balance;
+
+    public double getBalance() {
+        return balance;
+    }
+}</code></pre>
+                <p>Java also has package-private access (no modifier) and <code>protected</code>. Choose the narrowest access that supports the intended design.</p>
+                <p>Package-private members are visible to classes in the same package; <code>protected</code> additionally supports subclass access under Java's access rules. These levels let a package cooperate internally without making every implementation detail part of a public API.</p>
+                <p>Restricting visibility reduces the number of places that can depend on a member. Start fields as <code>private</code>, then expose focused methods where callers need a capability; changing a public member later can break unrelated code.</p>
+            </section>
+            <section class="content-section" id="encapsulation"><h2>Java Encapsulation</h2>
+                <p>Encapsulation protects an object's state and exposes operations that preserve its rules. Private fields prevent unrelated code from assigning arbitrary values.</p>
+                <pre class="lesson-code"><code>class Counter {
+    private int value;
+
+    void increment() {
+        value++;
+    }
+
+    int getValue() {
+        return value;
+    }
+}</code></pre>
+                <p>Prefer meaningful operations over automatically creating a setter for every field. This lets the class maintain valid state.</p>
+                <p>Encapsulation is more than hiding fields: it means the class controls how its state changes. A <code>deposit</code> operation can check that an amount is positive before updating a balance, keeping the rule next to the data it protects.</p>
+                <p>For immutable data, initialize fields in a constructor and do not provide mutation methods. Immutable objects are easier to share because their state cannot unexpectedly change after construction.</p>
+            </section>
+            <section class="content-section" id="packages"><h2>Java Packages</h2>
+                <p>Packages group related classes and help prevent naming conflicts. A package declaration appears at the start of a source file, before imports and the class declaration.</p>
+                <pre class="lesson-code"><code>package com.example.school;
+
+import java.util.ArrayList;
+
+public class Classroom {
+    private final ArrayList&lt;String&gt; students = new ArrayList&lt;&gt;();
+}</code></pre>
+                <p>Package names are commonly lowercase. The folder structure in a Java project should match the package name.</p>
+                <p>The package declaration establishes a class's fully qualified name, such as <code>com.example.school.Classroom</code>. Imports let source code use a type's short name, but they do not move classes or automatically include every class in another package.</p>
+                <p>Packages also organize access and project structure. In a conventional source tree, <code>com.example.school</code> maps to nested folders under the source root; build tools and the compiler use that relationship to find and compile types correctly.</p>
+            </section>
+            <section class="content-section" id="inheritance"><h2>Java Inheritance</h2>
+                <p>A class can extend another class to specialize behavior. The subclass inherits accessible members and can override methods.</p>
+                <pre class="lesson-code"><code>class Animal {
+    void speak() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void speak() {
+        System.out.println("Woof");
+    }
+}</code></pre>
+                <p>Use inheritance for a genuine subtype relationship. Prefer composition when a class only needs to use another object's services.</p>
+                <p><code>extends</code> declares that a subclass is also a kind of its superclass. The inherited method can be specialized with an override, while code typed to the superclass can continue to use the common behavior.</p>
+                <p>Java does not allow a class to extend multiple classes, and a superclass's private members are not directly accessible to subclasses. Keep the parent type focused on shared guarantees; use composition or interfaces when several independent capabilities are needed.</p>
+            </section>
+            <section class="content-section" id="polymorphism"><h2>Java Polymorphism</h2>
+                <p>Polymorphism lets code work with a parent type while calling behavior provided by the actual object. An overridden instance method is selected at runtime.</p>
+                <pre class="lesson-code"><code>Animal pet = new Dog();
+pet.speak(); // Woof</code></pre>
+                <p>Program to useful abstractions so new implementations can be introduced without rewriting every caller.</p>
+                <p>The variable's declared type determines which methods are available at compile time, but an overridden instance method is selected from the actual object's class at runtime. In the example, the variable is typed as <code>Animal</code> while the <code>Dog</code> implementation supplies the sound.</p>
+                <p>This supports substitution: a method can accept an <code>Animal</code> and work with different animal subclasses without a separate branch for each concrete type. Polymorphism applies to overridden instance methods, not to fields or overloaded method selection.</p>
+            </section>
+            <section class="content-section" id="abstraction"><h2>Abstract Classes</h2>
+                <p>An abstract class cannot be instantiated directly. It can define shared state and behavior, as well as abstract methods that concrete subclasses must implement.</p>
+                <pre class="lesson-code"><code>abstract class Shape {
+    abstract double area();
+}
+
+class Square extends Shape {
+    private final double side;
+
+    Square(double side) {
+        this.side = side;
+    }
+
+    @Override
+    double area() {
+        return side * side;
+    }
+}</code></pre>
+                <p>An abstract method declares behavior that concrete subclasses must supply, while implemented methods can provide shared steps. An abstract class may also hold fields and constructors, making it useful when related types share both state and a partial implementation.</p>
+                <p>Choose an abstract class when the types form a close family and need shared implementation; choose an interface when you want to describe a capability that unrelated classes can implement. A class can extend only one class but implement multiple interfaces.</p>
+            </section>
+            <section class="content-section" id="interfaces"><h2>Java Interfaces</h2>
+                <p>An interface describes behavior a class agrees to provide. A class can implement multiple interfaces, which is useful when unrelated types share a capability.</p>
+                <pre class="lesson-code"><code>interface Printable {
+    void print();
+}
+
+class Report implements Printable {
+    @Override
+    public void print() {
+        System.out.println("Printing report");
+    }
+}</code></pre>
+                <p>Interface methods that implement public interface methods must be declared <code>public</code>.</p>
+                <p>Code can accept the <code>Printable</code> interface instead of requiring a particular class, which separates the capability from the implementation. Any class that implements the contract can be passed in, so the caller does not need to know how printing is carried out.</p>
+                <p>Interfaces can also define constants and, in modern Java, default or static methods, but their main value is a clear behavior contract. Keep that contract small and focused so implementations have a meaningful obligation.</p>
+            </section>
+            <section class="content-section" id="enums"><h2>Java Enums</h2>
+                <p>An enum defines a fixed set of named constants. Enums are safer and clearer than using unexplained numeric values or strings for a limited set of choices.</p>
+                <pre class="lesson-code"><code>enum Level {
+    BEGINNER, INTERMEDIATE, ADVANCED
+}
+
+Level currentLevel = Level.BEGINNER;</code></pre>
+                <p>Each enum constant is an instance of the enum type, so the compiler can reject misspelled or unsupported values. Use the constants in a <code>switch</code> or compare them directly rather than passing around fragile text labels.</p>
+                <p>An enum can include fields, constructors, and methods when each option needs associated data or behavior. Avoid relying on an enum's ordinal number as a permanent identifier, since reordering constants changes those numeric positions.</p>
+            </section>
+            <section class="content-section" id="arraylist"><h2>Java ArrayList</h2>
+                <p><code>ArrayList</code> is a resizable list from the Java Collections Framework. Use a generic type to describe the element type.</p>
+                <pre class="lesson-code"><code>import java.util.ArrayList;
+
+ArrayList&lt;String&gt; languages = new ArrayList&lt;&gt;();
+languages.add("Java");
+languages.add("Python");
+System.out.println(languages.get(0));
+System.out.println(languages.size());</code></pre>
+                <p>For code that accepts a list, prefer the <code>List</code> interface when practical instead of requiring a specific implementation.</p>
+                <p>Generics make the element type part of the list's compile-time contract: this list accepts strings and returns strings, avoiding manual casts. Java's generic type arguments must be reference types, so use wrappers such as <code>Integer</code> rather than primitive <code>int</code>.</p>
+                <p>Use <code>get(index)</code> for indexed access, <code>add</code> to append, and <code>size()</code> for the current number of elements. Removing elements while iterating by index can shift later positions; an iterator or a separate collection may be safer depending on the operation.</p>
+            </section>
+            <section class="content-section" id="hashmap"><h2>Java HashMap</h2>
+                <p>A <code>HashMap</code> stores key-value pairs. Keys are unique; adding a value for an existing key replaces the earlier mapping.</p>
+                <pre class="lesson-code"><code>import java.util.HashMap;
+
+HashMap&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();
+scores.put("Ada", 95);
+Integer adaScore = scores.get("Ada");</code></pre>
+                <p>A map lookup may return <code>null</code> when a key is absent. Check the result or use methods such as <code>getOrDefault()</code> when appropriate.</p>
+                <p>A map associates each key with at most one value, making it useful for lookups such as a username-to-score table. Keys must implement consistent <code>equals</code> and <code>hashCode</code> behavior; changing a key in a way that affects those methods while it is in the map can make the entry difficult to find.</p>
+                <p>Use <code>containsKey</code> when you must distinguish an absent key from a key explicitly mapped to <code>null</code>. A <code>HashMap</code> does not promise a predictable iteration order, so choose an ordered map if output order is part of the requirement.</p>
+            </section>
+            <section class="content-section" id="exceptions"><h2>Java Exceptions</h2>
+                <p>Exceptions report errors or unexpected conditions. Handle an exception when your program can recover meaningfully; otherwise, allow it to propagate with useful context.</p>
+                <pre class="lesson-code"><code>try {
+    int value = Integer.parseInt("42");
+    System.out.println(value);
+} catch (NumberFormatException exception) {
+    System.out.println("Enter a whole number.");
+}</code></pre>
+                <p>Catch specific exception types rather than hiding unrelated failures with a broad catch.</p>
+                <p>The <code>try</code> block marks operations that may fail, and a matching <code>catch</code> handles a particular exception type. Checked exceptions must be caught or declared by the method, while unchecked exceptions often indicate invalid state or programming mistakes that should not be hidden.</p>
+                <p>Handle an error where you can take a useful next step, such as asking for corrected input or reporting that a file could not be read. Avoid empty catch blocks and broad catches that make a failed operation look successful; include useful context when rethrowing or reporting an error.</p>
+            </section>
+            <section class="content-section" id="files"><h2>Java Files</h2>
+                <p>The <code>Path</code> and <code>Files</code> APIs provide a modern way to work with files. Handle possible I/O errors and use try-with-resources when managing closeable resources.</p>
+                <pre class="lesson-code"><code>import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+Path path = Path.of("notes.txt");
+try {
+    Files.writeString(path, "Keep practicing Java.");
+    String contents = Files.readString(path);
+    System.out.println(contents);
+} catch (IOException exception) {
+    System.out.println("Could not read or write the file.");
+}</code></pre>
+                <p>Keep file paths and permissions in mind, and avoid overwriting important files without an explicit reason.</p>
+                <p><code>Path</code> represents a filesystem location, while <code>Files</code> provides operations such as reading and writing. A relative path like <code>notes.txt</code> is resolved against the program's working directory, which may differ between an IDE and a terminal.</p>
+                <p>File operations can fail because a path does not exist, permissions are insufficient, or storage is unavailable, so their checked <code>IOException</code> must be handled or declared. For streams and readers, use try-with-resources so resources are closed even when an exception interrupts the work.</p>
+            </section>
+            <section class="content-section" id="date-time"><h2>Java Date and Time</h2>
+                <p>Use the <code>java.time</code> API for dates and times. Types such as <code>LocalDate</code> represent a calendar date without a time zone.</p>
+                <pre class="lesson-code"><code>import java.time.LocalDate;
+
+LocalDate today = LocalDate.now();
+LocalDate nextWeek = today.plusDays(7);
+System.out.println(nextWeek);</code></pre>
+                <p>Use time-zone-aware types such as <code>ZonedDateTime</code> when representing a moment in a particular region.</p>
+                <p>The <code>java.time</code> types are immutable: operations such as <code>plusDays</code> return a new value, leaving <code>today</code> unchanged. This makes date calculations easier to reason about and avoids hidden mutation.</p>
+                <p>Use <code>LocalDate</code> for a birthday or due date, <code>LocalTime</code> for a wall-clock time, and an instant or zoned date-time for an actual moment. Time-zone rules include daylight-saving changes, so a region's zone should be used when local civil time matters.</p>
+            </section>
+            <section class="content-section" id="regex"><h2>Java Regular Expressions</h2>
+                <p>Regular expressions describe text patterns. Java's <code>String</code> methods include <code>matches()</code> for checking a whole string and <code>replaceAll()</code> for pattern-based replacement.</p>
+                <pre class="lesson-code"><code>String code = "A123";
+boolean valid = code.matches("[A-Z][0-9]{3}");
+System.out.println(valid);</code></pre>
+                <p>For user input, regular expressions are only one part of validation. Also apply the business rules and length limits your application requires.</p>
+                <p>The pattern <code>[A-Z]</code> matches one uppercase ASCII letter and <code>[0-9]{3}</code> matches three digits; together they require the entire input to have that shape because <code>matches()</code> checks the whole string. A pattern search method has different semantics and can match only part of a string.</p>
+                <p>In Java source, backslashes in a regular-expression pattern must also be escaped for the string literal, so a regex token such as <code>\\d</code> is written with a doubled backslash. Keep patterns readable and test valid and invalid examples, since dense patterns can be hard to maintain.</p>
+            </section>
+            <section class="content-section" id="lambdas"><h2>Java Lambda Expressions</h2>
+                <p>A lambda is a concise way to provide behavior where a functional interface is expected. Lambdas are often used with collection operations.</p>
+                <pre class="lesson-code"><code>import java.util.List;
+
+List&lt;String&gt; names = List.of("Ada", "Sam", "Lin");
+names.forEach(name -> System.out.println(name));</code></pre>
+                <p>Use a lambda when it makes the operation clear; move complicated behavior into a named method.</p>
+                <p>A functional interface has one abstract method, and the lambda supplies the implementation for that method. In <code>name -&gt; ...</code>, the parameter type is inferred from the context; parentheses are optional for a single parameter and braces are used for a multi-statement body.</p>
+                <p>Lambdas connect naturally to collection operations such as filtering, sorting, and mapping. Keep side effects and nested logic limited; a named method reference or helper method can make a complicated operation easier to understand and test.</p>
+            </section>
+            <section class="content-section" id="threads"><h2>Java Threads</h2>
+                <p>Threads allow tasks to run concurrently, but shared mutable data needs careful coordination. For many applications, higher-level concurrency utilities are safer than manually managing threads.</p>
+                <pre class="lesson-code"><code>Thread worker = new Thread(() ->
+    System.out.println("Task running")
+);
+worker.start();</code></pre>
+                <p>Calling <code>start()</code> begins execution on a new thread; calling <code>run()</code> directly executes the method on the current thread.</p>
+                <p>Concurrent tasks can make progress during overlapping time, but their execution order is not guaranteed. If multiple threads read and write shared mutable state, coordination is needed to prevent race conditions and inconsistent results.</p>
+                <p>Creating a raw thread is useful for learning the distinction, but real programs commonly use an executor to manage task scheduling and reuse threads. Prefer immutable data or thread-safe utilities where possible, and use synchronization only with a clear plan for ownership and visibility.</p>
+            </section>
+            <section class="content-section" id="debugging"><h2>Java Debugging</h2>
+                <p>Debugging is the process of finding and correcting the cause of unexpected behavior. Read compiler diagnostics, inspect values, and reduce a problem to a small reproducible example.</p>
+                <ul class="feature-list">
+                    <li><strong class="highlight">Read the first useful error:</strong> Later compiler messages can be consequences of an earlier mistake.</li>
+                    <li><strong class="highlight">Check assumptions:</strong> Print or inspect values just before the incorrect result.</li>
+                    <li><strong class="highlight">Use a debugger:</strong> Set breakpoints and step through code to see how values change.</li>
+                    <li><strong class="highlight">Test edge cases:</strong> Try empty input, boundary values, and unexpected data.</li>
+                </ul>
+                <p>First describe the incorrect behavior precisely, then reproduce it with the fewest steps possible. A small reproducible case helps separate the root cause from unrelated code and makes it easier to verify the fix.</p>
+                <p>A breakpoint pauses execution so you can inspect local variables and the call stack one step at a time. After changing code, repeat the same test and add a boundary or regression test so the bug is less likely to return.</p>
+            </section>
+            <section class="content-section" id="exercises"><h2>Java Exercises</h2>
+                <p>Apply the course topics with small, testable programs. Start with one requirement and add features only after the simple version works.</p>
+                <ol class="lang-grid">
+                    <li>Write a temperature converter using methods and numeric types.</li>
+                    <li>Build a quiz score summary using an array or an <code>ArrayList</code>.</li>
+                    <li>Create a simple bank account class that validates deposits and withdrawals.</li>
+                    <li>Read a text file and count the number of lines, handling I/O errors.</li>
+                </ol>
+                <p>For each exercise, write down expected input and output before coding. Test normal cases first, then empty input, boundary values, and invalid input; examples become much more useful when you can explain why each result is correct.</p>
+                <p>Build incrementally: make a small method work, call it from a simple <code>main</code>, then add storage or object state only when the program needs it. This combines the course concepts in a way that keeps mistakes easy to locate.</p>
+            </section>
+            <div class="chapter-navigation"><a href="java-classes.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</a><a href="java.html" class="nav-btn next-btn">Course Overview &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p><div class="social-links"><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></div></footer>
+</body>
+</html>

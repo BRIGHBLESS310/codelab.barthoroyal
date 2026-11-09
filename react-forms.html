@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Controlled Inputs | React | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="react-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html" class="active">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="React tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Forms and Controlled Inputs</h1>
+                <p class="intro-text">A controlled input gets its displayed value from React state and reports edits through onChange. This keeps form behavior explicit. Associate each input with a label and present validation errors in text.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>A controlled input gets its displayed value from React state and reports edits through onChange. State becomes the source of truth, so the input remains synchronized with what the component will validate or submit.</p>
+                <p>Connect each field to a label and keep its value type consistent: a text input should start with an empty string, not switch between undefined and a string. Handle submission explicitly when the app owns the flow.</p>
+                <p>Client-side checks give immediate feedback but are not a security boundary. A server must validate again because a browser can be bypassed. For larger forms, track field errors and submission status so users know what needs attention.</p>
+                <p>The example updates name from the input's change event. Extend it with a submit handler that trims and checks the value, shows an accessible error, and preserves entered text when validation fails.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>import { useState } from &quot;react&quot;;
+
+function NameForm() {
+  const [name, setName] = useState(&quot;&quot;);
+  return &lt;label&gt;Name
+    &lt;input value={name} onChange={event =&gt; setName(event.target.value)} /&gt;
+  &lt;/label&gt;;
+}</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Build a labeled form with a submit handler and a visible message when the field is empty.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="react-state.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> State with useState</a>
+                <a href="react-updates.html" class="nav-btn next-btn">Updating Arrays and Objects &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

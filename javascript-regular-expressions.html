@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Regular Expressions | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="regular-expressions">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Regular Expressions</h1><p class="intro-text">Regular expressions describe text patterns. They can test, search, or replace text, but complicated patterns can be hard to maintain.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Patterns for matching text</h3><p>A regular expression describes a text pattern. Literal syntax uses slash delimiters and flags such as <code>i</code> for case-insensitive matches or <code>g</code> for repeated matches. <code>test()</code> checks for a match; <code>match()</code> can return match information.</p><h3>Build for the exact requirement</h3><p>Character classes, quantifiers, groups, and anchors express constraints. Anchors matter for whole-value validation; without them a pattern can accept a substring inside invalid text. Escape metacharacters when a literal character is intended.</p><h3>A regex is not always the clearest validator</h3><p>Complex patterns are hard to maintain, and a matching email pattern cannot prove an address exists. Test valid inputs and near misses. Use regex for pattern matching and explicit code for semantic checks.</p></section><section class="content-section"><h2>Test a pattern</h2><p>For form validation, regular expressions are only one check; validate data on the server as well when it matters.</p><pre class="lesson-code"><code>const code = "A123";
+const pattern = /^[A-Z][0-9]{3}$/;
+console.log(pattern.test(code));</code></pre><h2>Practice</h2><p>Create a pattern for a short identifier and test it against valid and invalid examples.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

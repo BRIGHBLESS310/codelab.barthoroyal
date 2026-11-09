@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Conditions and Switch | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html">Java Intro</a><a href="java-get-started.html">Java Get Started</a><a href="java-syntax.html">Java Syntax & Output</a>
+            <a href="java-variables.html">Variables & Data Types</a><a href="java-operators.html">Operators & Math</a>
+            <a href="java-conditions.html" class="active">Conditions & Switch</a><a href="java-loops.html">Java Loops</a>
+            <a href="java-arrays.html">Java Arrays</a><a href="java-methods.html">Java Methods</a><a href="java-classes.html">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card"><h1 class="glow-text">Java Conditions and Switch</h1><p class="intro-text">Conditional statements let a program choose what to do based on a boolean expression. The condition inside parentheses must evaluate to <code>true</code> or <code>false</code>.</p></section>
+            <section class="content-section">
+                <h2>If and else</h2>
+                <p>Use <code>if</code> for a decision, <code>else if</code> for additional cases, and <code>else</code> for the remaining case.</p>
+                <pre class="lesson-code"><code>int score = 82;
+if (score >= 90) {
+    System.out.println("Excellent");
+} else if (score >= 70) {
+    System.out.println("Pass");
+} else {
+    System.out.println("Try again");
+}</code></pre>
+                <p>Conditions are checked from top to bottom. Once a matching branch runs, the remaining branches are skipped.</p>
+                <p>Order branches from the most specific case to the broadest. In the example, checking for <code>score &gt;= 70</code> before <code>score &gt;= 90</code> would make the excellent branch unreachable because every excellent score would already match the pass condition.</p>
+                <p>Boundary tests expose mistakes: try values immediately below, at, and above each threshold. Use braces even for a one-statement branch while learning; they make each branch's boundaries visible and reduce errors when you add a second statement later.</p>
+            </section>
+            <section class="content-section">
+                <h2>Combine conditions</h2>
+                <p>Use logical operators to express multiple requirements. Add parentheses when they make a compound condition easier to understand.</p>
+                <pre class="lesson-code"><code>int age = 19;
+boolean hasTicket = true;
+
+if (age >= 18 && hasTicket) {
+    System.out.println("Entry allowed");
+}</code></pre>
+                <p>Use parentheses to make complex combinations easier to parse, for example <code>(age &gt;= 18 &amp;&amp; hasTicket) || isStaff</code>. Because <code>&amp;&amp;</code> has higher precedence than <code>||</code>, explicit grouping can prevent a reader from misinterpreting the policy.</p>
+                <p>Conditions should express a clear yes-or-no question. Giving a meaningful boolean expression or variable a name can help make long decision rules easier to review and test.</p>
+            </section>
+            <section class="content-section">
+                <h2>Switch statements and expressions</h2>
+                <p>A switch is useful when one value is compared against several fixed alternatives. Modern Java also supports switch expressions that return a value.</p>
+                <pre class="lesson-code"><code>int day = 2;
+String dayName = switch (day) {
+    case 1 -> "Monday";
+    case 2 -> "Tuesday";
+    case 3 -> "Wednesday";
+    default -> "Another day";
+};
+System.out.println(dayName);</code></pre>
+                <p>Switch expression syntax requires a recent Java version. If your JDK is older, use a traditional switch statement with <code>case</code> labels and <code>break</code>.</p>
+                <p>A switch is a good fit when one expression is matched against a set of discrete alternatives, such as an enum value or command code. For ranges such as scores above and below thresholds, an <code>if</code>/<code>else if</code> chain communicates the intent more directly.</p>
+                <p>The arrow form avoids accidental fall-through: only the selected case is evaluated, and the switch expression must produce a value for every possible input, commonly using <code>default</code>. Traditional switch statements need explicit <code>break</code> statements when execution should not continue into the next case.</p>
+            </section>
+            <section class="content-section"><h2>Practice</h2><p>Write a program that assigns a letter grade based on a score. Test values just below and above each boundary to check your conditions.</p></section>
+            <div class="chapter-navigation"><a href="java-operators.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</a><a href="java-loops.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p><div class="social-links"><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></div></footer>
+</body>
+</html>

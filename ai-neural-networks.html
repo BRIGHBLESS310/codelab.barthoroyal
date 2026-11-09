@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence: Neural Networks | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html" class="active">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Artificial Intelligence tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Build intuition for neural networks</h1>
+                <p class="intro-text">A neural network is a model made of connected layers that transform input values. During training, an optimization process adjusts weights to reduce a chosen loss on examples.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">More layers or parameters do not guarantee better results. Neural networks can require substantial data and compute, and their performance must be checked on the actual task.</p>
+            </section>
+            <section class="content-section">
+                <h2>Layers transform representations</h2>
+                <p>A neural network is built from connected layers of units. Each layer combines its inputs using learned weights and biases, then applies an activation function. During training, the network adjusts those parameters so its output better matches examples and a chosen objective.</p>
+                <p>Hidden layers can build useful intermediate representations, which helps networks model complex patterns in images, language, and other data. More layers or parameters do not automatically improve results: they also increase computational cost and can make a model harder to train or more prone to memorizing its training set.</p>
+                <p>Training repeatedly compares predictions with a loss signal and uses optimization to update weights. Validation data helps detect when further training stops improving generalization. Understanding this loop explains why data quality, model capacity, and evaluation all matter as much as the network architecture.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The forward pass produces a prediction; loss measures its difference from the target. Training uses this signal to update weights.</p>
+                <pre class="lesson-code"><code>inputs = encode(features)
+prediction = network.forward(inputs)
+loss = compare(prediction, expected)
+
+# Training adjusts weights to reduce loss.</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Explain the relationship between an input, prediction, target, and loss using a tiny image or text example.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-unsupervised-learning.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Unsupervised Learning</a>
+                <a href="ai-natural-language.html" class="nav-btn next-btn">Natural Language Processing &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

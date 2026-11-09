@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Casting | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="python.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav id="emo">
+        <a href="index.html">Home</a><a href="python.html" class="active">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Python tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-python"></i> Python Tutorial</h3>
+            <a href="python.html">Python Intro</a><a href="pythongetstarted.html">Python Get Started</a>
+            <a href="pythonsinax.html">Python Syntax</a><a href="pythoncommet.html">Python Comments</a>
+            <a href="pythonvariable.html">Python Variables</a><a href="data.html">Python Data Types</a>
+            <a href="numbers.html">Python Numbers</a><a href="casting.html" class="active">Python Casting</a>
+            <a href="python-strings.html">Python Strings</a><a href="python-booleans.html">Python Booleans</a>
+            <a href="python-operators.html">Python Operators</a><a href="python-lists.html">Python Lists</a>
+            <a href="python-advanced.html#tuples">Python Tuples</a><a href="python-advanced.html#sets">Python Sets</a>
+            <a href="python-advanced.html#dictionaries">Python Dictionaries</a><a href="python-advanced.html#ifelse">Python If...Else</a>
+            <a href="python-advanced.html#whileloops">Python While Loops</a><a href="python-advanced.html#forloops">Python For Loops</a>
+            <a href="python-advanced.html#functions">Python Functions</a><a href="python-advanced.html#lambda">Python Lambda</a>
+            <a href="python-advanced.html#arrays">Python Arrays</a><a href="python-advanced.html#classes">Python Classes/Objects</a>
+        </aside>
+    <main id="python-container">
+        <section class="hero-card"><h1 class="glow-text">Python Casting</h1><p class="intro-text">Casting means explicitly converting a value to another type. Python's constructors such as <code>int()</code>, <code>float()</code>, and <code>str()</code> create converted values when the source can be interpreted in the requested way.</p></section>
+        <section class="content-section">
+            <h2>Convert between common types</h2>
+            <pre class="lesson-code"><code>age_text = "18"
+age = int(age_text)
+price = float("4.75")
+message = str(age)
+
+print(age + 2)
+print(price)
+print(message)</code></pre>
+            <p>Conversion succeeds only when the input can be interpreted as the requested type. For example, <code>int("hello")</code> raises a <code>ValueError</code>.</p>
+            <p>A common reason to cast is that data from a form, file, or network often arrives as text. Convert it before doing arithmetic, and decide how to handle invalid input rather than assuming every string contains a valid number. Casting does not change the original value; it produces a new value with a different type.</p>
+        </section>
+        <section class="content-section">
+            <h2>Common conversions</h2>
+            <ul class="feature-list">
+                <li><strong class="highlight">To integer:</strong> <code>int("42")</code> converts a valid integer string; converting a float truncates its fractional part.</li>
+                <li><strong class="highlight">To float:</strong> <code>float("3.5")</code> converts a numeric string to a floating-point value.</li>
+                <li><strong class="highlight">To string:</strong> <code>str(42)</code> creates the text <code>"42"</code>.</li>
+                <li><strong class="highlight">To boolean:</strong> <code>bool(value)</code> follows Python's truth-value rules; empty collections and zero are false.</li>
+            </ul>
+            <p>Converting a float to an integer truncates toward zero: <code>int(3.9)</code> becomes <code>3</code> and <code>int(-3.9)</code> becomes <code>-3</code>; it does not round to the nearest integer. By contrast, converting a numeric string such as <code>"3.9"</code> directly with <code>int()</code> fails because that text is not an integer literal.</p>
+            <p>Use <code>float()</code> when fractional values are valid and <code>str()</code> when you need to combine a value with text. For user input, catch <code>ValueError</code> around conversions and give a helpful message; this connects type conversion to input validation and error handling.</p>
+        </section>
+        <section class="content-section">
+            <h2>Practice</h2>
+            <p>Read a number as text, convert it safely, and handle invalid input with <code>try</code>/<code>except ValueError</code>. Validate user input before relying on its type.</p>
+            <p><a href="data.html">Review Python data types</a> or continue to <a href="python-strings.html">Python Strings</a>.</p>
+        </section>
+        <section class="content-section animate-fade" data-python-sandbox>
+            <h2><i class="fa-solid fa-laptop-code"></i> Try It Yourself</h2>
+            <p class="desc-text">Edit the sample and press Run Code. This lightweight preview supports basic assignments and <code>print()</code>, not Python's conversion constructors or all Python syntax; use a local interpreter to try the casting examples.</p>
+            <div class="editor-wrapper">
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-code"></i> Python Input Code</span><button class="copy-btn" data-action="copy" type="button"><i class="fa-solid fa-copy"></i> Copy Code</button></div>
+                    <textarea class="python-editor" aria-label="Python code editor" spellcheck="false">age = 18
+age_text = "18"
+print(age)
+print(age_text)</textarea>
+                    <div class="editor-actions"><button class="run-btn" data-action="run" type="button"><i class="fa-solid fa-play"></i> Run Code</button></div>
+                </div>
+                <div class="editor-column">
+                    <div class="editor-header"><span><i class="fa-solid fa-terminal"></i> Output Window</span><button class="clear-btn" data-action="clear" type="button"><i class="fa-solid fa-trash"></i> Clear</button></div>
+                    <div class="terminal-box" aria-live="polite">Click "Run Code" to view output...</div>
+                </div>
+            </div>
+        </section>
+        <div class="chapter-navigation">
+            <a href="numbers.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> &laquo; Previous</a>
+            <a href="python-strings.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+    <script src="python-sandbox.js"></script>
+</body>
+</html>

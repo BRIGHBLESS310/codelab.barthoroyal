@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Arrays | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="java-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html" class="active">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Java tutorial chapters">
+            <h3 class="sidebar-title"><i class="fa-brands fa-java"></i> Java Tutorial</h3>
+            <a href="java.html">Java Intro</a><a href="java-get-started.html">Java Get Started</a><a href="java-syntax.html">Java Syntax & Output</a>
+            <a href="java-variables.html">Variables & Data Types</a><a href="java-operators.html">Operators & Math</a>
+            <a href="java-conditions.html">Conditions & Switch</a><a href="java-loops.html">Java Loops</a>
+            <a href="java-arrays.html" class="active">Java Arrays</a><a href="java-methods.html">Java Methods</a><a href="java-classes.html">Classes & Inheritance</a>
+        </aside>
+        <main id="java-container">
+            <section class="hero-card"><h1 class="glow-text">Java Arrays</h1><p class="intro-text">An array stores a fixed number of values of one type. Arrays are useful when the number of items is known and you need to access them by position.</p></section>
+            <section class="content-section">
+                <h2>Create and access an array</h2>
+                <p>Array indexes start at zero. An array with four items has valid indexes from <code>0</code> through <code>3</code>.</p>
+                <pre class="lesson-code"><code>String[] languages = {"Java", "Python", "C++"};
+System.out.println(languages[0]);
+System.out.println(languages.length);</code></pre>
+                <p>Read the <code>length</code> property to find how many elements the array can hold. Accessing an invalid index causes an <code>ArrayIndexOutOfBoundsException</code>.</p>
+                <p>An array is an object with a fixed length chosen when it is created. Its elements all have the declared component type; primitive arrays hold primitive values, while arrays of reference types hold references to objects.</p>
+                <p>For a nonempty array, the final valid index is <code>length - 1</code>, not <code>length</code>. A loop that uses <code>index &lt; values.length</code> avoids the common off-by-one error and also adapts when the array size changes.</p>
+            </section>
+            <section class="content-section">
+                <h2>Update and loop through values</h2>
+                <p>Array elements can be changed, but the array's length is fixed after it is created.</p>
+                <pre class="lesson-code"><code>int[] scores = {72, 85, 91};
+scores[0] = 78;
+
+for (int score : scores) {
+    System.out.println(score);
+}</code></pre>
+                <p>Use an indexed loop when you need the position. Use an enhanced <code>for</code> loop when you only need each value.</p>
+                <p>Newly created array elements receive default values such as <code>0</code> for numeric primitives, <code>false</code> for boolean, and <code>null</code> for object references. Initializing each element intentionally prevents accidental reliance on these defaults.</p>
+                <p>An indexed loop is necessary to update an element, compare neighbors, or report its position. An enhanced loop emphasizes values instead. Choosing the loop form that matches the task makes array logic easier to read.</p>
+            </section>
+            <section class="content-section">
+                <h2>Calculate a total</h2>
+                <p>A loop can accumulate a result. Initialize the total before looping, then add each value once.</p>
+                <pre class="lesson-code"><code>double[] prices = {4.50, 2.25, 3.00};
+double total = 0;
+for (double price : prices) {
+    total += price;
+}
+System.out.println("Total: " + total);</code></pre>
+                <p>The total is called an accumulator: it begins with the identity value for addition, zero, and each iteration adds one element. Putting initialization before the loop matters, because resetting it in the loop would discard earlier work.</p>
+                <p>For an empty array, the loop body runs zero times and the total remains zero. Consider empty input and values at the limits of the chosen numeric type when writing general-purpose calculations.</p>
+            </section>
+            <section class="content-section">
+                <h2>When to use a collection instead</h2>
+                <p>When you need a resizable sequence, use <code>ArrayList</code>. Arrays are still common for fixed-size data and are the foundation for understanding many other structures.</p>
+                <pre class="lesson-code"><code>import java.util.ArrayList;
+
+ArrayList&lt;String&gt; tasks = new ArrayList&lt;&gt;();
+tasks.add("Practice arrays");</code></pre>
+                <p>An <code>ArrayList</code> can grow as elements are added and provides methods such as <code>add</code>, <code>get</code>, and <code>size</code>. Unlike an array's <code>length</code> field, a list's size is queried with a method call.</p>
+                <p>Arrays are a natural choice when the number of elements is fixed or when an API requires an array. Choose a list when you need frequent insertion or removal; both structures still use zero-based positions for indexed access.</p>
+            </section>
+            <section class="content-section"><h2>Practice</h2><p>Create an integer array of five scores. Find and print the highest score. Test your code with different values and with the highest score at different positions.</p></section>
+            <div class="chapter-navigation"><a href="java-loops.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous</a><a href="java-methods.html" class="nav-btn next-btn">Next &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p><div class="social-links"><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></div></footer>
+</body>
+</html>

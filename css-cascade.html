@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cascade and Specificity | CSS | CodeLab</title><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="css-sidebar.js" defer></script></head><body>
+<nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html" class="active">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+<div class="page-wrapper"><aside class="sidebar" aria-label="CSS tutorial chapters"></aside><main id="java-container">
+<section class="hero-card"><h1 class="glow-text">Cascade and Specificity</h1><p class="intro-text">Explore cascade and specificity through a practical example and a focused exercise.</p></section>
+<section class="content-section"><h2>How it works</h2><p>When declarations conflict, the cascade considers origin, importance, specificity, and source order. Keep specificity predictable.</p><div class="lesson-detail"><h3>Build the mental model</h3><p>The cascade resolves competing declarations by considering relevance, origin and importance, cascade layer, specificity, and source order. Specificity compares selector weight; later source order breaks a tie only after higher-priority cascade criteria are equal.</p><h3>How to apply it</h3><p>Inherited properties such as text color can flow from a parent to descendants, while many layout and box properties do not inherit. The computed value shown by developer tools reflects the winning declaration after these rules and value processing.</p><h3>Common pitfalls</h3><p>Adding <code>!important</code> to every conflict makes future changes harder rather than fixing the underlying priority. Prefer a clear component scope and simple selectors; check the cascade before assuming a declaration failed to load.</p></div>
+<pre class="lesson-code"><code>p { color: #334155; }
+.notice { color: #9a3412; }
+/* Equal-specificity later rules win. */</code></pre>
+<p>Follow the competing rules in the example from cascade priority through specificity to source order, and identify the one declaration that wins.</p></section>
+<section class="content-section"><h2>Practice</h2><p>Predict which of two conflicting rules wins, then verify the result in browser developer tools.</p><p>When ready, continue to <a href="css-colors-units.html">Colors and Units</a>. You can return to the <a href="css.html">CSS course overview</a> at any time.</p></section>
+<div class="chapter-navigation"><a href="css-selectors.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Previous: Selectors</a>
+<a href="css-colors-units.html" class="nav-btn next-btn">Next: Colors and Units &raquo; <i class="fa-solid fa-arrow-right"></i></a></div>
+</main></div><footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer></body></html>

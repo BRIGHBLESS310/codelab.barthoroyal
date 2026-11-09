@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Retrieval-Augmented Generation | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Ground answers in approved sources</h1>
+                <p class="intro-text">Retrieval-Augmented Generation (RAG) first finds relevant passages, then supplies them as context for a generated answer. Retrieval can improve grounding, but it does not ensure the answer is correct or that sources are current.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Restrict retrieval to authorized documents, preserve source references, and test both answerable and unanswerable questions. Make the system decline when evidence is insufficient.</p>
+            </section>
+            <section class="content-section">
+                <h2>Ground generation in selected evidence</h2>
+                <p>Retrieval-augmented generation first searches a collection for passages relevant to a question, then provides those passages as context for a generative model. This can make answers more specific to approved or current material than relying only on the model's training.</p>
+                <p>Retrieval quality depends on the source collection, chunk boundaries, indexing, permissions, and ranking. A missing or poorly ranked passage may leave the model without evidence even when the answer exists in the source. Preserve document identifiers and access rules throughout retrieval.</p>
+                <p>Ask the model to stay within the supplied evidence and state when it is insufficient, then verify citations against the retrieved passages. Retrieval reduces some unsupported claims but cannot guarantee correctness or resist every misleading instruction in documents. Test no-result and conflicting-source cases explicitly.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>Retrieval is permission-aware and the empty-result path is explicit. The final response should link to the source material so users can verify important claims.</p>
+                <pre class="lesson-code"><code>matches = search(approved_index, question, user_permissions)
+context = choose_relevant_passages(matches)
+
+if not context:
+    return &quot;No supporting information was found.&quot;
+return generate_with_sources(question, context)</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Create five test questions for a small FAQ. Include a question not covered by the documents and describe the correct fallback.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-structured-output.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Structured Output</a>
+                <a href="ai-development-tool-use.html" class="nav-btn next-btn">Tool Use &amp; Actions &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

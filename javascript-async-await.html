@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Async and Await | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="async-await">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Async and Await</h1><p class="intro-text">Mark a function async to make it return a promise. Inside it, await pauses that function until a promise settles, without blocking the browser's main thread.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>A readable way to work with promises</h3><p><code>async</code>/<code>await</code> lets asynchronous operations be written in a sequence-like style. An <code>async</code> function always returns a promise; <code>await</code> pauses that function until a promise settles, then produces its value or throws its rejection reason.</p><h3>Handle success and failure</h3><p>Use <code>try</code>/<code>catch</code> around operations that can reject when the function can recover or give useful feedback. Await pauses only the current async function, not the browser or other JavaScript tasks. Callers can await or chain the promise returned by the async function.</p><h3>Do not serialize independent work</h3><p>Awaiting requests one at a time makes sense when each depends on the prior result, but slows independent tasks. Start independent work together with <code>Promise.all()</code> and choose an error strategy deliberately. Async/await is built on promises, so understanding promise states remains valuable.</p></section><section class="content-section"><h2>Wait for asynchronous work</h2><p>Handle errors around awaited operations when your code can provide a useful recovery path.</p><pre class="lesson-code"><code>async function loadMessage() {
+    try {
+        const message = await Promise.resolve("Loaded");
+        console.log(message);
+    } catch (error) {
+        console.error("Could not load the message.", error);
+    }
+}</code></pre><h2>Practice</h2><p>Write an async function that awaits a promise and handles a rejected promise.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

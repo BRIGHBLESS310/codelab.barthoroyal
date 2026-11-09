@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="data-types">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Data Types</h1><p class="intro-text">JavaScript values include strings, numbers, booleans, undefined, null, symbols, big integers, and objects. Arrays and functions are objects too.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Values have different kinds</h3><p>A data type describes a value and the operations that make sense for it. JavaScript has primitives including strings, numbers, booleans, <code>undefined</code>, <code>null</code>, bigint, and symbol, plus objects such as arrays and functions. Type awareness helps explain behavior and errors.</p><h3>Primitives and objects behave differently</h3><p>Assigning a primitive copies its value; assigning an object copies a reference, so two variables can observe changes to the same object. <code>typeof</code> checks many types but reports <code>"object"</code> for both arrays and <code>null</code>; use <code>Array.isArray()</code> for arrays.</p><h3>Do not infer too much from a type check</h3><p>A variable can hold different types over time, but changing its role repeatedly invites bugs. Empty arrays and objects are truthy, and <code>typeof null</code> is a historical quirk. Type awareness connects directly to conversion, comparisons, and choosing safe operations.</p></section><section class="content-section"><h2>Basic values</h2><p>Use typeof to inspect many values, but note that typeof null is the historical string "object". Choose data types that represent information clearly.</p><pre class="lesson-code"><code>const title = "Intro";
+const count = 3;
+const finished = false;
+const selected = null;
+console.log(typeof title, typeof count);</code></pre><h2>Practice</h2><p>Create values of different types and inspect them with typeof.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

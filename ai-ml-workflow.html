@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence: Machine Learning Workflow | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html" class="active">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Artificial Intelligence tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Follow a disciplined ML workflow</h1>
+                <p class="intro-text">A typical workflow defines a task, collects and prepares data, trains a model, evaluates it on held-out examples, and monitors it after release. Each stage can reveal reasons not to proceed.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Keep training, validation, and test data separate. Decide on a baseline and evaluation metric before tuning so you can tell whether a change really helps.</p>
+            </section>
+            <section class="content-section">
+                <h2>Why the workflow is iterative</h2>
+                <p>A machine-learning workflow begins with a defined outcome, then checks whether data and a model can support it. Data preparation, baseline selection, training, and evaluation build on one another, but results often send the team back to refine the question or correct a data issue.</p>
+                <p>A baseline is a simple reference—such as a rule or majority-class predictor—that makes it possible to measure whether a more complex model improves anything. Split data carefully, fit transformations only on training data, and keep a final test set untouched until decisions are complete to reduce leakage.</p>
+                <p>Evaluation is not the final step: deployment changes the context, and data may shift over time. Monitor whether quality and error rates remain acceptable, then define when to retrain, roll back, or stop using the model. This makes the workflow a continuing lifecycle rather than a one-time training script.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The test split is reserved for a final estimate rather than repeated tuning. In practice, the split method and metric depend on the task and data structure.</p>
+                <pre class="lesson-code"><code>train, validation, test = split(records)
+model = fit(train)
+
+settings = choose_settings(validation)
+score = evaluate(model, test)
+print(score)</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Draw the workflow for a prediction problem you know. For each stage, write one quality check and one decision that could stop the project.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-data.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Data &amp; Representation</a>
+                <a href="ai-supervised-learning.html" class="nav-btn next-btn">Supervised Learning &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

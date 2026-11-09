@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="objects">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Objects</h1><p class="intro-text">Objects group related data in named properties. Use dot notation for known property names and bracket notation for dynamic names.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Named properties describe a thing</h3><p>An object groups related data as properties with keys and values. Use dot notation for known property names and bracket notation for computed names. A method is a property whose value is a function; object literals provide a concise way to create records.</p><h3>Objects are reference values</h3><p>Assigning an object copies its reference, not a separate object, so changes through either variable can be observed through the other. Destructuring reads selected fields and spread syntax can create a shallow copy.</p><h3>Nested objects remain shared in shallow copies</h3><p>A spread copy duplicates only the outer object; nested references remain shared. Check whether a property exists before assuming a value and avoid trusting external data automatically. Objects underpin classes, JSON data, and options passed to functions.</p></section><section class="content-section"><h2>Read and update properties</h2><p>Use optional chaining (?.) when a property may be absent, and avoid assuming untrusted data has the shape you expect.</p><pre class="lesson-code"><code>const learner = { name: "Ada", lessonsCompleted: 3 };
+console.log(learner.name);
+learner.lessonsCompleted += 1;</code></pre><h2>Practice</h2><p>Create a book object with a title and author, then add a property for its page count.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

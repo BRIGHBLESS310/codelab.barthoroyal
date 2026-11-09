@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings and Vectors | C++ | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="cpp-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html" class="active">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="C++ tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Strings and Vectors</h1>
+                <p class="intro-text">std::string represents text and std::vector stores a variable number of values. These standard-library types manage their own memory and are good defaults for ordinary collections.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>std::string represents text and std::vector stores a variable number of values. These standard-library types manage their own memory and are good defaults for ordinary collections.</p>
+                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>#include &lt;string&gt;
+#include &lt;vector&gt;
+
+std::vector&lt;std::string&gt; topics{&quot;Types&quot;, &quot;Loops&quot;};
+topics.push_back(&quot;Functions&quot;);
+for (const std::string&amp; topic : topics) {
+    std::cout &lt;&lt; topic &lt;&lt; &#x27;\n&#x27;;
+}</code></pre>
+                <p>Run or adapt this example in an appropriate local learning environment. Pay attention to the inputs, the result, and any assumptions the code makes.</p>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Store several words in a vector and print each word and its length.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="cpp-functions.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Functions</a>
+                <a href="cpp-references.html" class="nav-btn next-btn">References and const &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

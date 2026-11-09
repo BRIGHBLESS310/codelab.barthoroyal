@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional UI | React | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="react-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html" class="active">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a>
+    </nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="React tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Conditional UI</h1>
+                <p class="intro-text">Render different elements based on a condition. JavaScript conditionals and logical expressions work in component code; choose the form that makes each UI state obvious.</p>
+                <div class="note-box"><i class="fa-solid fa-lightbulb"></i><p><strong>In this lesson:</strong> Read the explanation, follow the example, and try the practice prompt before continuing.</p></div>
+            </section>
+            <section class="content-section">
+                <h2>Explanation</h2>
+                <p>Conditional rendering chooses elements from a component's current data. An early return is clear when the whole view has a distinct state, such as loading; a ternary suits two short alternatives inside a layout.</p>
+                <p>JavaScript's &amp;&amp; operator can render a fragment when true, but returns its left operand when false. With numbers, 0 &amp;&amp; element displays 0, so use an explicit Boolean check when zero should render nothing.</p>
+                <p>Model loading, success, empty results, and errors as distinct outcomes. One truthy flag can hide those differences; named states or a status value make transitions easier to reason about.</p>
+                <p>The example returns a loading message until isReady is true, then returns the ready message. A data view should also distinguish an empty result from a failed request and provide accessible status feedback.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <pre class="lesson-code"><code>function Status({ isReady }) {
+  if (!isReady) return &lt;p&gt;Loading…&lt;/p&gt;;
+  return &lt;p&gt;Ready to go.&lt;/p&gt;;
+}</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Show either an empty-state message or a list based on whether an array has items.</p>
+                <div class="cta-box"><h4>Before continuing, explain the example in your own words and try one variation.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="react-components.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Components and Props</a>
+                <a href="react-lists.html" class="nav-btn next-btn">Lists and Keys &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

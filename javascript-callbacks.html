@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Callbacks | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="callbacks">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Callbacks</h1><p class="intro-text">A callback is a function passed to other code to be called later. Callbacks are common in event listeners and array methods.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>A function passed for later use</h3><p>A callback is a function given to another function so it can be called at an appropriate time. The receiver might call it for each array item, after an event, or when work finishes. This lets reusable code delegate one specific behavior to its caller.</p><h3>The receiving API determines timing and arguments</h3><p>Check the API contract to learn when the callback runs and what arguments it receives. Array callbacks receive values and indexes; event listeners receive an event object. Pass a function value such as <code>handleClick</code>; writing <code>handleClick()</code> calls it immediately instead.</p><h3>Keep asynchronous flow understandable</h3><p>Deeply nested callbacks make the order of work and error handling difficult to follow. Name substantial callbacks and keep failures explicit. Promises standardize composition of asynchronous results, and <code>async</code>/<code>await</code> offers another readable style; both build on the callback pattern.</p></section><section class="content-section"><h2>Pass a function</h2><p>For multiple asynchronous steps, promises can make success and error paths easier to follow.</p><pre class="lesson-code"><code>function greet(name, onDone) {
+    console.log("Hello, " + name);
+    onDone();
+}
+greet("Ada", () =&gt; console.log("Finished"));</code></pre><h2>Practice</h2><p>Write a function that accepts another function and calls it after completing a task.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

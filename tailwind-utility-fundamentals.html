@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Utility Fundamentals | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tailwind-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html" class="active">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="Tailwind CSS tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Compose focused utility classes</h1>
+                <p class="intro-text">A utility class represents a small styling decision, such as padding, text color, or display. Combining utilities makes the styling visible next to the element it affects and avoids inventing one-off class names for every rule.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Treat a class list as a readable collection of choices. Prefer semantic HTML, keep related choices together, and avoid adding contradictory utilities that obscure the final result.</p>
+            </section>
+            <section class="content-section">
+                <h2>How utility composition works</h2>
+                <p>A utility class represents a small styling decision: <code>p-4</code> sets padding, <code>font-semibold</code> changes weight, and <code>text-slate-700</code> sets a text color. Combining them makes the element's styling explicit at the point where its structure is written, rather than requiring a separate selector for each visual variation.</p>
+                <p>Utilities are not applied by the order of class names in the HTML. Tailwind generates rules in its own stylesheet order, so conflicting classes such as two different padding utilities do not reliably make the later token win. Remove the conflict or express the intended conditional state clearly.</p>
+                <p>Think of a long class list as a readable collection of design decisions, not as a goal in itself. Group related layout, spacing, typography, and state utilities mentally; extract a component when repeated markup needs to stay consistent. This connects utility fluency with maintainable component design.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>This button uses utilities for corner radius, background, horizontal and vertical padding, weight, and foreground color. The element remains a real button, so its native keyboard behavior is preserved.</p>
+                <pre class="lesson-code"><code>&lt;button class=&quot;rounded-md bg-indigo-600 px-4 py-2 font-semibold text-white&quot;&gt;Save changes&lt;/button&gt;</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Style a notice using utilities for spacing, border, background, and text. Keep its HTML semantic, then explain what each utility contributes.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="tailwind-get-started.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Get Started</a>
+                <a href="tailwind-colors-backgrounds.html" class="nav-btn next-btn">Colors &amp; Backgrounds &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

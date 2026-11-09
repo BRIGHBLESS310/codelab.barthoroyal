@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development: Safety &amp; Security | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="ai-development-sidebar.js" defer></script>
+</head>
+<body>
+    <nav id="demo"><a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="java.html">Java</a>
+<a href="javascript.html">JavaScript</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="bootstrap.html">Bootstrap</a>
+<a href="tailwind.html">Tailwind</a>
+<a href="ai.html">AI</a>
+<a href="ai-development.html" class="active">AI Development</a>
+<a href="sql.html">SQL</a>
+<a href="react.html">React</a>
+<a href="c++.html">C++</a>
+<a href="php.html">PHP</a></nav>
+    <div class="page-wrapper">
+        <aside class="sidebar" aria-label="AI Development tutorial chapters"></aside>
+        <main id="java-container">
+            <section class="hero-card animate-fade">
+                <h1 class="glow-text">Protect the feature and its users</h1>
+                <p class="intro-text">AI features inherit ordinary application risks and add model-specific issues such as untrusted output, prompt injection in retrieved content, and unexpected tool requests. Safety requires layered controls, not just prompt wording.</p>
+            </section>
+            <div class="wave-divider"></div>
+            <section class="content-section">
+                <h2>Key idea</h2>
+                <p class="desc-text">Keep authorization outside model decisions, isolate untrusted content, restrict tools, validate outputs, and test failure cases. Do not place secrets in prompts or retrieved documents.</p>
+            </section>
+            <section class="content-section">
+                <h2>Model-specific risks need ordinary controls too</h2>
+                <p>AI features can be exposed to prompt injection, abusive inputs, sensitive-data disclosure, and unsafe or misleading outputs. A prompt asking the model to ignore malicious instructions is useful guidance but is not a security boundary. Treat all external text and model output as untrusted input.</p>
+                <p>Enforce authentication, authorization, input limits, and output handling in application code. Restrict retrieval to documents the user is allowed to see, limit tools and their permissions, and avoid rendering generated text as executable markup. Apply abuse monitoring and rate limits appropriate to the feature.</p>
+                <p>Test realistic misuse and failure scenarios, including attempts to retrieve restricted material or trigger unauthorized actions. Define escalation and incident-response paths before launch. Security and safety are ongoing properties of the system, not a checklist completed by selecting a capable model.</p>
+            </section>
+            <section class="content-section">
+                <h2>Example</h2>
+                <p>The model output is checked before use and cannot grant itself access. A fallback handles results that fail policy or format checks.</p>
+                <pre class="lesson-code"><code>candidate = model_response(untrusted_input)
+validated = validate_format(candidate)
+
+if not allowed_action(validated):
+    return safe_fallback()
+return present_as_unverified_draft(validated)</code></pre>
+            </section>
+            <section class="content-section">
+                <h2>Practice</h2>
+                <p>Threat-model a document Q&amp;A prototype at a high level. Identify the data boundary, untrusted inputs, a possible unsafe output, and a defensive control for each.</p>
+                <div class="cta-box"><h4>Try the example, change one detail, and explain how the result changes.</h4></div>
+            </section>
+            <div class="chapter-navigation">
+                <a href="ai-development-evaluation.html" class="nav-btn prev-btn"><i class="fa-solid fa-arrow-left"></i> Testing &amp; Evaluation</a>
+                <a href="ai-development-privacy.html" class="nav-btn next-btn">Privacy &amp; Data Handling &raquo; <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </main>
+    </div>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© <span class="bouncing-name">Blessed Ovenseri Development Team</span></p>
+        <div class="social-links">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

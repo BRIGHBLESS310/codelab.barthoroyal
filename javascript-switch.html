@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Switch | CodeLab</title>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript-sidebar.js" defer></script><script src="javascript-lesson.js" defer></script>
+</head>
+<body data-js-lesson="switch">
+    <nav id="demo"><a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a><a href="javascript.html" class="active">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a><a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a><a href="c++.html">C++</a><a href="php.html">PHP</a></nav>
+    <div class="page-wrapper"><aside class="sidebar" aria-label="JavaScript tutorial chapters"></aside><main id="java-container"><section class="hero-card"><h1 class="glow-text">JavaScript Switch</h1><p class="intro-text">A switch compares one expression with several cases. Use break to exit a matching case unless intentionally sharing behavior; default handles unmatched values.</p></section><section class="content-section lesson-explanations"><h2>Understand the topic</h2><h3>Select among discrete cases</h3><p>A <code>switch</code> compares one expression with a list of <code>case</code> values and begins at the matching case. It can clarify a set of alternatives compared with a long chain of branches.</p><h3>Matching is strict and fall-through is possible</h3><p>Cases use strict equality, so a number and numeric-looking string differ. A <code>break</code> usually ends the selected case; without it execution continues into the next case. Group case labels when they share behavior.</p><h3>Plan for unexpected values</h3><p>A <code>default</code> case handles values not listed. Switch is less suitable for ranges or complex predicates, where ordered <code>if</code> statements communicate intent better. Explicit conversion makes the compared value predictable.</p></section><section class="content-section"><h2>Match a case</h2><p>Cases use strict comparison. Group cases when they should run the same code, and include a default when unexpected values need handling.</p><pre class="lesson-code"><code>const day = "Saturday";
+switch (day) {
+    case "Saturday":
+    case "Sunday":
+        console.log("Weekend");
+        break;
+    default:
+        console.log("Weekday");
+}</code></pre><h2>Practice</h2><p>Write a switch that converts a small set of grade letters into descriptions.</p></section><div class="chapter-navigation"></div></main></div>
+    <footer id="footer-section"><p class="footer-title">This Is CodeLab ✨</p><p>© Blessed Ovenseri Development Team</p><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>
