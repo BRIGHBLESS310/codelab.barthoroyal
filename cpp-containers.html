@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>std::string represents text and std::vector stores a variable number of values. These standard-library types manage their own memory and are good defaults for ordinary collections.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p><code>std::string</code> manages text storage, and <code>std::vector</code> manages a resizable sequence of elements. Both handle their own memory and work with standard algorithms. Prefer these standard-library containers over raw arrays for ordinary application code.</p>
+                <p>Vector indexing with <code>[]</code> does not check bounds, while <code>.at()</code> checks and reports an invalid index. Adding elements may reallocate storage, invalidating pointers and iterators into the vector. Use range-based loops when you do not need an index.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

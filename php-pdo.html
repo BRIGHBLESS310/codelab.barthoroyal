@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="php-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>PDO provides a database interface. Prepared statements keep values separate from SQL syntax; do not concatenate submitted input into query strings. Handle errors without exposing credentials or internal details to visitors.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>PDO provides a consistent interface to supported databases. A prepared statement separates SQL structure from parameter values, preventing submitted text from being interpreted as SQL syntax. Bind values through placeholders rather than concatenating them into the query string.</p>
+                <p>Choose an appropriate error-handling strategy and log diagnostic details on the server, not in the visitor's response. Validate values before database operations and use transactions when multiple changes must succeed or fail together. Parameter placeholders protect values, not table or column names.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

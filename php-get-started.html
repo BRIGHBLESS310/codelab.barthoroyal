@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="php-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>PHP runs on a server and can produce HTML, JSON, or another response. A PHP runtime is required; a browser cannot execute PHP directly. The server processes the file and sends the generated response.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>PHP is executed by a server runtime; the browser receives the response, not the PHP source itself. A local development server lets you request a PHP file and see the generated HTML or other response. The file extension alone does not run code without a configured PHP environment.</p>
+                <p>Server-side code can read a request, apply application rules, and create a response. Keep presentation and data handling organized as the project grows, and do not expose runtime errors or configuration secrets to visitors.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

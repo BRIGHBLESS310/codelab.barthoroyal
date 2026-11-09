@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="php-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>Validation checks a value&#x27;s meaning and format. Escaping makes data safe for a particular output context; htmlspecialchars with UTF-8 is common for HTML text. These are different protections.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>Validation checks whether data meets the application's rules, such as a required field, allowed range, or expected email format. Perform it on the server because browser checks can be bypassed. Give useful feedback without treating an invalid value as successful.</p>
+                <p>Escaping is a separate step applied when output is generated. For HTML text and quoted attributes, <code>htmlspecialchars</code> with UTF-8 is a common defense; other contexts require their own encoding rules. Prepared SQL statements protect query values but do not replace validation or output escaping.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

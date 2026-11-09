@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="php-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>PHP variables begin with $. Common values include strings, integers, floats, booleans, arrays, and objects. PHP is dynamically typed, but explicit checks and strict comparisons (===) improve reliability.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>PHP variables begin with <code>$</code> and hold values whose types can change at runtime. Use clear names and initialize values before reading them. Scalar types include strings, integers, floats, and booleans; arrays and objects can represent more structured data.</p>
+                <p>Dynamic typing does not remove the need to check input. A value received from a request may be missing or have an unexpected format. Use strict comparisons such as <code>===</code> when both type and value should match, and validate data at system boundaries.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

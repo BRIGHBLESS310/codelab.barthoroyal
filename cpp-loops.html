@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>Loops repeat work while a condition holds or once for each item in a range. A range-based for loop is a clear way to visit every container element. Ensure a loop can reach its termination condition.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>A loop repeats a block, so identify its initialization, continuation condition, and progress step. If the condition never becomes false, a <code>while</code> or traditional <code>for</code> loop may not terminate. A range-based <code>for</code> is often clearer when simply visiting every element in a container.</p>
+                <p>Avoid invalidating iterators or changing a container's size while iterating unless the operation is designed for it. Test empty collections and boundary counts. Loops work naturally with arrays and vectors, and functions can encapsulate repeated processing.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

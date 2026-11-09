@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="php-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>Include reusable files for shared functions or templates. require is appropriate when a missing file should stop the request. Use __DIR__ for paths relative to the current file, and keep secrets out of public source control.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p><code>include</code> and <code>require</code> load another PHP file, allowing shared functions or templates. Use <code>require</code> when the application cannot continue without the file. <code>__DIR__</code> anchors a path to the current file, avoiding ambiguity about the process working directory.</p>
+                <p>Organize files by responsibility and avoid including the same declarations repeatedly; <code>require_once</code> can help for files that define functions or classes. Keep secrets such as database credentials outside publicly served source files and out of version control.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

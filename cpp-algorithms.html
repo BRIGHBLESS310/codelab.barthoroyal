@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>Standard algorithms operate on iterator ranges and often communicate intent better than hand-written loops. Include the header for each algorithm and remember the end iterator is not an element.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>Standard algorithms describe common operations such as sorting, searching, counting, and transforming ranges. Include the relevant header, such as <code>&lt;algorithm&gt;</code>, and provide iterators that identify the range. The end iterator marks one past the last element and must not be dereferenced.</p>
+                <p>Algorithms work with arrays, vectors, and other iterator-based containers, so the same operation can be reused across data structures. Prefer a standard algorithm when it clearly communicates intent; check its preconditions, such as sorting a range before using binary search.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

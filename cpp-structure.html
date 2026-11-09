@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>A program starts at main. Include headers for facilities you use and qualify standard-library names with std::. Statements commonly end in semicolons; indentation makes blocks easier to read.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>The preprocessor handles directives such as <code>#include</code> before compilation. Headers declare standard-library facilities, while <code>main</code> is the program entry point; execution begins there and returns an exit status to the environment.</p>
+                <p>Keep statements inside braces and terminate declarations and expressions with semicolons. Qualifying names with <code>std::</code> makes their library origin clear. A program's structure provides the foundation for adding variables, functions, and classes without putting everything into <code>main</code>.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

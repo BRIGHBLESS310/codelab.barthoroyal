@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>std::cin reads formatted input. Arithmetic follows operator precedence; parentheses can make intent clearer. Check extraction when input may be invalid. std::getline reads a whole line, including spaces.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>Formatted extraction with <code>std::cin &gt;&gt; value</code> reads a token and skips leading whitespace. Always check whether extraction succeeded before trusting the variable; invalid text can put the stream into a failure state. Use <code>std::getline</code> when a complete line, including spaces, is needed.</p>
+                <p>Arithmetic expressions follow precedence rules, but parentheses communicate intent and prevent mistakes when expressions grow. Mixing formatted input and <code>getline</code> requires care because a newline may remain in the input buffer. Validate input at the point it enters the program.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

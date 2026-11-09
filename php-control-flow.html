@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="php-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>Conditions select which code runs; loops repeat work over collections or until a condition changes. foreach is usually clearest for visiting array items. Validate values before relying on them.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>Conditions select a branch based on a boolean expression; loops repeat code while a condition holds or for each item in a collection. Use strict comparisons to avoid surprising type coercion, and test boundary cases such as empty input or a value exactly at a threshold.</p>
+                <p><code>foreach</code> is generally the clearest way to process array values. A <code>while</code> loop is appropriate when the number of repetitions depends on a changing condition, but ensure each pass can move toward termination to avoid an infinite loop.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

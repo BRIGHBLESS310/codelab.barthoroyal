@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>A reference is another name for an existing object. Use references to avoid copies and const references for read-only access. A reference must refer to a valid object; never return a reference to a local variable.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>A reference is an alias, not a separate object: it must be initialized to refer to a valid object and cannot later be reseated. A <code>const</code> reference allows reading without copying while preventing modification through that reference.</p>
+                <p>Reference lifetime matters. Returning a reference to a local variable creates a dangling reference because the local object is destroyed when the function returns. Use a value return for newly created results, and use references when the referenced object's lifetime is guaranteed.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="php-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>HTTP requests are independent. Sessions associate data with a visitor across requests, commonly for sign-in state or a temporary workflow. Start sessions before output and configure cookies securely in deployed applications.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>HTTP is stateless: each request is independent. A session lets a server associate data with a visitor across requests, commonly using a session identifier stored in a cookie. Start the session before sending response output, then store only the state needed by the workflow.</p>
+                <p>Session identifiers and cookies are security-sensitive. In deployed applications, use HTTPS and appropriate cookie flags, regenerate the identifier after authentication, and avoid storing unnecessary personal data. A session is not a replacement for authorization checks on each protected action.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

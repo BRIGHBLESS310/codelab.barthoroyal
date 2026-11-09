@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>Functions give reusable work a name. Declare parameter and return types, use descriptive names, and keep each function focused. Pass larger read-only inputs by const reference to avoid unnecessary copies.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>A function declaration specifies a return type, name, and typed parameters. Calling the function supplies arguments; a return statement sends a result to the caller. Use <code>void</code> when no result is returned and keep one function focused on one responsibility.</p>
+                <p>Passing a large read-only object by <code>const</code> reference avoids copying while preventing modification through that parameter. Small types such as integers are commonly passed by value. These choices define a function's interface and help classes and callers use it safely.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

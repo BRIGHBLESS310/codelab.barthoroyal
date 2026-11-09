@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="php-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>HTML forms send request data to the server. Values in $_GET and $_POST are untrusted: check the request method, ensure fields exist, validate formats, and provide helpful errors.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>Forms submit named controls using a request method such as GET or POST. Check the request method before processing, then handle fields that may be absent. Trim and validate values on the server even when the HTML form has required fields, because clients can bypass browser checks.</p>
+                <p>Validation asks whether a value has the expected meaning or format; escaping makes it safe for the place it is displayed. Escape output when rendering user-provided text, and use CSRF protections for state-changing requests in real applications. Never trust a submitted field merely because it came from your own page.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

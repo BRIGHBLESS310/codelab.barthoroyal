@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>A class groups related data and operations. Keep implementation details private and expose a small public interface that maintains the object&#x27;s rules. Initialize members in a constructor when appropriate.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>A class defines a type: its data members represent state and its member functions define operations. Keep representation details private and expose a small public interface. A constructor establishes the object's initial state, and member initializer lists are the preferred way to initialize members.</p>
+                <p>Encapsulation lets a class preserve its invariants—for example, rejecting an invalid balance instead of allowing callers to assign arbitrary values. Prefer standard-library types such as <code>std::string</code> and <code>std::vector</code> as members rather than owning raw memory without a clear need.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

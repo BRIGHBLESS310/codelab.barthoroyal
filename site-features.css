@@ -1,0 +1,174 @@
+.site-feature-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.site-feature-links a,
+.site-feature-links button {
+    border: 1px solid #155e75;
+    border-radius: 20px;
+    padding: 6px 12px;
+    background: #0e7490;
+    color: #fff;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.site-feature-links a:hover,
+.site-feature-links button:hover,
+.site-feature-links button[aria-pressed="true"] {
+    background: #06b6d4;
+    color: #fff;
+}
+
+.studio-page {
+    max-width: 1440px;
+}
+
+.studio-intro {
+    color: #cbd5e1;
+}
+
+.studio-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+    gap: 22px;
+}
+
+.studio-panel {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    background: #1e293b;
+}
+
+.studio-panel h2 {
+    margin-bottom: 8px;
+    color: #38bdf8;
+}
+
+.studio-panel p,
+.studio-panel label {
+    color: #cbd5e1;
+}
+
+.studio-panel label {
+    display: block;
+    margin: 14px 0 6px;
+    font-weight: 600;
+}
+
+.studio-panel label.studio-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-weight: 400;
+}
+
+.studio-panel label.studio-check input {
+    width: auto;
+    margin-top: 5px;
+}
+
+.studio-panel textarea,
+.studio-panel select,
+.studio-panel input {
+    width: 100%;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: #0f172a;
+    color: #f8fafc;
+    font: 0.95rem/1.5 Consolas, Monaco, monospace;
+}
+
+.studio-panel textarea {
+    min-height: 150px;
+    resize: vertical;
+    tab-size: 2;
+}
+
+.studio-panel textarea:focus,
+.studio-panel select:focus,
+.studio-panel input:focus,
+.studio-panel button:focus-visible,
+.site-feature-links :focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 2px;
+}
+
+.studio-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.studio-actions button {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    background: #0e7490;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.studio-actions button:hover {
+    background: #0891b2;
+}
+
+.studio-actions button:disabled,
+.site-feature-links button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.pidgin-status {
+    color: #fecaca;
+    font-size: 0.85rem;
+}
+
+.studio-preview {
+    width: 100%;
+    min-height: 310px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.studio-output,
+.tutor-answer {
+    min-height: 48px;
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #e2e8f0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.studio-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 850px) {
+    .studio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-feature-links {
+        margin-left: 0;
+    }
+}

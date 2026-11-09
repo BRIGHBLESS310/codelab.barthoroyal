@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code Editor and AI Tutor | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="site-features.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="site-features.js" defer></script>
+</head>
+<body>
+    <nav id="demo">
+        <a href="index.html">Home</a><a href="python.html">Python</a><a href="java.html">Java</a>
+        <a href="javascript.html">JavaScript</a><a href="html.html">HTML</a><a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a><a href="tailwind.html">Tailwind</a><a href="ai.html">AI</a>
+        <a href="ai-development.html">AI Development</a><a href="sql.html">SQL</a><a href="react.html">React</a>
+        <a href="c++.html">C++</a><a href="php.html">PHP</a><a href="studio.html" class="active">Studio</a>
+    </nav>
+    <main id="asap" class="studio-page">
+        <section class="hero-card">
+            <h1 class="glow-text">Live Code Editor</h1>
+            <p class="intro-text studio-intro">Write HTML, CSS, and JavaScript and see your page update in the preview. Your code runs in a sandboxed browser frame on this device.</p>
+        </section>
+        <div class="studio-grid">
+            <section class="studio-panel" aria-labelledby="editor-heading">
+                <h2 id="editor-heading">Your code</h2>
+                <label for="studio-html">HTML</label>
+                <textarea id="studio-html" spellcheck="false" aria-label="HTML code"><h1>Hello, CodeLab!</h1>
+<button id="greet">Click me</button>
+<p id="message">Your message will appear here.</p></textarea>
+                <label for="studio-css">CSS</label>
+                <textarea id="studio-css" spellcheck="false" aria-label="CSS code">body { font-family: sans-serif; padding: 2rem; }
+h1 { color: #0891b2; }
+button { padding: .6rem 1rem; }</textarea>
+                <label for="studio-js">JavaScript</label>
+                <textarea id="studio-js" spellcheck="false" aria-label="JavaScript code">document.querySelector("#greet").addEventListener("click", () => {
+  document.querySelector("#message").textContent = "You ran your JavaScript!";
+  console.log("Button clicked");
+});</textarea>
+                <div class="studio-actions">
+                    <button type="button" data-studio-run data-pcm="Run am!" data-english="Run code">Run code</button>
+                    <button type="button" data-studio-reset data-pcm="Start again" data-english="Reset example">Reset example</button>
+                </div>
+                <p class="studio-note">HTML/CSS/JavaScript run in this editor. Other languages need their own runtime; this browser-only editor does not compile Java, C++, or PHP, or run Python.</p>
+                <p class="studio-note">Preview code runs in an isolated frame with network access blocked. Do not paste secrets into code you share or send to an AI service.</p>
+            </section>
+            <section class="studio-panel" aria-labelledby="preview-heading">
+                <h2 id="preview-heading">Live preview</h2>
+                <iframe id="studio-preview" class="studio-preview" title="Sandboxed code preview" sandbox="allow-scripts"></iframe>
+                <div id="studio-output" class="studio-output" role="status" aria-live="polite">Preview output appears here.</div>
+            </section>
+            <section class="studio-panel" aria-labelledby="tutor-heading">
+                <h2 id="tutor-heading">AI Tutor</h2>
+                <p>Ask a question and get a step-by-step explanation. The tutor uses the AI service configured by the site owner. Your question is sent only after you submit it.</p>
+                <label for="tutor-question">Ask a question about your code</label>
+                <textarea id="tutor-question" data-english="" data-pcm="" placeholder="For example: why is my click event not working?" aria-label="Question for the programming tutor"></textarea>
+                <label class="studio-check"><input id="tutor-include-code" type="checkbox"> Include my HTML, CSS, and JavaScript in the tutor request</label>
+                <label class="studio-check"><input id="tutor-consent" type="checkbox"> I understand my question and selected code will be sent to the configured AI provider</label>
+                <div class="studio-actions">
+                    <button type="button" data-tutor-ask data-pcm="Ask am" data-english="Ask tutor">Ask tutor</button>
+                </div>
+                <div id="tutor-answer" class="tutor-answer" role="status" aria-live="polite">Configure the AI provider to start asking questions. The tutor will show a clear setup message until then.</div>
+            </section>
+        </div>
+    </main>
+    <footer id="footer-section">
+        <p class="footer-title">This Is CodeLab ✨</p>
+        <p>© Blessed Ovenseri Development Team</p>
+        <p><a href="index.html">Back to Home</a></p>
+    </footer>
+</body>
+</html>

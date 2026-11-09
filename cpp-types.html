@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>A variable&#x27;s type determines its valid values and operations. Initialize values when declaring them and prefer const when a value should not change. Standard types include int, double, bool, and std::string.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>C++ checks types at compile time, so a value's type constrains which operations are valid. Initialize variables when declaring them to avoid using indeterminate values, and prefer <code>const</code> when reassignment is not needed. Use <code>std::string</code> for ordinary text rather than managing character buffers manually.</p>
+                <p>Choose integer or floating-point types based on the range and precision required. Implicit conversions can lose information, such as converting a decimal to an integer, so make conversions deliberate. These choices affect function parameters, calculations, and how the compiler can catch mistakes.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

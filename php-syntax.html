@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="php-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>PHP statements commonly end with semicolons. echo writes to the response. Treat values that might contain user input as untrusted, and escape them for the output context.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>PHP code is placed between <code>&lt;?php</code> and <code>?&gt;</code> tags when embedded in a file. Statements commonly end with semicolons, and <code>echo</code> writes content into the HTTP response. PHP expressions can be embedded in HTML, but separate processing from presentation when it improves readability.</p>
+                <p>Data inserted into HTML must be escaped for its output context, especially when it came from a request or database. A value safe as plain text is not automatically safe inside an HTML attribute or JavaScript. Output encoding is a core habit for server-rendered pages.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>

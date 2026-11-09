@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="cpp-sidebar.js" defer></script>
+    <link rel="stylesheet" href="site-features.css">
+    <script src="site-features.js" defer></script>
 </head>
 <body>
     <nav id="demo">
@@ -27,7 +29,8 @@
             <section class="content-section">
                 <h2>Explanation</h2>
                 <p>Use if and else to branch on a boolean condition. A switch is useful for selecting among discrete cases. Use braces consistently and include a default case when it helps handle unexpected values.</p>
-                <p>Start with the example below, then change one value or condition and observe how the result changes. Check the documentation for your language or database version when details vary.</p>
+                <p>An <code>if</code> condition must evaluate to a boolean expression. Use <code>else if</code> for mutually exclusive alternatives and consider boundary values when writing comparisons. A <code>switch</code> expresses selection among discrete values; each case should end deliberately, commonly with <code>break</code>.</p>
+                <p>Include a <code>default</code> branch when unexpected values need handling, and use braces consistently even for short branches. Clear conditions are easier to test than deeply nested decisions; extract a named function when the rules become complex.</p>
             </section>
             <section class="content-section">
                 <h2>Example</h2>
